@@ -1,0 +1,64 @@
+import funkin.play.PauseSubState;
+import flixel.effects.FlxFlicker;
+import funkin.play.GameOverSubState;
+
+class BoyfriendReinventedCharacter extends MultiAnimateAtlasCharacter
+{
+  function new()
+  {
+    super('bf-r');
+  }
+
+  function onCreate(event:ScriptEvent)
+  {
+    super.onCreate(event);
+
+    GameOverSubState.musicSuffix = '-reinvented';
+    PauseSubState.musicSuffix = '-reinvented';
+    GameOverSubState.animationSuffix = "";
+
+    FunkinMemory.cacheSound(Paths.sound('Pico_Bonk', "weekend1"));
+  }
+
+  override function onSongRetry(event:ScriptEvent):Void
+  {
+    super.onSongRetry(event);
+
+    // Reset to standard death animation.
+    GameOverSubState.musicSuffix = '-reinvented';
+    GameOverSubState.blueBallSuffix = "";
+    GameOverSubState.animationSuffix = "";
+
+    PauseSubState.musicSuffix = '-remnants';
+
+    bfDeathExplosion = null;
+    this.visible = true;
+  }
+
+    // Bugfix!
+    if (["firstDeath", "deathLoop", "deathConfirm"].contains(name) && GameOverSubState.animationSuffix.length > 0)
+    {
+      return playAnimation(name + GameOverSubState.animationSuffix, restart, ignoreOther);
+    }
+
+    // Do not create the sprites when on the animation editor.
+    if (!this.debug)
+    {
+      switch (name)
+      {
+        case "fakeoutDeath":
+          doFakeoutDeath();
+
+        case "firstDeath-explosion":
+          doExplosionDeath();
+
+        case "deathConfirm-explosion":
+          doExplosionConfirm();
+      }
+    }
+
+    // Make the camera to center BF more.
+    GameOverSubState.instance.cameraFollowPoint.x -= 50;
+    GameOverSubState.instance.cameraFollowPoint.y += 100;
+    GameOverSubState.instance.targetCameraZoom = 0.95;
+}

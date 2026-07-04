@@ -1,0 +1,85 @@
+import funkin.play.PlayState;
+import funkin.modding.module.Module;
+import flixel.FlxG;
+import flixel.math.FlxMath;
+import flixel.math.FlxPoint;
+
+class camFollow extends Module {
+
+	public function new() {
+		super("Camera Follow TargetO");
+	}
+
+	//CONFIG
+	public static var move:Int = 10;
+	public static var mult:Float = 0.0035;
+	public static var spd:Float = 0.8;
+	public static var enableAngle:Bool = false;
+
+	var dirActive:Bool = false;
+	var dirTimer:Int = 0;
+	var opq = FlxPoint.get();
+	var tpp = FlxPoint.get();
+	var ag:Float = 0;
+	var ta:Float = 0;
+
+	function onStepHit(evt:Dynamic) {
+		if (dirTimer > 0) {
+			dirTimer--;
+			if (dirTimer <= 0) { dirActive = false; }
+		}
+		if (evt.step % 16 == 0) {
+			if (!dirActive) { resetFollow(); }
+		}
+	}
+
+	override function onNoteHit(e) {
+		super.onNoteHit(e);
+		if (e.note.kind == "noanim") return;
+		dir(e.note.direction);
+	}
+
+	override function onOpponentNoteHit(e) {
+		super.onOpponentNoteHit(e);
+		if (e.note.kind == "noanim") return;
+		dir(e.note.direction);
+	}
+
+	function dir(d:Int) {
+		tpp.set();
+		ta = 0;
+
+		dirActive = true;
+		dirTimer = 8;
+
+		switch (d) {
+			case 0: tpp.x = -move; ta = -move * mult;
+			case 1: tpp.y =  move;
+			case 2: tpp.y = -move;
+			case 3: tpp.x =  move; ta =  move * mult;
+		}
+	}
+
+	override function onUpdate(e) {
+		super.onUpdate(e);
+		opq.x = FlxMath.lerp(opq.x, tpp.x, spd);
+		opq.y = FlxMath.lerp(opq.y, tpp.y, spd);
+		FlxG.camera.targetOffset.set(opq.x, opq.y);
+
+		if (enableAngle) { 
+			ag = FlxMath.lerp(ag, ta, spd * 0.5); 
+			FlxG.camera.angle = ag; 
+		}
+	}
+
+	override function onSongRetry(e) { resetFollow(); }
+	override function onDestroy(e) { resetFollow(); }
+	override function onSongEnd(e) { resetFollow(); }
+	override function onSongStart(e) { resetFollow(); }
+
+	private function resetFollow(st:Bool = true) {
+		if (enableAngle) { ta = 0; }
+		tpp.set(0, 0);
+		active = st;
+	}
+}

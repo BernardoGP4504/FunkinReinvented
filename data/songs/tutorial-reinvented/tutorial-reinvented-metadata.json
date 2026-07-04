@@ -1,0 +1,33 @@
+{
+	"version": "2.2.4",
+	"songName": "Preface",
+	"artist": "Jujuzinha",
+	"charter": "magnífic0",
+	"offsets": {},
+	"playData": {
+		"difficulties": ["hard"],
+		"characters": {
+			"player": "bf-r",
+			"opponent": "gf-r",
+			"instrumental": "",
+			"opponentVocals": ["gf-reinvented"],
+			"playerVocals": ["bf-reinvented"]
+		},
+		"stage": "mainStageReinvented",
+                "stickerPack": "standard-reinvented",
+		"noteStyle": "reinvented",
+		"ratings": {
+			"hard": 3
+		},
+		"album": "volume1"
+	},
+	"generatedBy": "Friday Night Funkin' - v0.8.4",
+	"timeChanges": [
+		{
+			"t": 0,
+			"b": 0,
+			"bpm": 100,
+			"bt": [4, 4, 4, 4]
+		}
+	]
+}

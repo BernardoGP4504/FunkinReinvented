@@ -1,0 +1,71 @@
+import flixel.tweens.FlxTween;
+import flixel.FlxCamera;
+import flixel.tweens.FlxEase;
+import flixel.FlxG;
+import flixel.util.FlxSave;
+
+import funkin.Conductor;
+
+import funkin.play.PlayState;
+import funkin.modding.module.ModuleHandler;
+
+
+import funkin.play.event.ScriptedSongEvent;
+
+class FlashCamEvent extends ScriptedSongEvent{
+    static var DEFAULTwhite_DURATION:Float = 4.0;
+
+    var flashingLights = false;
+    var options;
+
+    public function new(){
+        super('FlashTHECam');
+        
+    }
+    public override function create(dat)
+    {
+        super.create(dat);
+        options = ModuleHandler.getModule("optionsUtils");
+        flashingLights=options.scriptGet("flashingLights");
+    }
+
+    public override function handleEvent(data):Void{
+        var whiteduration:Float = data.getFloat('theduration') ?? DEFAULTwhite_DURATION;
+        var white = Std.parseInt(data.getString("thecolor"));
+        var durSeconds = Conductor.instance.stepLengthMs * whiteduration / 1000;
+        if(flashingLights)
+        {
+            FlxG.camera.flash(white, durSeconds);
+        }
+        else
+        {
+            trace("Flashing Lights Are Disabled!!!");
+        }
+    }
+
+    public override function getTitle():String
+    {
+        return 'Flash Cam';
+    }
+
+    public override function getEventSchema()
+    {
+        return([
+        {
+            name: 'theduration',
+            title: 'Duration',
+            defaultValue: 4.0,
+            step: 0.5,
+            type: 'float',
+            units: 'steps'
+        },
+        {
+            name: 'thecolor',
+            title: 'COLOR',
+            defaultValue: "0x00BABABA",
+            type: 'string',
+        }
+    
+    ]);
+    }
+}

@@ -1,0 +1,22 @@
+{
+	"version": "1.1.0",
+	"name": "Bullets",
+	"author": "BerGP",
+	"fallback": "reinvented",
+	"assets": {
+		"note": {
+			"assetPath": "DodgeNotes",
+			"scale": 0.75,
+			"data": {
+				"left": { "prefix": "purple0" },
+				"down": { "prefix": "blue0" },
+				"up": { "prefix": "green0" },
+				"right": { "prefix": "red0" }
+			}
+		},
+		"noteSplash": {
+			"assetPath": "SplashesR",
+			"data": { "enabled": false }
+		}
+	}
+}

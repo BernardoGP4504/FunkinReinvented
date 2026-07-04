@@ -1,0 +1,247 @@
+import funkin.play.event.ScriptedSongEvent;
+import funkin.modding.module.Module;
+import funkin.modding.module.ModuleHandler;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import funkin.Conductor;
+import funkin.util.ReflectUtil;
+
+
+class CinematicBarsEvent extends ScriptedSongEvent
+{
+    var reset:Module;
+    var tweening:Bool = false;
+
+    function new()
+    {
+        super("cinematicBarsEvent");
+        
+    }
+    override function getTitle() 
+    {
+        return "Cinematic Bars";
+    }
+
+    
+
+    override function handleEvent(data):Void 
+    {
+        reset = ModuleHandler.getModule("cinematicBarsResetHandler");
+        var res = data.getBool("reset");
+        var ins = data.getBool("instant");
+        var am = data.getFloat("amount");
+        var tim = data.getFloat("duration");
+
+        var eas:Null<String> = data.getString('ease') ?? "linear";
+        var easDir:String = data.getString('easeDir') ?? "In";
+
+        var timSeconds = Conductor.instance.stepLengthMs * tim / 1000;
+        var easeFunctionName = '$eas$easDir';
+        var easeFunction:Null<Float->Float> = ReflectUtil.getField(FlxEase, easeFunctionName);
+
+        var ul = reset.scriptGet("upperLine");
+        var ll = reset.scriptGet("lowerLine");
+        if(!res){
+            if(!ins){
+                trace("using ease:"+eas);
+                if (ul != null){
+                    tweening = true;
+                    FlxTween.tween(ul,{y:(-500 + am)}, timSeconds,{ease: easeFunction ,onComplete: (t:FlxTween) -> {twening = false;} });
+                }
+                else{
+                    trace("UpperLine is NULL");
+                }
+                if (ll != null){
+                    tweening = true;
+                    FlxTween.tween(ll,{y:(FlxG.height - am)}, timSeconds,{ease: easeFunction, onComplete: (t:FlxTween) -> {twening = false;} });
+                }else{
+                    trace("LowerLine is NULL");
+                }
+            }
+            else
+            {
+                if (ul != null){
+                    ul.y = -500+am;
+                }
+                else{
+                    trace("UpperLine is NULL");
+                }
+                if (ll != null){
+                    ll.y = FlxG.height-am; 
+                }else{
+                    trace("LowerLine is NULL");
+                }
+            }
+        }
+        else
+        {
+            trace("resetting by EVENT!!!!");
+            if(!ins){
+                if (ul != null){
+                    tweening = true;
+                    FlxTween.tween(ul,{y:(-500)}, timSeconds,{ease: easeFunction ,onComplete: (t:FlxTween) -> {twening = false;} });
+                }
+                else{
+                    trace("UpperLine is NULL");
+                }
+                if (ll != null){
+                    tweening = true;
+                    FlxTween.tween(ll,{y:(FlxG.height)}, timSeconds,{ease: easeFunction, onComplete: (t:FlxTween) -> {twening = false;} });
+                }else{
+                    trace("LowerLine is NULL");
+                }
+            }
+            else{
+                if (ul != null){
+                    ul.y = -500;
+                }
+                else{
+                    trace("UpperLine is NULL");
+                }
+                if (ll != null){
+                    ll.y = FlxG.height; 
+                }else{
+                    trace("LowerLine is NULL");
+                }
+            }
+        }
+    }
+
+    override function getEventSchema() 
+    {
+        return [
+            { 
+                name: "reset", 
+                title: "Reset", 
+                type: "bool", 
+                defaultValue: false 
+            },
+            { 
+                name: "instant", 
+                title: "Instant", 
+                type: "bool", 
+                defaultValue: false 
+            },
+            {
+                name: "amount",
+                title: "Amount",
+                defaultValue: 100,
+                step: 1.0,
+                type: "float",
+                units: "px"
+            },
+            {
+                name: 'duration',
+                title: 'Duration',
+                defaultValue: 4,
+                min: 0,
+                step: 0.5,
+                type:"float",
+                units: 'steps'
+            }, 
+            {
+                name: 'ease',
+                title: 'Easing Type',
+                defaultValue: "linear",
+                type: "enum",
+                keys: ['Linear' => 'linear', 'Sine' => 'sine', 'Quad' => 'quad', 'Cube' => 'cube', 'Quart' => 'quart', 'Quint' => 'quint', 'Expo' => 'expo', 'Smooth Step' => 'smoothStep', 'Smoother Step' => 'smootherStep', 'Elastic' => 'elastic', 'Back' => 'back', 'Bounce' => 'bounce', 'Circ ' => 'circ',]
+            }, 
+            {
+                name: 'easeDir',
+                title: 'Easing Direction',
+                defaultValue: "In",
+                type: "enum",
+                keys: ['In' => 'In', 'Out' => 'Out', 'In/Out' => 'InOut']
+            }
+        ];
+    }
+}
+
+import funkin.play.PlayState;
+import flixel.FlxSprite;
+import flixel.util.FlxColor;
+import flixel.group.FlxGroup;
+
+class CinematicBarsResetHandler extends Module
+{
+    private var upperLine:FlxSprite;
+    private var lowerLine:FlxSprite;
+    var lineGroup:FlxGroup;
+
+    function new()
+    {
+        super("cinematicBarsResetHandler");
+    }
+    override function handleEvent(data)
+    {
+        trace(data.getTitle());
+    }
+
+    override function onCountdownStart(event:CountdownScriptEvent)
+    {
+        super.onCountdownStart(event);
+        resetGroup();
+    }
+
+    override function onSongStart(event){
+        super.onSongStart(event);
+        resetGroup();
+    }
+
+    override function onSongRetry(event:SongRetryEvent)
+    {
+        super.onSongRetry(event);
+        resetGroup();
+    }
+
+    override function onSongLoaded(event:SongLoadScriptEvent)
+    {
+        super.onSongLoaded(event);
+        resetGroup();
+    }
+
+    function resetGroup(){
+        trace("RESETTING!!!!!!");
+        delGroup();
+        lineGroup = new FlxGroup();
+
+        upperLine = new FlxSprite(0,-500);
+        upperLine.makeGraphic(FlxG.width, 500, FlxColor.BLACK);
+
+        lowerLine = new FlxSprite(0,FlxG.height);
+        lowerLine.makeGraphic(FlxG.width, 500, FlxColor.BLACK);
+
+        if(PlayState != null && PlayState.instance != null){
+            if(PlayState.instance.camHUD != null){
+                var stage = PlayState.instance;
+                lineGroup.add(upperLine);
+                lineGroup.add(lowerLine);
+                lineGroup.cameras = [PlayState.instance.camHUD];
+                stage.add(lineGroup);
+                stage.refresh();
+                lineGroup.visible = true;
+            }
+            else{
+                trace("HUD is null!");
+            }
+        }
+        else{
+            trace("Playstate is null!");
+        }
+    }
+
+    override function onGameOver(event:ScriptEvent)
+    {
+        super.onGameOver(event);
+        resetGroup();
+    }
+
+    function delGroup(){
+        if(upperLine != null){
+            upperLine.destroy();
+        }
+        if(lowerLine != null){
+            lowerLine.destroy();
+        }
+    }
+}

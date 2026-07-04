@@ -1,0 +1,67 @@
+{
+ "version": "1.0.2",
+ "name": "Main Stage (Reinvented)",
+ "props": [
+  {
+   "assetPath": "stageback-r",
+   "atlasSettings": null,
+   "name": "stageBack",
+   "position": [-600, -200],
+   "scale": 1,
+   "scroll": [0.9, 0.9],
+   "startingAnimation": null
+  },
+  {
+   "assetPath": "stagefront-r",
+   "atlasSettings": null,
+   "name": "stageFront",
+   "position": [-650, 600],
+   "scale": 1.1,
+   "scroll": [0.9, 0.9],
+   "startingAnimation": null,
+   "zIndex": 1
+  },
+  {
+   "assetPath": "server",
+   "atlasSettings": null,
+   "name": "stuff",
+   "position": [394, 144],
+   "scale": 0.95,
+   "scroll": [0.9, 0.9],
+   "startingAnimation": null,
+   "zIndex": 1
+  },
+  {
+   "assetPath": "stagecurtains-r",
+   "atlasSettings": null,
+   "name": "stageCurtains",
+   "position": [-703, -169],
+   "scale": [
+	1.14,
+	1.24
+],
+   "scroll": [1.5, 1.5],
+   "startingAnimation": null,
+   "zIndex": 5
+  }
+ ],
+ "characters": {
+  "bf": {
+   "cameraOffsets": [-100, -100],
+   "position": [989.5, 885],
+   "zIndex": 4
+  },
+  "dad": {
+   "cameraOffsets": [150, -100],
+   "position": [335, 885],
+   "zIndex": 3
+  },
+  "gf": {
+   "cameraOffsets": [0, 0],
+   "position": [751.5, 787],
+   "zIndex": 2
+  }
+ },
+ "cameraZoom": 0.9,
+ "directory": "week1"
+}

@@ -1,0 +1,30 @@
+{
+	"version": "2.2.4",
+	"generatedBy": "Psych Engine 1.0.4 to Friday Night Funkin' Converter - BETA",
+	"songName": "Blammed (Reinvented)",
+	"playData": {
+		"difficulties": ["hard"],
+		"stage": "phillyTrainReinvented",
+		"noteStyle": "reinvented",
+		"ratings": {
+			"hard": 7
+		},
+		"characters": {
+			"player": "bf-r",
+			"girlfriend": "gf-r",
+			"opponent": "pico-r"
+		},
+		"album": "volume1",
+		"stickerPack": "standard-reinvented"
+	},
+	"timeChanges": [
+		{
+			"t": 0,
+			"b": 0,
+			"bpm": 170,
+			"bt": [4, 4, 4, 4]
+		}
+	],
+	"artist": "THMPlays",
+	"charter": "magnífic0"
+}

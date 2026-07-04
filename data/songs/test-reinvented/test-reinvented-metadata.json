@@ -1,0 +1,39 @@
+{
+ "version": "2.2.4",
+ "songName": "Test (Reinvented)",
+ "artist": "AeFelipe",
+ "charter": "magnífic0",
+ "offsets": { },
+ "playData": {
+  "difficulties": [
+   "hard"
+  ],
+  "characters": {
+   "player": "bf-r",
+   "girlfriend": "gf-r",
+   "opponent": "bf-pixel-r-op",
+   "opponentVocals": [
+    "bf-pixel-r-opp"
+   ],
+   "playerVocals": [
+    "bf-r"
+   ]
+  },
+  "stage": "mainStage",
+  "noteStyle": "reinvented",
+  "ratings": {
+   "hard": 4
+  },
+  "stickerPack": "bf-reinvented",
+  "previewEnd": 80
+ },
+ "generatedBy": "Friday Night Funkin' - v0.8.4",
+ "timeChanges": [
+  {
+   "t": 0,
+   "b": 0,
+   "bpm": 150,
+   "bt": [4, 4, 4, 4]
+  }
+ ]
+}

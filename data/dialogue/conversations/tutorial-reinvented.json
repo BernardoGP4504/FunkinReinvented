@@ -1,0 +1,66 @@
+{
+	"version": "1.0.0",
+
+	"music": {
+		"asset": "breakfast-reinvented/breakfast-reinvented",
+		"fadeTime": 1.5
+	},
+
+	"backdrop": {
+		"type": "solid",
+		"fadeTime": 2.0,
+		"color": "#6F000000"
+	},
+
+	"outro": {
+		"type": "fade",
+		"fadeTime": 1.0
+	},
+
+	"dialogue": [
+		{
+			"speaker": "senpai",
+			"speakerAnimation": "talkEnter",
+			"box": "default",
+			"boxAnimation": "idleLeft",
+
+			"text": ["Hey BF! What's up?"]
+		},
+		{
+			"speaker": "bf-pixel",
+			"speakerAnimation": "talk",
+			"box": "default",
+			"boxAnimation": "idle",
+
+			"text": ["I can't believe today's the day I'm meeting your dad..."]
+		},
+		{
+			"speaker": "senpai",
+			"speakerAnimation": "talkEnter",
+			"box": "default",
+			"boxAnimation": "idleLeft",
+
+			"text": [
+				"You bet, I thought it would take longer too, but he's super paranoid about who I'm dating..."
+			]
+		},
+		{
+			"speaker": "bf-pixel",
+			"speakerAnimation": "talk",
+			"box": "default",
+			"boxAnimation": "idle",
+
+			"text": [
+				"Maybe I'm not being the most confident right now, but...can we practice?"
+			]
+		},
+		{
+			"speaker": "senpai",
+			"speakerAnimation": "talkEnter",
+			"box": "default",
+			"boxAnimation": "idleLeft",
+
+			"text": ["Of course, babe! Just follow my lead!"]
+		}
+	]
+}

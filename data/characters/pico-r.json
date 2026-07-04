@@ -1,0 +1,133 @@
+{
+	"version": "1.0.0",
+	"renderType": "sparrow",
+	"offsets": [
+		0,
+		0
+	],
+	"danceEvery": 1,
+	"applyStageMatrix": false,
+	"scale": 1,
+	"flipX": true,
+	"name": "PicoR",
+	"cameraOffsets": [
+		0,
+		0
+	],
+	"startingAnimation": "idle",
+	"isPixel": false,
+	"singTime": 8,
+	"assetPath": "characters/PICO-REIN/futureSPRITEMAP",
+	"healthIcon": {
+		"isPixel": false,
+		"offsets": [
+			0,
+			0
+		],
+		"scale": 1,
+		"id": "pico-r",
+		"flipX": false
+	},
+	"atlasSettings": {
+		"swfMode": true,
+		"applyStageMatrix": false,
+		"useRenderTexture": false,
+		"filterQuality": 1,
+		"cacheOnLoad": false
+	},
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "Pico Idle Dance",
+			"name": "idle",
+			"looped": false,
+			"flipX": false,
+			"animType": "framelabel"
+		},
+		{
+			"offsets": [
+				-86,
+				-10
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "Pico NOTE LEFT0",
+			"name": "singRIGHT",
+			"looped": false,
+			"flipX": false,
+			"animType": "framelabel"
+		},
+		{
+			"offsets": [
+				173,
+				-77
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "Pico Down Note0",
+			"name": "singDOWN",
+			"looped": false,
+			"flipX": false,
+			"animType": "framelabel"
+		},
+		{
+			"offsets": [
+				-42,
+				33
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "pico Up note0",
+			"name": "singUP",
+			"looped": false,
+			"flipX": false,
+			"animType": "framelabel"
+		},
+		{
+			"offsets": [
+				30,
+				-8
+			],
+			"prefix": "Pico Reload0",
+			"name": "cock",
+			"looped": false,
+			"animType": "framelabel",
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": "characters/PICO-REIN/Pico_Shooting"
+		},
+		{
+			"offsets": [
+				30,
+				232
+			],
+			"prefix": "Pico Shoot Hip Full0",
+			"name": "shoot",
+			"looped": false,
+			"animType": "framelabel",
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": "characters/PICO-REIN/Pico_Shooting"
+		},
+		{
+			"offsets": [
+				51,
+				2
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "Pico Note Right0",
+			"name": "singLEFT",
+			"looped": false,
+			"flipX": false,
+			"animType": "framelabel"
+		}
+	]
+}

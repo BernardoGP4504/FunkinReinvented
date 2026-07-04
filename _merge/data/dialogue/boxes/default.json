@@ -1,0 +1,53 @@
+[
+	[
+		{ "op": "replace", "path": "/scale", "value": 1 },
+		{ "op": "replace", "path": "/offsets", "value": [-580, 0] },
+		{ "op": "replace", "path": "/isPixel", "value": false }
+	],
+	[
+		{ "op": "replace", "path": "/text/width", "value": 1035 },
+		{ "op": "replace", "path": "/text/offsets", "value": [80, 130] },
+		{ "op": "remove", "path": "/text/fontFamily" },
+		{ "op": "remove", "path": "/text/color" },
+		{ "op": "replace", "path": "/text/shadowColor", "value": "transparent" },
+		{ "op": "remove", "path": "/text/shadowWidth" }
+	],
+	[
+		{
+			"op": "replace",
+			"path": "/animations/0/prefix",
+			"value": "Speech Bubble Normal Open"
+		},
+		{
+			"op": "add",
+			"path": "/animations/0/offsets",
+			"value": [-60, 0]
+		},
+		{
+			"op": "add",
+			"path": "/animations/1/looped",
+			"value": true
+		},
+
+		{
+			"op": "add",
+			"path": "/animations/-",
+			"value": {
+				"name": "enterLeft",
+				"prefix": "Speech Bubble Normal Open",
+				"flipX": true,
+				"offsets": [-30, 0]
+			}
+		},
+		{
+			"op": "add",
+			"path": "/animations/-",
+			"value": {
+				"name": "idleLeft",
+				"prefix": "speech bubble normal",
+				"flipX": true,
+				"looped": true
+			}
+		}
+	]
+]
