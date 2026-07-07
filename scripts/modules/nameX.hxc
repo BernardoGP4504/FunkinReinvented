@@ -5,11 +5,11 @@ import Std; //have safe sex
 import lime.graphics.Image;
 import lime.app.Application;
 
-class NameX extends Module{
+class NameX extends Module
+{
 	public function new()
 	{
 		super('namex', 1000);
-
     #if !sys active = false; #end
 	}
 
@@ -25,6 +25,6 @@ class NameX extends Module{
 		super.onUpdate(event);
 		if(Std.isOfType(FlxG.state,PlayState)) return "my booty itches";
 
-    DiscordClient.setPresence({state: "In the Menus", details:"Reinvented Edition", largeImageKey:"https://raw.githubusercontent.com/FunkinCrew/funkin.art/429ab728b19272dca834c83d97b1646455b22579/icons/bf-iOS-Default-1024x1024.png"});
+    DiscordClient.setPresence({state: "In the Menus", details:"Reinvented Edition", largeImageKey: "https://raw.githubusercontent.com/BernardoGP4504/FunkinReinvented/main/_polymod_icon.png"});
 	}
 }
