@@ -1,3 +1,4 @@
+import funkin.play.PlayState;
 import funkin.play.notes.notekind.NoteKind;
 import funkin.util.Constants;
 
@@ -9,14 +10,22 @@ class ReinventedBlammedNote extends NoteKind
 		this.scoreable = false;
 	}
 
+	override function onNoteHit(event:NoteScriptEvent)
+	{
+		PlayState.instance.currentStage.getDad()?.playAnimation('shoot', true, true);
+	}
+
 	override function onNoteMiss(event:NoteScriptEvent)
 	{
-		event.healthChange = -6.25 / 100 * Constants.HEALTH_MAX;
+		PlayState.instance.currentStage.getDad()?.playAnimation('shoot', true, true);
+
+		event.healthChange = -10 / 100 * Constants.HEALTH_MAX;
 		event.playSound = false;
 	}
 
 	override function onNoteIncoming(event:NoteScriptEvent)
 	{
+		PlayState.instance.currentStage.getDad()?.playAnimation('cock');
 		event.note.offset.x = 42;
 	}
 }

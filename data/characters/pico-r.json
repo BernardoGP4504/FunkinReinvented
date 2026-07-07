@@ -1,29 +1,20 @@
 {
 	"version": "1.0.0",
-	"renderType": "sparrow",
-	"offsets": [
-		0,
-		0
-	],
+	"renderType": "multisparrow",
+	"offsets": [0, 0],
 	"danceEvery": 1,
 	"applyStageMatrix": false,
 	"scale": 1,
 	"flipX": true,
 	"name": "PicoR",
-	"cameraOffsets": [
-		0,
-		0
-	],
+	"cameraOffsets": [0, 0],
 	"startingAnimation": "idle",
 	"isPixel": false,
 	"singTime": 8,
 	"assetPath": "characters/PICO-REIN/futureSPRITEMAP",
 	"healthIcon": {
 		"isPixel": false,
-		"offsets": [
-			0,
-			0
-		],
+		"offsets": [0, 0],
 		"scale": 1,
 		"id": "pico-r",
 		"flipX": false
@@ -37,10 +28,7 @@
 	},
 	"animations": [
 		{
-			"offsets": [
-				0,
-				0
-			],
+			"offsets": [0, 0],
 			"flipY": false,
 			"frameRate": 24,
 			"prefix": "Pico Idle Dance",
@@ -50,10 +38,7 @@
 			"animType": "framelabel"
 		},
 		{
-			"offsets": [
-				-86,
-				-10
-			],
+			"offsets": [-86, -10],
 			"flipY": false,
 			"frameRate": 24,
 			"prefix": "Pico NOTE LEFT0",
@@ -63,10 +48,7 @@
 			"animType": "framelabel"
 		},
 		{
-			"offsets": [
-				173,
-				-77
-			],
+			"offsets": [173, -77],
 			"flipY": false,
 			"frameRate": 24,
 			"prefix": "Pico Down Note0",
@@ -76,10 +58,7 @@
 			"animType": "framelabel"
 		},
 		{
-			"offsets": [
-				-42,
-				33
-			],
+			"offsets": [-42, 33],
 			"flipY": false,
 			"frameRate": 24,
 			"prefix": "pico Up note0",
@@ -89,10 +68,7 @@
 			"animType": "framelabel"
 		},
 		{
-			"offsets": [
-				30,
-				-8
-			],
+			"offsets": [30, -8],
 			"prefix": "Pico Reload0",
 			"name": "cock",
 			"looped": false,
@@ -103,10 +79,7 @@
 			"assetPath": "characters/PICO-REIN/Pico_Shooting"
 		},
 		{
-			"offsets": [
-				30,
-				232
-			],
+			"offsets": [30, 232],
 			"prefix": "Pico Shoot Hip Full0",
 			"name": "shoot",
 			"looped": false,
@@ -117,10 +90,7 @@
 			"assetPath": "characters/PICO-REIN/Pico_Shooting"
 		},
 		{
-			"offsets": [
-				51,
-				2
-			],
+			"offsets": [51, 2],
 			"flipY": false,
 			"frameRate": 24,
 			"prefix": "Pico Note Right0",

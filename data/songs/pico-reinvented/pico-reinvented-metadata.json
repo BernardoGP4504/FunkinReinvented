@@ -1,0 +1,31 @@
+{
+	"version": "2.2.4",
+	"generatedBy": "Psych Engine 1.0.4 to Friday Night Funkin' Converter - BETA",
+	"songName": "Pico (Reinvented)",
+	"playData": {
+		"difficulties": ["hard"],
+		"stage": "phillyTrainReinvented",
+		"noteStyle": "reinvented",
+		"ratings": {
+			"hard": 5
+		},
+		"characters": {
+			"player": "bf-r",
+			"girlfriend": "gf-r",
+			"opponent": "pico-r",
+			"opponentVocals": ["Opponent"],
+			"playerVocals": ["Player"]
+		},
+		"album": "volume1"
+	},
+	"timeChanges": [
+		{
+			"t": 0,
+			"b": 0,
+			"bpm": 150,
+			"bt": [4, 4, 4, 4]
+		}
+	],
+	"artist": "Jujuzinha",
+	"charter": "magnífic0"
+}
