@@ -1,0 +1,88 @@
+{
+  "version": "1.0.0",
+  "name": "Boyfriend Reinvented (Car)",
+  "assetPath": "shared:characters/BF-REINVENTED/car",
+  "renderType": "animateatlas",
+  "healthIcon": {
+    "id": "bf-r"
+  },
+  "flipX": true,
+  "singTime": 8.0,
+  "offsets": [17, 3],
+  "cameraOffsets": [-17, 36],
+  "atlasSettings": {
+    "swfMode": false
+  },
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "BF idle dance"
+    },
+    {
+      "name": "idle-hold",
+      "prefix": "BF idle dance",
+      "frameIndices": [10, 11, 12, 13],
+      "looped": true
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "BF NOTE LEFT"
+    },
+    {
+      "name": "singLEFT-hold",
+      "prefix": "BF NOTE LEFT0",
+      "frameIndices": [10, 11, 12, 13],
+      "looped": true
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "BF NOTE DOWN"
+    },
+    {
+      "name": "singDOWN-hold",
+      "prefix": "BF NOTE DOWN0",
+      "frameIndices": [10, 11, 12, 13],
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "BF NOTE UP"
+    },
+    {
+      "name": "singUP-hold",
+      "prefix": "BF NOTE UP0",
+      "frameIndices": [10, 11, 12, 13],
+      "looped": true
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "BF NOTE RIGHT"
+    },
+    {
+      "name": "singRIGHT-hold",
+      "prefix": "BF NOTE RIGHT0",
+      "frameIndices": [10, 11, 12, 13],
+      "looped": true
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "BF NOTE LEFT MISS"
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "BF NOTE DOWN MISS"
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "BF NOTE UP MISS"
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "BF NOTE RIGHT MISS"
+    },
+    {
+      "name": "hey",
+      "prefix": "BF HEY!!"
+    }
+  ]
+}

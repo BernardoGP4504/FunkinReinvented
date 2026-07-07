@@ -5,6 +5,7 @@
 	"playData": {
 		"difficulties": ["hard"],
 		"stage": "phillyTrainReinvented",
+		"stickerPack": "standard-reinvented",
 		"noteStyle": "reinvented",
 		"ratings": {
 			"hard": 5
