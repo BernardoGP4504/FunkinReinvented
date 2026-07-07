@@ -11,7 +11,7 @@ class camFollow extends Module {
 	}
 
 	//CONFIG
-	public static var move:Int = 10;
+	public static var move:Int = 15;
 	public static var mult:Float = 0.0035;
 	public static var spd:Float = 0.8;
 	public static var enableAngle:Bool = false;
@@ -80,6 +80,7 @@ class camFollow extends Module {
 	private function resetFollow(st:Bool = true) {
 		if (enableAngle) { ta = 0; }
 		tpp.set(0, 0);
+		opq.set(0, 0);
 		active = st;
 	}
 }
