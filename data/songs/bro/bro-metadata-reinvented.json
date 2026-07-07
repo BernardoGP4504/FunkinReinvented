@@ -6,7 +6,7 @@
  "offsets": { },
  "playData": {
   "difficulties": [
-   "hard"
+   "extras"
   ],
   "characters": {
    "player": "bf-r",
@@ -22,7 +22,7 @@
   "stage": "basementErect",
   "noteStyle": "reinvented",
   "ratings": {
-   "hard": 5
+   "extras": 5
   },
   "previewEnd": 0
  },
