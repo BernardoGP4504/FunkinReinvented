@@ -1,0 +1,38 @@
+{
+ "version": "2.2.4",
+ "songName": "Bro (Reinvented)",
+ "artist": "Kawai Sprite (feat. Ven0msGh0st)",
+ "charter": "magnífic0",
+ "offsets": { },
+ "playData": {
+  "difficulties": [
+   "hard"
+  ],
+  "characters": {
+   "player": "bf-r",
+   "girlfriend": "gf-r",
+   "opponent": "bingo",
+   "opponentVocals": [
+    "dad"
+   ],
+   "playerVocals": [
+    "bf"
+   ]
+  },
+  "stage": "basementErect",
+  "noteStyle": "reinvented",
+  "ratings": {
+   "hard": 5
+  },
+  "previewEnd": 0
+ },
+ "generatedBy": "Friday Night Funkin' - v0.8.4",
+ "timeChanges": [
+  {
+   "t": 0,
+   "b": 0,
+   "bpm": 190,
+   "bt": [4, 4, 4, 4]
+  }
+ ]
+}
