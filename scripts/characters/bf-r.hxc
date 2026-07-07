@@ -1,13 +1,10 @@
 import funkin.play.PauseSubState;
-import flixel.effects.FlxFlicker;
 import funkin.play.GameOverSubState;
+import funkin.play.character.AnimateAtlasCharacter;
 
-class BoyfriendReinventedCharacter extends MultiAnimateAtlasCharacter
+class BoyfriendReinventedCharacter extends AnimateAtlasCharacter
 {
-  function new()
-  {
-    super('bf-r');
-  }
+  function new() { super('bf-r'); }
 
   function onCreate(event:ScriptEvent)
   {
@@ -16,8 +13,6 @@ class BoyfriendReinventedCharacter extends MultiAnimateAtlasCharacter
     GameOverSubState.musicSuffix = '-reinvented';
     PauseSubState.musicSuffix = '-reinvented';
     GameOverSubState.animationSuffix = "";
-
-    FunkinMemory.cacheSound(Paths.sound('Pico_Bonk', "weekend1"));
   }
 
   override function onSongRetry(event:ScriptEvent):Void
@@ -28,12 +23,10 @@ class BoyfriendReinventedCharacter extends MultiAnimateAtlasCharacter
     GameOverSubState.musicSuffix = '-reinvented';
     GameOverSubState.blueBallSuffix = "";
     GameOverSubState.animationSuffix = "";
-
-    PauseSubState.musicSuffix = '-remnants';
+    PauseSubState.musicSuffix = '-reinvented';
 
     bfDeathExplosion = null;
     this.visible = true;
-  }
 
     // Bugfix!
     if (["firstDeath", "deathLoop", "deathConfirm"].contains(name) && GameOverSubState.animationSuffix.length > 0)
@@ -58,7 +51,8 @@ class BoyfriendReinventedCharacter extends MultiAnimateAtlasCharacter
     }
 
     // Make the camera to center BF more.
-    GameOverSubState.instance.cameraFollowPoint.x -= 50;
+    /* GameOverSubState.instance.cameraFollowPoint.x -= 50;
     GameOverSubState.instance.cameraFollowPoint.y += 100;
-    GameOverSubState.instance.targetCameraZoom = 0.95;
+    GameOverSubState.instance.targetCameraZoom = 0.95; */
+	}
 }
