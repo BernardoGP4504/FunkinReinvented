@@ -1,0 +1,22 @@
+import funkin.play.song.Song;
+import funkin.play.PlayState;
+
+class PicoReinventedSong extends Song {
+
+	public function new() {
+		super('pico-reinvented');
+	}
+
+	function onCountdownStart(event:CountdownScriptEvent):Void {
+		super.onCountdownStart(event);
+
+		// Pegando a referência da GF
+		var currentSpectator = PlayState.instance.currentStage.getGirlfriend();
+		
+		// Diminuindo a velocidade da batida da da GF
+		if(currentSpectator != null)
+		{
+			currentSpectator.danceEvery = 2;
+		}
+	}
+}
