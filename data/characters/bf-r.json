@@ -1,6 +1,6 @@
 {
 	"version": "1.0.0",
-	"renderType": "animateatlas",
+	"renderType": "multianimateatlas",
 	"offsets": [
 		17,
 		14
@@ -257,6 +257,13 @@
 			"animType": "symbol",
 			"name": "singRIGHTmiss"
 		},
+		{
+            "assetPath": "shared:characters/BF-REINVENTED/dead",
+            "name": "death",
+            "prefix": "fake out death BF",
+            "animType": "symbol",
+            "offsets": [-3, -65]
+        },
 		{
 			"flipY": false,
 			"offsets": [

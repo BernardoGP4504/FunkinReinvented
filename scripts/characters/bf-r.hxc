@@ -1,58 +1,67 @@
-import funkin.play.PauseSubState;
+import funkin.audio.FunkinSound;
 import funkin.play.GameOverSubState;
-import funkin.play.character.AnimateAtlasCharacter;
+import funkin.play.character.MultiAnimateAtlasCharacter;
+import funkin.play.PlayState;
+import funkin.FunkinMemory;
 
-class BoyfriendReinventedCharacter extends AnimateAtlasCharacter
+class BoyfriendReinventedCharacter extends MultiAnimateAtlasCharacter
 {
-  function new() { super('bf-r'); }
+  function new()
+  {
+    super('bf-r');
+  }
 
   function onCreate(event:ScriptEvent)
   {
     super.onCreate(event);
 
+    // Configurações de áudio
     GameOverSubState.musicSuffix = '-reinvented';
-    PauseSubState.musicSuffix = '-reinvented';
     GameOverSubState.animationSuffix = "";
+    GameOverSubState.blueBallSuffix = "";
+
+    // Pré-carrega o som do fakeout death
+    FunkinMemory.cacheSound(Paths.sound("gameplay/gameover/fakeout_death"));
+  }
+
+  override function playAnimation(name:String, restart:Bool = false, ignoreOther:Bool = false, reversed:Bool = false)
+  {
+    super.playAnimation(name, restart, ignoreOther, reversed);
+
+    // Se a animação for fakeoutDeath e não estiver no editor, executa
+    if (name == "death" && !this.debug)
+    {
+      doDeath();
+    }
+  }
+
+  function doDeath():Void
+  {
+    // Toca o som do fakeout
+    FunkinSound.playOnce(Paths.sound("gameplay/gameover/fakeout_death"), 1.0);
+
+    // Impede que o jogador saia durante a animação
+    GameOverSubState.instance.mustNotExit = true;
+    
+    // Quando a animação terminar, vai para a morte normal
+    this.animation.onFinish.addOnce(() ->
+    {
+      GameOverSubState.instance.mustNotExit = false;
+      this.playAnimation('firstDeath', true);
+      // Toca o som de "blue balled"
+      GameOverSubState.playBlueBalledSFX();
+    });
   }
 
   override function onSongRetry(event:ScriptEvent):Void
   {
     super.onSongRetry(event);
 
-    // Reset to standard death animation.
+    // Restaura as configurações ao reiniciar a música
     GameOverSubState.musicSuffix = '-reinvented';
     GameOverSubState.blueBallSuffix = "";
     GameOverSubState.animationSuffix = "";
-    PauseSubState.musicSuffix = '-reinvented';
 
-    bfDeathExplosion = null;
     this.visible = true;
-
-    // Bugfix!
-    if (["firstDeath", "deathLoop", "deathConfirm"].contains(name) && GameOverSubState.animationSuffix.length > 0)
-    {
-      return playAnimation(name + GameOverSubState.animationSuffix, restart, ignoreOther);
-    }
-
-    // Do not create the sprites when on the animation editor.
-    if (!this.debug)
-    {
-      switch (name)
-      {
-        case "fakeoutDeath":
-          doFakeoutDeath();
-
-        case "firstDeath-explosion":
-          doExplosionDeath();
-
-        case "deathConfirm-explosion":
-          doExplosionConfirm();
-      }
-    }
-
-    // Make the camera to center BF more.
-    /* GameOverSubState.instance.cameraFollowPoint.x -= 50;
-    GameOverSubState.instance.cameraFollowPoint.y += 100;
-    GameOverSubState.instance.targetCameraZoom = 0.95; */
-	}
+  }
 }

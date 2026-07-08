@@ -1,0 +1,32 @@
+{
+	"version": "2.2.4",
+	"generatedBy": "V Slice",
+	"songName": "Spookeez (Reinvented)",
+	"playData": {
+		"difficulties": ["hard"],
+		"stage": "spookyMansionErect",
+		"stickerPack": "standard-reinvented",
+		"noteStyle": "reinvented",
+		"ratings": {
+			"hard": 5
+		},
+		"characters": {
+			"player": "bf-dark-r",
+			"girlfriend": "gf-dark",
+			"opponent": "spooky-dark",
+			"opponentVocals": ["spooky-dark"],
+			"playerVocals": ["bf-dark-r"]
+		},
+		"album": "volume1"
+	},
+	"timeChanges": [
+		{
+			"t": 0,
+			"b": 0,
+			"bpm": 150,
+			"bt": [4, 4, 4, 4]
+		}
+	],
+	"artist": "Write",
+	"charter": "magnífic0"
+}
