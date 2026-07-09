@@ -1,0 +1,41 @@
+{
+ "version": "2.2.4",
+ "songName": "High (Reinvented)",
+ "artist": "Pankdoe",
+ "charter": "Kerv66 + Magnífic0",
+ "offsets": { },
+ "playData": {
+  "difficulties": [
+   "hard"
+  ],
+  "characters": {
+   "player": "bf-car-r",
+   "girlfriend": "gf-car-r",
+   "opponent": "mom-r",
+   "instrumental": "reinvented",
+   "altInstrumentals": [  ],
+   "opponentVocals": [
+    "mom-r"
+   ],
+   "playerVocals": [
+    "bf-car-r"
+   ]
+  },
+  "stage": "limoRideReinvented",
+  "noteStyle": "reinvented",
+  "ratings": {
+   "hard": 5
+  },
+  "album": "volume1",
+  "previewEnd": 0.141945984821243
+ },
+ "generatedBy": "Friday Night Funkin' - v0.8.4",
+ "timeChanges": [
+  {
+   "t": 0,
+   "b": 0,
+   "bpm": 135,
+   "bt": [4, 4, 4, 4]
+  }
+ ]
+}
