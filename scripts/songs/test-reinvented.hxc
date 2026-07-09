@@ -9,24 +9,15 @@ import funkin.modding.module.ModuleHandler;
 import funkin.play.Countdown;
 import funkin.Conductor;
 
-class PicoReinventedSong extends Song {
+class TestReinventedSong extends Song {
     public function new() {
-        super('pico-reinvented');
+        super('test-reinvented', {});
     }
 
     public override function onCountdownStart(event:CountdownScriptEvent):Void {
         super.onCountdownStart(event);
-        
-        // === SKIP COUNTDOWN ===
         event.cancel();
         PlayState.instance.isInCountdown = true;
         Conductor.instance.update(0);
-        
-        // === GF SPEED ===
-        var currentSpectator = PlayState.instance.currentStage.getGirlfriend();
-        
-        if (currentSpectator != null) {
-            currentSpectator.danceEvery = 2; // Dança a cada 2 beats (mais lento)
-        }
     }
 }
