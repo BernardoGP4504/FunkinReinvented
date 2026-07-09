@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "cameraZoom": 0.9,
+  "cameraZoom": 0.88,
   "props": [
     {
       "zIndex": 10,
@@ -98,7 +98,7 @@
     {
       "zIndex": 30,
       "danceEvery": 1,
-      "position": [100, 100],
+      "position": [100, 80],
       "scale": [1, 1],
       "name": "limoDancer1",
       "animType": "sparrow",
@@ -148,7 +148,7 @@
     {
       "zIndex": 30,
       "danceEvery": 1,
-      "position": [400, 100],
+      "position": [400, 80],
       "scale": [1, 1],
       "name": "limoDancer2",
       "animType": "sparrow",
@@ -198,7 +198,7 @@
     {
       "zIndex": 30,
       "danceEvery": 1,
-      "position": [700, 100],
+      "position": [700, 80],
       "scale": [1, 1],
       "name": "limoDancer3",
       "animType": "sparrow",
@@ -248,7 +248,7 @@
     {
       "zIndex": 30,
       "danceEvery": 1,
-      "position": [1000, 100],
+      "position": [1000, 80],
       "scale": [1, 1],
       "name": "limoDancer4",
       "animType": "sparrow",
@@ -298,7 +298,7 @@
     {
       "zIndex": 30,
       "danceEvery": 1,
-      "position": [1300, 100],
+      "position": [1300, 80],
       "scale": [1, 1],
       "name": "limoDancer5",
       "animType": "sparrow",

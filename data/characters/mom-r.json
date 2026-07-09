@@ -3,7 +3,7 @@
   "name": "Mommy (Reinvented)",
   "assetPath": "characters/ReinventedMom",
   "healthIcon": {
-    "id": "momr"
+    "id": "mom-r"
   },
   "cameraOffsets": [0, -100],
   "animations": [

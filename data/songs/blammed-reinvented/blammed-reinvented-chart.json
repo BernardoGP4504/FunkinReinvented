@@ -5,6 +5,40 @@
  },
  "events": [
   {
+   "t": 0,
+   "e": "FocusCamera",
+   "v": {
+	"x": 0,
+	"duration": 4,
+	"y": 0,
+	"char": 2,
+	"ease": "CLASSIC",
+	"easeDir": "In"
+}
+  },
+  {
+   "t": 0,
+   "e": "ZoomCamera",
+   "v": {
+	"duration": 4,
+	"widescreenScaleX": 0,
+	"widescreenScaleY": 0,
+	"ease": "bounce",
+	"easeDir": "Out",
+	"zoom": 0.85,
+	"mode": "stage"
+}
+  },
+  {
+   "t": 0,
+   "e": "SetCameraBop",
+   "v": {
+	"rate": 1,
+	"intensity": 1,
+	"offset": 0
+}
+  },
+  {
    "t": 1411.76470588235,
    "e": "FocusCamera",
    "v": {
@@ -23,6 +57,64 @@
    "e": "FocusCamera",
    "v": {
 	"char": 0
+}
+  },
+  {
+   "t": 5647.05882352941,
+   "e": "FocusCamera",
+   "v": {
+	"x": 0,
+	"duration": 4,
+	"y": 0,
+	"char": 1,
+	"ease": "CLASSIC",
+	"easeDir": "In"
+}
+  },
+  {
+   "t": 7058.82352941176,
+   "e": "FocusCamera",
+   "v": {
+	"duration": 4,
+	"x": 0,
+	"y": 0,
+	"ease": "CLASSIC",
+	"char": 2,
+	"easeDir": "In"
+}
+  },
+  {
+   "t": 8382.35294117647,
+   "e": "ZoomCamera",
+   "v": {
+	"duration": 9,
+	"widescreenScaleX": 0,
+	"widescreenScaleY": 0,
+	"ease": "linear",
+	"easeDir": "In",
+	"zoom": 1,
+	"mode": "stage"
+}
+  },
+  {
+   "t": 8470.58823529412,
+   "e": "FocusCamera",
+   "v": {
+	"x": 0,
+	"duration": 4,
+	"y": 0,
+	"char": 2,
+	"ease": "CLASSIC",
+	"easeDir": "In"
+}
+  },
+  {
+   "t": 11294.1176470588,
+   "e": "SetCameraBop",
+   "v": {
+	"rate": 4,
+	"offset": 0,
+	"intensity": 1
 }
   },
   {
@@ -69,6 +161,15 @@
   },
   {
    "t": 45176.4705882353,
+   "e": "SetCameraBop",
+   "v": {
+	"rate": 2,
+	"intensity": 1.2,
+	"offset": 0
+}
+  },
+  {
+   "t": 45176.4705882353,
    "e": "FocusCamera",
    "v": {
 	"char": 1
@@ -89,6 +190,15 @@
 }
   },
   {
+   "t": 56470.5882352941,
+   "e": "SetCameraBop",
+   "v": {
+	"rate": 1,
+	"intensity": 1.2,
+	"offset": 0
+}
+  },
+  {
    "t": 62117.6470588235,
    "e": "FocusCamera",
    "v": {
@@ -100,6 +210,15 @@
    "e": "FocusCamera",
    "v": {
 	"char": 1
+}
+  },
+  {
+   "t": 67764.7058823529,
+   "e": "SetCameraBop",
+   "v": {
+	"rate": 4,
+	"intensity": 1.2,
+	"offset": 0
 }
   },
   {
@@ -121,6 +240,40 @@
    "e": "FocusCamera",
    "v": {
 	"char": 0
+}
+  },
+  {
+   "t": 90352.9411764706,
+   "e": "ZoomCamera",
+   "v": {
+	"duration": 9,
+	"widescreenScaleX": 0,
+	"widescreenScaleY": 0,
+	"ease": "quad",
+	"easeDir": "In",
+	"zoom": 0.85,
+	"mode": "stage"
+}
+  },
+  {
+   "t": 90352.9411764706,
+   "e": "SetCameraBop",
+   "v": {
+	"rate": 4,
+	"intensity": 1,
+	"offset": 0
+}
+  },
+  {
+   "t": 91764.7058823529,
+   "e": "FocusCamera",
+   "v": {
+	"x": 0,
+	"duration": 4,
+	"y": 50,
+	"char": 2,
+	"ease": "CLASSIC",
+	"easeDir": "In"
 }
   }
  ],

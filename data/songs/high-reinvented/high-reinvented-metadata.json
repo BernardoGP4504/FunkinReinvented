@@ -12,7 +12,7 @@
    "player": "bf-car-r",
    "girlfriend": "gf-car-r",
    "opponent": "mom-r",
-   "instrumental": "reinvented",
+   "instrumental": "",
    "altInstrumentals": [  ],
    "opponentVocals": [
     "mom-r"
@@ -26,6 +26,7 @@
   "ratings": {
    "hard": 5
   },
+  "stickerPack": "standard-reinvented",
   "album": "volume1",
   "previewEnd": 0.141945984821243
  },
