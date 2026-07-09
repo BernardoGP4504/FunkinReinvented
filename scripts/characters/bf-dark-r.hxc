@@ -4,7 +4,7 @@ import funkin.play.PlayState;
 import funkin.play.character.MultiAnimateAtlasCharacter;
 import funkin.util.HapticUtil;
 
-class BoyfriendDarkRCharacter extends MultiAnimateAtlasCharacter
+class BoyfriendDarkReinventedCharacter extends MultiAnimateAtlasCharacter
 {
   function new()
   {

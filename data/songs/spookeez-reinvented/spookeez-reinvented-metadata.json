@@ -8,12 +8,12 @@
 		"stickerPack": "standard-reinvented",
 		"noteStyle": "reinvented",
 		"ratings": {
-			"hard": 5
+			"hard": 7
 		},
 		"characters": {
 			"player": "bf-dark-r",
-			"girlfriend": "gf-dark",
-			"opponent": "spooky-dark",
+			"girlfriend": "gf-dark-r",
+			"opponent": "spooky-dark-r",
 			"opponentVocals": ["spooky-dark"],
 			"playerVocals": ["bf-dark-r"]
 		},
