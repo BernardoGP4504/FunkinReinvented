@@ -1,0 +1,35 @@
+#if mobile
+
+import funkin.input.ControlsHandler;
+#end
+import funkin.modding.module.Module;
+import funkin.play.PlayState;
+
+class GlobalPopupOffsets extends Module
+{
+  public function new()
+  {
+    super('reinvented', 1000, {state: PlayState});
+  }
+
+  override public function onCountdownStart(event:ScriptEvent):Void
+  {
+    super.onCountdownStart(event);
+
+    #if !mobile
+    if (!Preferences.downscroll) PlayState.instance.comboPopUps.offsets = [550, 350]; // Upscroll PC Offset
+    if (Preferences.downscroll) PlayState.instance.comboPopUps.offsets = [550, -190]; // Downscroll PC Offset
+    #else
+    if (Preferences.controlsScheme == "Arrows"
+      && !ControlsHandler.usingExternalInputDevice) PlayState.instance.comboPopUps.offsets = [30, 350]; // Middle Mobile Offset
+
+    if (!Preferences.downscroll
+      && Preferences.controlsScheme == "Arrows"
+      && ControlsHandler.usingExternalInputDevice) PlayState.instance.comboPopUps.offsets = [725, -350]; // Upscroll Side Mobile Offset
+
+    if (Preferences.downscroll
+      && Preferences.controlsScheme == "Arrows"
+      && ControlsHandler.usingExternalInputDevice) PlayState.instance.comboPopUps.offsets = [725, -190]; // Downscroll Side Mobile Offset
+    #end
+  }
+}
