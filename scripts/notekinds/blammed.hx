@@ -7,7 +7,7 @@ class ReinventedBlammedNote extends NoteKind
 	function new()
 	{
 		super('Blammed Notes', "Bullet dodge notes used on Blammed.", "bullets", [], false, "ALT");
-		this.scoreable = false;
+		this.scoreable = true;
 	}
 
 	override function onNoteHit(event:NoteScriptEvent)
