@@ -88,6 +88,11 @@
       "prefix": "BF NOTE RIGHT MISS",
       "offsets": [-30, 21]
     },
+        {
+      "name": "hey",
+      "prefix": "BF HEY!!",
+      "offsets": [7, 4]
+    },
     {
       "name": "firstDeath",
       "prefix": "BF dies",
