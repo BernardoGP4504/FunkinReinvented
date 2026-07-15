@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "name": "Mommy (Reinvented)",
-  "assetPath": "characters/ReinventedMom",
+  "assetPath": "characters/parents/ReinventedMom",
   "healthIcon": {
     "id": "mom-r"
   },
