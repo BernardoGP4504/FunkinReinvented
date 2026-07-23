@@ -1,0 +1,171 @@
+import funkin.play.PlayState;
+
+import funkin.modding.module.Module;
+import funkin.util.tools.StringTools;
+import funkin.util.Constants;
+
+//import flixel.util.FlxColor;
+
+import flixel.ui.FlxBar;
+import flixel.FlxSprite;
+import flixel.FlxG;
+
+import Math;
+import Std;
+
+import haxe.ds.StringMap;
+import haxe.ds.IntMap;
+
+class IconColoredHealthBar extends Module {
+    function new(){
+        iconColorCache = new StringMap();
+
+        super("IconColoredHealthBar", 0);
+    }
+
+    // lower to make the script faster, at the cost of accuracy
+    // default value is 150 (aka base game icon size)
+    var iconRes = 150;
+
+    static var defaultHBGreen = Constants.COLOR_HEALTH_BAR_GREEN;
+    static var defaultHBRed = Constants.COLOR_HEALTH_BAR_RED;
+
+    static var bfColor;
+    static var dadColor;
+
+    static var bfLastChar:String = '';
+    static var dadLastChar:String = '';
+    
+    static var iconColorCache:StringMap;
+
+	var inPlay = false;
+
+    function getIconColor(icon:FlxSprite, ?resMult:Float = 1.0, ?dontUseCache = false) {
+        if(!dontUseCache && iconColorCache.get(icon.characterId) != null) {
+            return iconColorCache.get(icon.characterId);
+        } else {
+            var color = dominantColor(icon, resMult);
+            iconColorCache.set(icon.characterId, color);
+
+            return color;
+        }
+    }
+
+    function updateHealthBarColors(?resMult:Float = 1.0, ?forced:Bool = false) {
+        if(!inPlay) return;
+
+        var shouldFill = false;
+
+        if(PlayState.instance.iconP1.characterId != bfLastChar || forced) {
+            bfColor = getIconColor(PlayState.instance.iconP1, resMult, forced);
+            bfLastChar = PlayState.instance.iconP1.characterId;
+
+            shouldFill = true;
+        }
+
+        if(PlayState.instance.iconP2.characterId != dadLastChar || forced) {
+            dadColor = getIconColor(PlayState.instance.iconP2, resMult, forced);
+            dadLastChar = PlayState.instance.iconP2.characterId;
+
+            shouldFill = true;
+        }
+
+        if(shouldFill) fillHealthBar();
+    }
+
+    function fillHealthBar() {
+        bfColor = (bfColor != null ? bfColor : defaultHBGreen);
+        dadColor = (dadColor != null ? dadColor : defaultHBRed);
+
+        // so other mods use it as well (mostly added for fancy hud)
+        Constants.COLOR_HEALTH_BAR_GREEN = bfColor;
+        Constants.COLOR_HEALTH_BAR_RED = dadColor;
+
+        if (!inPlay || PlayState.instance == null || PlayState.instance.healthBar == null) return;
+
+        PlayState.instance.healthBar.createFilledBar(dadColor,bfColor);
+        PlayState.instance.healthBar.updateBar();
+    }
+
+    // Based off dominantColor from Psych Engine (in CoolUtils.hx)
+    function dominantColor(sprite:FlxSprite, ?resMult:Float = 1.0) {
+        if(sprite == null || !inPlay) return;
+
+        var mult:Float = Math.min(1,(iconRes / sprite.frameWidth) * resMult);
+
+        // This code is horrible, nasty, disgusting, horrible code. But it has to be done this way as HScript doesn't support maps for some reason.
+        // (i now know the above comment is wrong but I am too lazy to fix this to work with maps :3)
+        var countByColor:Array<Int> = [];
+        var colorById:Array<Int> = [];
+        for(col in 0...(sprite.frameWidth)*mult) {
+            for(row in 0...(sprite.frameHeight)*mult) {
+                var colorOfThisPixel:Int = sprite.pixels.getPixel32(col / mult, row / mult);
+                if(colorOfThisPixel != 0) {
+                    var colorId = colorById.indexOf(colorOfThisPixel);
+                    if(colorId != -1) {
+                        countByColor[colorId] = countByColor[colorId] + 1;
+                    } else {
+                        var id = colorById.length;
+                        colorById[id] = colorOfThisPixel;
+                        countByColor[id] = 1;
+                    }
+                }
+            }
+        }
+
+        var maxCount:Int = 0;
+        var maxKey:Int = 0; //after the loop this will store the max color
+        for(color in colorById) {
+            var id = colorById.indexOf(color);
+            var count = countByColor[id] != null ? countByColor[id] : 0;
+            if(id != -1 && count > maxCount && color != 0xFF000000 && color != 0x00FFFFFF) {
+                var alpha = (color >> 24) & 0xff;
+                if (alpha >= 255) {
+                    maxCount = count;
+                    maxKey = color;
+                }
+            }
+        }
+        countByColor = [];
+        colorById = [];
+        return maxKey;
+    }
+
+    override function onBeatHit(ev:ScriptEvent) {
+        updateHealthBarColors(0.25); // We use 0.25 here as onBeatHit is more likely to happen while the player is hitting notes
+
+        super(ev);
+    }
+
+    override function onSongEvent(ev:ScriptEvent) {
+        updateHealthBarColors(0.5); // Use 0.5 as this happens mid-song
+
+        super(ev);
+    }
+
+    override function onPause(ev:ScriptEvent) {
+        super(ev);
+
+        updateHealthBarColors(1); // why not lol
+    }
+
+    // i took this from kade hud because im LAZY shut up please :(
+	override function onStateChangeBegin(ev:ScriptEvent) {
+		super.onStateChangeBegin(ev);
+		inPlay = false;
+	}
+
+	override function onStateChangeEnd(ev:ScriptEvent) {
+		super.onStateChangeEnd(ev);
+
+		inPlay = Std.isOfType(PlayState.instance, PlayState);
+		if (PlayState.instance != null && inPlay) {
+			onPlayStateEnter();
+			return;
+		}
+	}
+
+    function onPlayStateEnter() {
+        updateHealthBarColors(1, true); // Forcing this does add a tiny bit of loading time, but ensures that colors won't be wrong
+    }
+}
