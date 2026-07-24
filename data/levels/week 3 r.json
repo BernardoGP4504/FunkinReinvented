@@ -53,5 +53,6 @@
 		}
 	],
 	"background": "#5464e8",
-	"songs": ["pico-reinvented", "blammed-reinvented"]
+	"songs": ["pico-reinvented", "blammed-reinvented"],
+	"capsule": { "name": "Week 3" }
 }

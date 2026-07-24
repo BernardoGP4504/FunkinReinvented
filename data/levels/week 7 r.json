@@ -1,22 +1,18 @@
 {
 	"version": "1.0.0",
-	"name": "SPOOKY SONGS!",
-	"titleAsset": "storymenu/titles/week2",
+	"name": "TANKMAN",
+	"titleAsset": "storymenu/titles/week7",
+	"visible": false,
 	"props": [
 		{
-			"assetPath": "storymenu/props/spooky",
+			"assetPath": "storymenu/props/tankman",
 			"scale": 1.0,
-			"offsets": [100, 120],
+			"offsets": [100, 100],
 			"animations": [
 				{
-					"name": "danceLeft",
+					"name": "idle",
 					"prefix": "idle0",
-					"frameIndices": [0, 1, 2, 3, 4, 5, 6, 7]
-				},
-				{
-					"name": "danceRight",
-					"prefix": "idle0",
-					"frameIndices": [8, 9, 10, 11, 12, 13, 14, 15]
+					"frameRate": 24
 				}
 			]
 		},
@@ -57,7 +53,7 @@
 			]
 		}
 	],
-	"background": "#11594A",
-	"songs": ["spookeez-reinvented"],
-	"capsule": { "name": "Week 2" }
+	"background": "#5464e8",
+	"songs": ["guns-reinvented"],
+	"capsule": { "name": "Week 7" }
 }

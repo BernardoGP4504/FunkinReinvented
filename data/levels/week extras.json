@@ -1,6 +1,6 @@
 {
 	"version": "1.0.0",
-	"name": "PREFACE!",
+	"name": "Extra songs",
 	"titleAsset": "storymenu/titles/tutorial",
 	"visible": false,
 	"props": [
@@ -44,5 +44,6 @@
 		}
 	],
 	"background": "#fc85a9",
-	"songs": ["test-reinvented"]
+	"songs": ["test-reinvented"],
+	"capsule": { "name": "Extras" }
 }
