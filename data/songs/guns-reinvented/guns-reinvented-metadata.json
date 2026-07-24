@@ -1,0 +1,29 @@
+{
+	"version": "2.2.4",
+	"generatedBy": "Psych Engine 1.0.4 to Friday Night Funkin' Converter - BETA",
+	"songName": "Guns (Reinvented)",
+	"playData": {
+		"difficulties": ["hard"],
+		"stage": "battlefieldReinvented",
+		"noteStyle": "reinvented",
+		"ratings": {
+			"hard": 5
+		},
+		"characters": {
+			"player": "bf-r",
+			"girlfriend": "gf-tankmen",
+			"opponent": "tankman"
+		},
+		"album": "volume2"
+	},
+	"timeChanges": [
+		{
+			"t": 0,
+			"b": 0,
+			"bpm": 185,
+			"bt": [4, 4, 4, 4]
+		}
+	],
+	"artist": "Lotrob",
+	"charter": "magnífic0"
+}

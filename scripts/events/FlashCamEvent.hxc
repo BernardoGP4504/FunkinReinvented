@@ -25,7 +25,7 @@ class FlashCamEvent extends ScriptedSongEvent{
     public override function create(dat)
     {
         super.create(dat);
-        options = ModuleHandler.getModule("optionsUtils");
+        options = ModuleHandler.getModule("OptionsUtils");
         flashingLights=options.scriptGet("flashingLights");
     }
 

@@ -1,0 +1,362 @@
+import Std;
+import Type;
+import flixel.FlxG;
+import flixel.util.FlxSave;
+import funkin.input.Controls;
+import funkin.play.PlayState;
+import polymod.fs.SysFileSystem;
+import funkin.modding.module.Module;
+import funkin.modding.PolymodHandler;
+import funkin.ui.options.OptionsState;
+import funkin.ui.options.PreferencesMenu;
+
+import funkin.input.Controls;
+
+class OptionsAdder extends Module
+{
+
+    var save = null;
+    
+    var isChangedBaseGameSongs = false;
+
+    var inOptions:Bool = false;
+
+    var instanceOptions;
+
+    var deb = false;
+
+    var modOptionsPageName = 'modOptions';
+    var statesOptionsPageName = 'statesOptions';
+    var debugModOptionsPageName = 'debugModOptions';
+
+    function bindSave(){
+        save = new FlxSave();   
+        save.bind("fnf-beat-shift", "bshift");
+        trace('binded save');
+    }
+
+    function closeSave(){
+        if(save != null)save.close();
+        save = null;
+    }
+
+    public function new()
+    {
+        super('OptionsAdder', 100);
+        bindSave();
+
+        //#################################
+        //INITIALIZING NEW SETTINGS SAVING
+        //#################################
+
+        //simple options
+        if(save.data.flashingLights == null){
+            save.data.flashingLights = true;
+        }
+        if(save.data.disableStageShaders == null){
+            save.data.disableStageShaders = false;
+        }
+        if(save.data.disableEffectsShaders == null)
+        {
+            save.data.disableEffectsShaders = false;
+        }
+
+        //state options
+        if(save.data.showIntroState == null)
+        {
+            save.data.showIntroState = true;
+        }
+        if(save.data.showStartWarning == null)
+        {
+            save.data.showStartWarning = true;
+        }
+        if(save.data.showCustomTitle == null)
+        {
+            save.data.showCustomTitle = true;
+        }
+        if(save.data.showCustomMenu == null)
+        {
+            save.data.showCustomMenu = true;
+        }
+
+        //debug options
+        if(save.data.debugModStates == null)
+        {
+            save.data.debugModStates = false;
+        }
+
+        if(save.data.debugModButtons == null)
+        {
+            save.data.debugModButtons = false;
+        }
+        //#################################
+
+        closeSave();
+    }
+
+    public function onStateChangeEnd(event:StateChangeScriptEvent){
+        super.onStateChangeEnd(event);
+        inOptions = false;
+        if (Std.isOfType(event.targetState, OptionsState)){
+            inOptions = true;
+            deb = false;
+            bindSave();
+
+            //#################################
+            //Saving Backups Normal Options Labels
+            //#################################
+            var state = event.targetState;
+            var options = event.targetState.optionsCodex.pages.get("options");
+            instanceOptions = event.targetState.optionsCodex.pages.get("options");
+            var preferences = event.targetState.optionsCodex.pages.get('preferences');
+            var exit = options.items.members[options.items.length - 1];
+            var cleardata = options.items.members[options.items.length - 2];
+            var newGrounds = options.items.members[options.items.length - 3];
+            var inputOffsets = options.items.members[options.items.length - 4];
+            var controls = options.items.members[options.items.length - 5];
+            var thePreferences = options.items.members[options.items.length - 6];
+            //#################################
+
+            
+            //#################################
+            //Offsettings Normal Options Labels
+            //#################################
+            exit.y += 300;
+            cleardata.y += 100;
+            newGrounds.y += 100;
+            inputOffsets.y += 100;
+            controls.y += 100;
+            thePreferences.y += 100;
+            //#################################
+
+
+            //#####################################################################
+            //Removing Normal Options Labels For Adding And Applying The Modifiers
+            //#####################################################################
+            options.items.remove(exit);
+            options.items.remove(cleardata);
+            options.items.remove(newGrounds);
+            options.items.remove(inputOffsets);
+            options.items.remove(controls); 
+            options.items.remove(thePreferences);
+            //#################################
+            
+
+            //##########################################################
+            // Re-adding Normal Options Labels For The Offsets To Works
+            //##########################################################
+            options.items.add(thePreferences);
+            options.items.add(controls);
+            options.items.add(inputOffsets);
+            options.items.add(newGrounds);
+            options.items.add(cleardata);
+            //#################################
+
+
+            //#################################
+            //  Creating New Options Labels
+            //#################################
+            var modOptions = options.items.createItem(0, cleardata.y + 100, "Mod Options", "bold", function(){
+                options.onSwitch.dispatch(modOptionsPageName);
+            });
+
+            var stateOptions = options.items.createItem(0, modOptions.y + 100, "Mod Game Modifiers", "bold", function(){
+                options.onSwitch.dispatch(statesOptionsPageName);
+            });
+            //#################################
+
+
+
+
+            //#################################
+            //  Centering The New Buttons
+            //#################################
+            modOptions.x = (FlxG.width - modOptions.width) / 2;
+            stateOptions.x = (FlxG.width - stateOptions.width) / 2;
+
+            
+            //  adding the exit button
+            options.items.add(exit);
+            //-----------------------
+
+
+            for(label in options.items){
+				label.y -= 75;
+			}
+            //#################################
+            
+
+
+            //#################################
+            //          Setting Menus
+            //#################################
+            var modOptionsMenu = event.targetState.optionsCodex.addPage(modOptionsPageName, new PreferencesMenu());
+            var statesOptionsMenu = event.targetState.optionsCodex.addPage(statesOptionsPageName, new PreferencesMenu());
+            var debugModOptionsMenu = event.targetState.optionsCodex.addPage(debugModOptionsPageName, new PreferencesMenu());
+            //#################################
+
+
+            //#################################
+            //  Creating New Options Labels
+            //#################################
+            modOptionsMenu.preferenceDesc = [];
+            modOptionsMenu.onExit.add(function(){
+                state.optionsCodex.switchPage("options");
+            });
+
+            statesOptionsMenu.preferenceDesc = [];
+            statesOptionsMenu.onExit.add(function(){
+                state.optionsCodex.switchPage("options");
+            });
+
+            debugModOptionsMenu.preferenceDesc = [];
+            debugModOptionsMenu.onExit.add(function(){
+                state.optionsCodex.switchPage("options");
+            });
+            //#################################
+
+
+
+            //#################################
+            //    Clearing Default States
+            //#################################
+            for(shit in modOptionsMenu.items){
+                shit.destroy();
+            }
+            for(shit in modOptionsMenu.preferenceItems){
+                shit.destroy();
+            }
+
+            for(shit in statesOptionsMenu.items){
+                shit.destroy();
+            }
+            for(shit in statesOptionsMenu.preferenceItems){
+                shit.destroy();
+            }
+
+            for(shit in debugModOptionsMenu.items){
+                shit.destroy();
+            }
+            for(shit in debugModOptionsMenu.preferenceItems){
+                shit.destroy();
+            }
+            
+            modOptionsMenu.items.clear();
+            modOptionsMenu.preferenceItems.clear();
+
+            statesOptionsMenu.items.clear();
+            statesOptionsMenu.preferenceItems.clear();
+
+            debugModOptionsMenu.items.clear();
+            debugModOptionsMenu.preferenceItems.clear();
+            //#################################
+
+
+
+
+
+            
+            //#################################
+            //   Basic Mod Options Manager
+            //#################################
+            modOptionsMenu.createPrefItemCheckbox("Flashing Lights", "If Disabled, the camFlash event will not start", function(value){
+                save.data.flashingLights = value;
+                isChangedBaseGameSongs = true;
+                trace('Flashing Lights: '+ value);
+            }, save.data.flashingLights);
+
+            modOptionsMenu.createPrefItemCheckbox("Disable Stages Shaders", "If Disable, The enchanted visuals on the bgs are not gonna be seen. But for color modifiers reasons not all shaders will been deactivated.", function(value){
+                save.data.disableStageShaders = value;
+                isChangedBaseGameSongs = true;
+                trace('Disable Stages Shaders: ' + value);
+            }, save.data.disableStageShaders);
+
+            modOptionsMenu.createPrefItemCheckbox("Disable Effects Shaders", "If Disable, Visual effects that involve shader usage will not be activated.", function(value){
+                save.data.disableEffectsShaders = value;
+                isChangedBaseGameSongs = true;
+                trace('Disable Effects Shaders: ' + value);
+            }, save.data.disableEffectsShaders);
+            
+            //#################################
+
+
+
+
+
+            //#################################
+            //    State Options Manager
+            //#################################
+
+            statesOptionsMenu.createPrefItemCheckbox("Start Warning State", "If Disable, The initial warning screen will not be showed.", function(value){
+                save.data.showStartWarning = value;
+                isChangedBaseGameSongs = true;
+                trace('Start Warning State: ' + value);
+            }, save.data.showStartWarning);
+
+            statesOptionsMenu.createPrefItemCheckbox("Intro State", "If Disable, The bshift intro will not be played.", function(value){
+                save.data.showIntroState = value;
+                isChangedBaseGameSongs = true;
+                trace('Intro State: ' + value);
+            }, save.data.showIntroState);
+
+            statesOptionsMenu.createPrefItemCheckbox("Custom Title", "If Disable, The bshift custom title will not be displayed.", function(value){
+                save.data.showCustomTitle = value;
+                isChangedBaseGameSongs = true;
+                trace('Custom Title: ' + value);
+            }, save.data.showCustomTitle);
+
+            statesOptionsMenu.createPrefItemCheckbox("Custom Menu", "If Disable, The bshift custom main menu will not be displayed.", function(value){
+                save.data.showCustomMenu = value;
+                isChangedBaseGameSongs = true;
+                trace('Custom Menu: ' + value);
+            }, save.data.showCustomMenu);
+            //#################################
+
+
+            //#################################
+            //        Debug Features
+            //#################################
+            debugModOptionsMenu.createPrefItemCheckbox("Custom State Key Shortcut", "If Enabled, use the keys Z,X,C,V for open the custom states", function(value){
+                save.data.debugModStates = value;
+                isChangedBaseGameSongs = true;
+                trace('Custom State Key Shortcut: ' + value);
+            }, save.data.debugModStates);
+
+            debugModOptionsMenu.createPrefItemCheckbox("Debug Menu Access", "If Enabled, you can open the debug menu", function(value){
+                save.data.debugModButtons = value;
+                isChangedBaseGameSongs = true;
+                trace('CDebug Menu Access: ' + value);
+            }, save.data.debugModButtons);
+
+
+        }else if(inOptions)
+            closeSave();
+    }
+    
+    function onUpdate(){
+        if(isChangedBaseGameSongs)
+        {
+            if(FlxG.keys.justPressed.BACKSPACE || FlxG.keys.justPressed.ESCAPE){
+                isChangedBaseGameSongs = false;
+                PolymodHandler.forceReloadAssets();
+            }
+        }
+        if(inOptions && !deb)
+        {
+            if(FlxG.keys.justPressed.P)
+            {
+                var exit = instanceOptions.items.members[instanceOptions.items.length - 1];
+                instanceOptions.items.remove(exit);
+                exit.y += 100;
+                var debugModOptions = instanceOptions.items.createItem(0, instanceOptions.items.members[instanceOptions.items.length - 2].y + 100, "MOD DEBUG OPTIONS", "bold", function(){
+                    instanceOptions.onSwitch.dispatch(debugModOptionsPageName);
+                });
+                debugModOptions.x = (FlxG.width - debugModOptions.width) / 2;
+                instanceOptions.items.add(exit);
+                deb = true;
+            }
+        }
+        // trace(isChangedBaseGameSongs);
+    }
+
+}

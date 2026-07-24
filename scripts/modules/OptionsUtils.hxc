@@ -1,0 +1,90 @@
+import Std;
+import Type;
+import flixel.FlxG;
+import flixel.util.FlxSave;
+import funkin.input.Controls;
+import funkin.play.PlayState;
+import polymod.fs.SysFileSystem;
+import funkin.modding.module.Module;
+import funkin.modding.PolymodHandler;
+import funkin.ui.options.OptionsState;
+import funkin.ui.options.PreferencesMenu;
+import funkin.modding.module.ModuleHandler;
+
+class OptionsUtils extends Module
+{
+    //mod game options
+    var flashingLights:Bool = true;
+    var disableEffectsShaders:Bool = false;
+    var disableStageShaders:Bool = false;
+
+    //mod custom state options
+    var showStartWarning:Bool = true;
+    var showIntroState:Bool = true;
+    var showCustomTitle:Bool = true;
+    var showCustomMenu:Bool = true;
+
+    //debug options
+    var debugModStates:Bool = false;
+    var debugModButtons:Bool = false;
+
+    function bindSave(){
+        save = new FlxSave();   
+        save.bind("fnf-beat-shift", "bshift");
+        trace('binded save');
+    }
+
+    function closeSave(){
+        if(save != null)save.close();
+        save = null;
+    }
+
+    function new()
+    {
+        super("optionsUtils");
+        this.bindSave();
+
+        
+        //simple options
+        if(save.data.flashingLights != null){
+            this.flashingLights = save.data.flashingLights;
+        }
+        if(save.data.disableStageShaders != null){
+            this.disableStageShaders = save.data.disableStageShaders;
+        }
+        if(save.data.disableEffectsShaders != null)
+        {
+            this.disableEffectsShaders = save.data.disableEffectsShaders;
+        }
+
+        //state options
+        if(save.data.showIntroState != null)
+        {
+            this.showIntroState = save.data.showIntroState;
+        }
+        if(save.data.showStartWarning != null)
+        {
+            this.showStartWarning = save.data.showStartWarning;
+        }
+        if(save.data.showCustomTitle != null)
+        {
+            this.showCustomTitle = save.data.showCustomTitle;
+        }
+        if(save.data.showCustomMenu != null)
+        {
+            this.showCustomMenu = save.data.showCustomMenu;
+        }
+
+        //debug options
+        if(save.data.debugModStates != null)
+        {
+            this.debugModStates = save.data.debugModStates;
+        }
+        if(save.data.debugModButtons != null){
+            this.debugModButtons = save.data.debugModButtons;
+        }
+        
+
+        this.closeSave();
+    }
+}
