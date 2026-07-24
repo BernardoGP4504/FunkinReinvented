@@ -3,5 +3,9 @@
 	"author": "TheReinventedCrew!",
 	"mod_version": "1.1.1",
 	"api_version": "0.8.4",
-	"contribuitors": []
+	"contribuitors": [],
+	"optionalDependencies": {
+		"qt-rewired-pc_e777e": "",
+		"BlakeExpansionModpack": ""
+	}
 }

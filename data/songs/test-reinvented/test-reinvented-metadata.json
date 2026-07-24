@@ -1,39 +1,34 @@
 {
- "version": "2.2.4",
- "songName": "Test (Reinvented)",
- "artist": "AeFelipe",
- "charter": "magnífic0",
- "offsets": { },
- "playData": {
-  "difficulties": [
-   "hard"
-  ],
-  "characters": {
-   "player": "bf-r",
-   "girlfriend": "gf-r",
-   "opponent": "bf-pixel-r-op",
-   "opponentVocals": [
-    "bf-pixel-r-opp"
-   ],
-   "playerVocals": [
-    "bf-r"
-   ]
-  },
-  "stage": "mainStageReinvented",
-  "noteStyle": "reinvented",
-  "ratings": {
-   "hard": 6
-  },
-  "stickerPack": "bf-reinvented",
-  "previewEnd": 80
- },
- "generatedBy": "Friday Night Funkin' - v0.8.4",
- "timeChanges": [
-  {
-   "t": 0,
-   "b": 0,
-   "bpm": 150,
-   "bt": [4, 4, 4, 4]
-  }
- ]
+	"version": "2.2.4",
+	"songName": "Test (Reinvented)",
+	"artist": "AeFelipe",
+	"charter": "magnífic0",
+	"offsets": {},
+	"playData": {
+		"difficulties": ["hard"],
+		"characters": {
+			"player": "bf-r",
+			"girlfriend": "gf-r",
+			"opponent": "bf-pixel-r-op",
+			"opponentVocals": ["bf-pixel-r-opp"],
+			"playerVocals": ["bf-r"],
+			"altInstrumentals": ["original"]
+		},
+		"stage": "mainStageReinvented",
+		"noteStyle": "reinvented",
+		"ratings": {
+			"hard": 6
+		},
+		"stickerPack": "bf-reinvented",
+		"previewEnd": 80
+	},
+	"generatedBy": "Friday Night Funkin' - v0.8.4",
+	"timeChanges": [
+		{
+			"t": 0,
+			"b": 0,
+			"bpm": 150,
+			"bt": [4, 4, 4, 4]
+		}
+	]
 }

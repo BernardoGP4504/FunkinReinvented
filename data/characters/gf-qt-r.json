@@ -1,78 +1,56 @@
 {
-  "version": "1.0.0",
-  "name": "Girlfriend Reinvented (QT Rewired).",
-  "assetPath": "characters/GF-REINVENTED/REINVENTED_GF_QT_AsssTS",
-  "renderType": "sparrow",
-  "startingAnimation": "danceRight",
-  "animations": [
-    {
-      "name": "danceLeft",
-      "prefix": "idle"
-    },
-    {
-      "name": "danceRight",
-      "prefix": "idle"
-    },
-    {
-      "name": "danceRight-alt",
-      "frameIndices": [
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        0,
-        1,
-        2,
-        3
-      ],
-      "prefix": "gf caramelldansen0"
-    },
-    {
-      "name": "dodge",
-      "prefix": "gf dodge0"
-    },
-    {
-      "name": "intro",
-      "prefix": "shocked",
-      "looped": true
-    },
-    {
-      "name": "danceLeft-alt",
-      "prefix": "gf caramelldansen0",
-      "frameIndices": [
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13
-      ]
-    },
-    {
-      "name": "preDance",
-      "prefix": "gf pre dance0"
-    },
-    {
-      "name": "sad",
-      "prefix": "gf sad0"
-    },
-    {
-      "name": "cheer",
-      "prefix": "gf cheer0"
-    },
-    {
-      "name": "combo50",
-      "prefix": "gf cheer0"
-    },
-    {
-      "name": "drop70",
-      "prefix": "gf sad0"
-    }
-  ]
+	"version": "1.0.0",
+	"name": "Reinvented Girlfriend (QT Rewired).",
+	"assetPath": "shared:characters/GF-REINVENTED/QT",
+	"renderType": "animateatlas",
+	"startingAnimation": "danceRight",
+	"animations": [
+		{
+			"name": "danceLeft",
+			"prefix": "dance left"
+		},
+		{
+			"name": "danceRight",
+			"prefix": "dance right"
+		},
+		{
+			"name": "danceRight-alt",
+			"frameIndices": [14, 15, 16, 17, 18, 19, 0, 1, 2, 3],
+			"prefix": "caramelldansen"
+		},
+		{
+			"name": "dodge",
+			"prefix": "dodge"
+		},
+		{
+			"name": "intro",
+			"prefix": "shocked",
+			"looped": true
+		},
+		{
+			"name": "danceLeft-alt",
+			"prefix": "caramelldansen",
+			"frameIndices": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+		},
+		{
+			"name": "preDance",
+			"prefix": "pre dance"
+		},
+		{
+			"name": "sad",
+			"prefix": "sad"
+		},
+		{
+			"name": "cheer",
+			"prefix": "cheer"
+		},
+		{
+			"name": "combo50",
+			"prefix": "cheer"
+		},
+		{
+			"name": "drop70",
+			"prefix": "sad"
+		}
+	]
 }
