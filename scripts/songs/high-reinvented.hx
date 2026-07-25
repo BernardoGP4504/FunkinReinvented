@@ -22,5 +22,5 @@ class HighReinventedSunset extends Song
 	}
 
 	override function onGameOver() { FlxG.camera.filters.remove(shaderFilter); }
-	override function onSongRetry() { FlxG.camera.filters.push(shaderFilter); }
+	override function onSongRetry() { if (!FlxG.camera.filters.contains(shaderFilter)) FlxG.camera.filters.push(shaderFilter); }
 }
