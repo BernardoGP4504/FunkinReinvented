@@ -1,0 +1,47 @@
+{
+  "version": "2.2.4",
+  "songName": "Blissful (Reinvented)",
+  "artist": "Pankdoe",
+  "charter": "magnífic0",
+  "divisions": 96,
+  "looped": false,
+  "offsets": {
+    "instrumental": 0,
+    "altInstrumentals": {},
+    "vocals": {},
+    "altVocals": {}
+  },
+  "playData": {
+    "stickerPack": "qtStickers",
+    "difficulties": ["extras"],
+    "characters": {
+      "player": "bf-r",
+      "girlfriend": "gf-qt-r",
+      "opponent": "qt",
+      "instrumental": "extras",
+      "opponentVocals": ["qt"],
+      "playerVocals": ["bf-r"],
+      "altInstrumentals": ["", "pico"]
+    },
+    "stage": "qtStageCityErect",
+    "noteStyle": "reinvented",
+    "ratings": {
+      "extras": 6
+    },
+    "album": "qt",
+    "previewStart": 0,
+    "previewEnd": 8700
+  },
+  "generatedBy": "Friday Night Funkin' - v0.6.2",
+  "timeFormat": "ms",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 138,
+      "n": 4,
+      "d": 4,
+      "bt": [4, 4, 4, 4]
+    }
+  ]
+}

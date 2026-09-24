@@ -16,7 +16,7 @@ class NameX extends Module
 	override function onCreate(ev)
 	{
 		super.onCreate(ev);
-		FlxG.stage.application.window.title = "Friday Night Funkin' Reinvented | V.1.1";
+		FlxG.stage.application.window.title = "Friday Night Funkin' Reinvented™";
 		Application.current.window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('icon'))));
 	}
 

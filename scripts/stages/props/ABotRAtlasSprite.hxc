@@ -1,0 +1,13 @@
+import funkin.graphics.FunkinSprite;
+import flixel.math.FlxPoint;
+import funkin.Conductor;
+
+class ABotRAtlasSprite extends FunkinSprite
+{
+  function new(x:Float, y:Float)
+  {
+    super(x, y);
+
+    loadTextureAtlas("characters/abot-r/abotSystem", "shared");
+  }
+}

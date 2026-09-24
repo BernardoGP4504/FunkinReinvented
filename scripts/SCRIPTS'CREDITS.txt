@@ -6,3 +6,6 @@ Discord Name script
 
 HB Colors
 * https://gamebanana.com/mods/download/511342#FileInfo_1610279
+
+NOTE
+If any of the coders ask for their scripts to be removed from the mod, I will remove them.

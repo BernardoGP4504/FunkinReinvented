@@ -1,0 +1,88 @@
+{
+ "version": "1.0.2",
+ "name": "Tankman Battlefield (Reinvented)",
+ "props": [
+  {
+   "assetPath": "stages/tank/sky",
+   "atlasSettings": null,
+   "name": "sky",
+   "position": [-535, -270],
+   "scale": 1.7,
+   "scroll": [0.2, 0.2],
+   "startingAnimation": null
+  },
+  {
+   "assetPath": "stages/tank/mountains",
+   "atlasSettings": null,
+   "name": "mountains",
+   "position": [-349, -212],
+   "scale": [
+	1.45,
+	1.55
+],
+   "scroll": [0.35, 0.35],
+   "startingAnimation": null,
+   "zIndex": 1
+  },
+  {
+   "assetPath": "stages/tank/tankBuildings",
+   "atlasSettings": null,
+   "name": "buildingsFG",
+   "position": [-1220, -385],
+   "scale": 2.1,
+   "scroll": [0.42, 0.42],
+   "startingAnimation": null,
+   "zIndex": 2
+  },
+  {
+   "assetPath": "stages/tank/tankRuins",
+   "atlasSettings": null,
+   "name": "buildings",
+   "position": [-1273, -356],
+   "scale": 2,
+   "scroll": [0.37, 0.37],
+   "startingAnimation": null,
+   "zIndex": 3
+  },
+  {
+   "assetPath": "stages/tank/tankGround",
+   "atlasSettings": null,
+   "name": "ground",
+   "position": [-455, -205],
+   "scale": [
+	1.15,
+	1.1
+],
+   "startingAnimation": null,
+   "zIndex": 4
+  },
+  {
+   "assetPath": "stages/tank/box",
+   "atlasSettings": null,
+   "name": "box",
+   "position": [-254, 549],
+   "scale": 1,
+   "scroll": [0.85, 0.85],
+   "startingAnimation": null,
+   "zIndex": 5
+  }
+ ],
+ "characters": {
+  "bf": {
+   "cameraOffsets": [-100, -100],
+   "position": [960, 806],
+   "zIndex": 8
+  },
+  "dad": {
+   "cameraOffsets": [150, -100],
+   "position": [210, 806],
+   "zIndex": 7
+  },
+  "gf": {
+   "cameraOffsets": [0, 0],
+   "position": [580, 690],
+   "zIndex": 6
+  }
+ },
+ "cameraZoom": 0.8
+}

@@ -1,0 +1,39 @@
+{
+ "version": "2.2.4",
+ "songName": "Philly (Reinvented)",
+ "artist": "turtleman42 (ft. AeFelipe)",
+ "charter": "magnífic0",
+ "offsets": { },
+ "playData": {
+  "difficulties": [
+   "hard"
+  ],
+  "characters": {
+   "player": "bf-r",
+   "girlfriend": "gf-r",
+   "opponent": "pico-r",
+   "opponentVocals": [
+    "pico-r"
+   ],
+   "playerVocals": [
+    "bf-r"
+   ]
+  },
+  "stage": "phillyTrainReinvented",
+  "noteStyle": "reinvented",
+  "ratings": {
+   "hard": 4
+  },
+  "previewEnd": 88,
+  "stickerPack": "standard-reinvented"
+ },
+ "generatedBy": "Friday Night Funkin' - v0.8.4",
+ "timeChanges": [
+  {
+   "t": 0,
+   "b": 0,
+   "bpm": 175,
+   "bt": [4, 4, 4, 4]
+  }
+ ]
+}

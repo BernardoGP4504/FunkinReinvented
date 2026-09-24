@@ -11,7 +11,7 @@
 	"startingAnimation": "idle",
 	"isPixel": false,
 	"singTime": 8,
-	"assetPath": "characters/PICO-REIN/futureSPRITEMAP",
+	"assetPath": "characters/PICO-REINVENTED/futureSPRITEMAP",
 	"healthIcon": {
 		"isPixel": false,
 		"offsets": [0, 0],
@@ -76,7 +76,7 @@
 			"flipX": false,
 			"flipY": false,
 			"frameRate": 24,
-			"assetPath": "characters/PICO-REIN/Pico_Shooting"
+			"assetPath": "characters/PICO-REINVENTED/Pico_Shooting"
 		},
 		{
 			"offsets": [30, 232],
@@ -87,7 +87,7 @@
 			"flipX": false,
 			"flipY": false,
 			"frameRate": 24,
-			"assetPath": "characters/PICO-REIN/Pico_Shooting"
+			"assetPath": "characters/PICO-REINVENTED/Pico_Shooting"
 		},
 		{
 			"offsets": [51, 2],

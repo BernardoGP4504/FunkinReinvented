@@ -8,38 +8,75 @@
    "t": 0,
    "e": "FocusCamera",
    "v": {
-	"char": 0
+	"duration": 4,
+	"x": 0,
+	"y": 150,
+	"ease": "CLASSIC",
+	"char": 2,
+	"easeDir": "In"
 }
   },
   {
    "t": 3555.55555555556,
    "e": "FocusCamera",
    "v": {
-	"char": 1
+	"duration": 2,
+	"y": 0,
+	"char": 1,
+	"ease": "back",
+	"easeDir": "Out"
 }
   },
   {
-   "t": 3555.55555555556,
-   "e": "Add Camera Zoom",
+   "t": 5333.33333333333,
+   "e": "ZoomCamera",
    "v": {
-	"value1": "0.04",
-	"value2": ""
+	"duration": 4,
+	"widescreenScaleX": 0,
+	"widescreenScaleY": 0,
+	"ease": "back",
+	"mode": "stage",
+	"zoom": 1.1,
+	"easeDir": "Out"
 }
   },
   {
    "t": 7111.11111111111,
-   "e": "Set Cam Zoom",
+   "e": "ZoomCamera",
    "v": {
-	"value1": "1.0",
-	"value2": ""
+	"duration": 4,
+	"widescreenScaleX": 0,
+	"widescreenScaleY": 0,
+	"ease": "back",
+	"mode": "stage",
+	"zoom": 1.2,
+	"easeDir": "Out"
 }
   },
   {
-   "t": 8000,
-   "e": "Set Cam Zoom",
+   "t": 7555.55555555555,
+   "e": "ZoomCamera",
    "v": {
-	"value1": "0.7",
-	"value2": ""
+	"duration": 1.5,
+	"widescreenScaleX": 0,
+	"widescreenScaleY": 0,
+	"ease": "back",
+	"mode": "stage",
+	"zoom": 1.1,
+	"easeDir": "Out"
+}
+  },
+  {
+   "t": 8888.88888888889,
+   "e": "ZoomCamera",
+   "v": {
+	"duration": 1.5,
+	"widescreenScaleX": 0,
+	"widescreenScaleY": 0,
+	"ease": "back",
+	"mode": "stage",
+	"zoom": 1,
+	"easeDir": "Out"
 }
   },
   {
@@ -47,78 +84,6 @@
    "e": "FocusCamera",
    "v": {
 	"char": 0
-}
-  },
-  {
-   "t": 16222.2222222222,
-   "e": "Add Camera Zoom",
-   "v": {
-	"value1": "0.04",
-	"value2": ""
-}
-  },
-  {
-   "t": 16444.4444444444,
-   "e": "Add Camera Zoom",
-   "v": {
-	"value1": "0.04",
-	"value2": ""
-}
-  },
-  {
-   "t": 16666.6666666667,
-   "e": "Add Camera Zoom",
-   "v": {
-	"value1": "0.04",
-	"value2": ""
-}
-  },
-  {
-   "t": 16888.8888888889,
-   "e": "Add Camera Zoom",
-   "v": {
-	"value1": "0.06",
-	"value2": ""
-}
-  },
-  {
-   "t": 17111.1111111111,
-   "e": "Add Camera Zoom",
-   "v": {
-	"value1": "0.06",
-	"value2": ""
-}
-  },
-  {
-   "t": 17333.3333333333,
-   "e": "Add Camera Zoom",
-   "v": {
-	"value1": "0.06",
-	"value2": ""
-}
-  },
-  {
-   "t": 17444.4444444444,
-   "e": "Add Camera Zoom",
-   "v": {
-	"value1": "0.06",
-	"value2": ""
-}
-  },
-  {
-   "t": 17555.5555555556,
-   "e": "Add Camera Zoom",
-   "v": {
-	"value1": "0.06",
-	"value2": ""
-}
-  },
-  {
-   "t": 17666.6666666667,
-   "e": "Add Camera Zoom",
-   "v": {
-	"value1": "0.06",
-	"value2": ""
 }
   },
   {
@@ -139,18 +104,15 @@
   },
   {
    "t": 17777.7777777778,
-   "e": "Add Camera Zoom",
+   "e": "ZoomCamera",
    "v": {
-	"value1": "0.013",
-	"value2": ""
-}
-  },
-  {
-   "t": 18222.2222222222,
-   "e": "Add Camera Zoom",
-   "v": {
-	"value1": "0.04",
-	"value2": ""
+	"duration": 1.5,
+	"widescreenScaleX": 0,
+	"widescreenScaleY": 0,
+	"ease": "back",
+	"mode": "stage",
+	"zoom": 0.9,
+	"easeDir": "Out"
 }
   },
   {
@@ -203,11 +165,39 @@
 }
   },
   {
-   "t": 23555.5555555556,
-   "e": "Add Camera Zoom",
+   "t": 23111.1111111111,
+   "e": "FocusCamera",
    "v": {
-	"value1": "0.04",
-	"value2": ""
+	"duration": 4,
+	"x": 0,
+	"y": 0,
+	"ease": "INSTANT",
+	"char": 0,
+	"easeDir": "In"
+}
+  },
+  {
+   "t": 23555.5555555556,
+   "e": "FocusCamera",
+   "v": {
+	"duration": 4,
+	"x": 0,
+	"y": 0,
+	"ease": "INSTANT",
+	"char": 1,
+	"easeDir": "In"
+}
+  },
+  {
+   "t": 24000,
+   "e": "FocusCamera",
+   "v": {
+	"duration": 4,
+	"x": 0,
+	"y": 0,
+	"ease": "INSTANT",
+	"char": 0,
+	"easeDir": "In"
 }
   },
   {
@@ -219,10 +209,23 @@
 }
   },
   {
+   "t": 24444.4444444444,
+   "e": "FocusCamera",
+   "v": {
+	"duration": 4,
+	"x": 0,
+	"y": 0,
+	"ease": "INSTANT",
+	"char": 1,
+	"easeDir": "In"
+}
+  },
+  {
    "t": 24888.8888888889,
    "e": "FocusCamera",
    "v": {
-	"char": 0
+	"char": 0,
+	"y": 70
 }
   },
   {
@@ -315,100 +318,23 @@
 }
   },
   {
-   "t": 37222.2222222222,
-   "e": "SetCameraBop",
-   "v": {
-	"rate": 1,
-	"intensity": 1.3,
-	"offset": 0
-}
-  },
-  {
-   "t": 37333.3333333333,
-   "e": "Add Camera Zoom",
-   "v": {
-	"value1": "0.020",
-	"value2": ""
-}
-  },
-  {
-   "t": 37555.5555555556,
-   "e": "Add Camera Zoom",
-   "v": {
-	"value1": "0.013",
-	"value2": ""
-}
-  },
-  {
-   "t": 37777.7777777778,
-   "e": "Add Camera Zoom",
-   "v": {
-	"value1": "0.020",
-	"value2": ""
-}
-  },
-  {
-   "t": 38000,
-   "e": "Add Camera Zoom",
-   "v": {
-	"value1": "0.013",
-	"value2": ""
-}
-  },
-  {
-   "t": 38222.2222222222,
-   "e": "Add Camera Zoom",
-   "v": {
-	"value1": "0.020",
-	"value2": ""
-}
-  },
-  {
-   "t": 38444.4444444444,
-   "e": "Add Camera Zoom",
-   "v": {
-	"value1": "0.020",
-	"value2": ""
-}
-  },
-  {
-   "t": 38555.5555555556,
-   "e": "Add Camera Zoom",
-   "v": {
-	"value1": "0.020",
-	"value2": ""
-}
-  },
-  {
-   "t": 38666.6666666667,
-   "e": "Add Camera Zoom",
-   "v": {
-	"value1": "0.020",
-	"value2": ""
-}
-  },
-  {
-   "t": 38888.8888888889,
-   "e": "Add Camera Zoom",
-   "v": {
-	"value1": "0.013",
-	"value2": ""
-}
-  },
-  {
-   "t": 39000,
-   "e": "SetCameraBop",
-   "v": {
-	"rate": 2,
-	"intensity": 1.3,
-	"offset": 0
-}
-  },
-  {
    "t": 39111.1111111111,
    "e": "FocusCamera",
    "v": {
 	"char": 0
+}
+  },
+  {
+   "t": 39111.1111111111,
+   "e": "ZoomCamera",
+   "v": {
+	"duration": 2,
+	"widescreenScaleX": 0,
+	"widescreenScaleY": 0,
+	"ease": "back",
+	"easeDir": "Out",
+	"zoom": 1,
+	"mode": "stage"
 }
   },
   {
@@ -1063,6 +989,19 @@
 }
   },
   {
+   "t": 88888.8888888889,
+   "e": "ZoomCamera",
+   "v": {
+	"duration": 9,
+	"widescreenScaleX": 0,
+	"widescreenScaleY": 0,
+	"ease": "circ",
+	"easeDir": "In",
+	"zoom": 0.8,
+	"mode": "stage"
+}
+  },
+  {
    "t": 88888.888888889,
    "e": "FocusCamera",
    "v": {
@@ -1095,26 +1034,15 @@
 }
   },
   {
-   "t": 90666.6666666668,
+   "t": 90666.6666666667,
    "e": "FocusCamera",
    "v": {
-	"char": 1
-}
-  },
-  {
-   "t": 90666.6666666668,
-   "e": "Set Cam Zoom",
-   "v": {
-	"value1": "0.8",
-	"value2": ""
-}
-  },
-  {
-   "t": 91555.5555555556,
-   "e": "Set Cam Zoom",
-   "v": {
-	"value1": "0.80",
-	"value2": ""
+	"x": 130,
+	"duration": 4,
+	"y": 90,
+	"char": 1,
+	"ease": "CLASSIC",
+	"easeDir": "In"
 }
   }
  ],

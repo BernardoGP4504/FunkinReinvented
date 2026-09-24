@@ -1,0 +1,238 @@
+{
+ "version": "1.0.2",
+ "name": "Philly (Streets) [Reinvented]",
+ "props": [
+  {
+   "assetPath": "#8E9191",
+   "atlasSettings": null,
+   "name": "solid",
+   "position": [-500, -1033],
+   "scale": [
+	4000,
+	3000
+],
+   "scroll": [0, 0],
+   "startingAnimation": null
+  },
+  {
+   "assetPath": "phillyStreets/r/phillySkyline",
+   "atlasSettings": null,
+   "name": "phillySkyline",
+   "position": [-263, -117],
+   "scale": 1,
+   "scroll": [0.2, 0.2],
+   "startingAnimation": null,
+   "zIndex": 20
+  },
+  {
+   "angle": 5,
+   "assetPath": "phillyStreets/r/phillyForegroundCity",
+   "atlasSettings": null,
+   "name": "phillyForegroundCity2",
+   "position": [2517, -47],
+   "scale": 1,
+   "scroll": [0.3, 0.3],
+   "startingAnimation": null,
+   "zIndex": 30
+  },
+  {
+   "assetPath": "phillyStreets/phillyHighwayLights",
+   "atlasSettings": null,
+   "name": "phillyHighwayLights",
+   "position": [1904, 191],
+   "scale": 1,
+   "scroll": [0.8, 0.8],
+   "startingAnimation": null,
+   "zIndex": 50
+  },
+  {
+   "assetPath": "phillyStreets/phillyHighwayLights_lightmap",
+   "atlasSettings": null,
+   "name": "phillyHighwayLights_lightmap",
+   "position": [1908, 192],
+   "scale": 1,
+   "scroll": [0.8, 0.8],
+   "startingAnimation": null,
+   "zIndex": 50
+  },
+  {
+   "assetPath": "phillyStreets/phillyHighway",
+   "atlasSettings": null,
+   "flipX": true,
+   "name": "phillyHighway",
+   "position": [1313, 102],
+   "scale": 1,
+   "scroll": [0.8, 0.8],
+   "startingAnimation": null,
+   "zIndex": 60
+  },
+  {
+   "animations": [
+    {
+     "animType": null,
+     "assetPath": null,
+     "atlasSettings": null,
+     "flipX": true,
+     "name": "car4",
+     "prefix": "car4",
+     "renderType": null
+    },
+    {
+     "animType": null,
+     "assetPath": null,
+     "atlasSettings": null,
+     "flipX": true,
+     "name": "car2",
+     "prefix": "car2",
+     "renderType": null
+    },
+    {
+     "animType": null,
+     "assetPath": null,
+     "atlasSettings": null,
+     "flipX": true,
+     "name": "car3",
+     "prefix": "car3",
+     "renderType": null
+    },
+    {
+     "animType": null,
+     "assetPath": null,
+     "atlasSettings": null,
+     "flipX": true,
+     "name": "car1",
+     "prefix": "car1",
+     "renderType": null
+    }
+   ],
+   "assetPath": "phillyStreets/phillyCars",
+   "atlasSettings": null,
+   "name": "phillyCars2",
+   "position": [1200, 818],
+   "scale": 1,
+   "scroll": [0.9, 1],
+   "startingAnimation": null,
+   "zIndex": 78
+  },
+  {
+   "animations": [
+    {
+     "animType": null,
+     "assetPath": null,
+     "atlasSettings": null,
+     "name": "car4",
+     "prefix": "car4",
+     "renderType": null
+    },
+    {
+     "animType": null,
+     "assetPath": null,
+     "atlasSettings": null,
+     "name": "car2",
+     "prefix": "car2",
+     "renderType": null
+    },
+    {
+     "animType": null,
+     "assetPath": null,
+     "atlasSettings": null,
+     "name": "car3",
+     "prefix": "car3",
+     "renderType": null
+    },
+    {
+     "animType": null,
+     "assetPath": null,
+     "atlasSettings": null,
+     "name": "car1",
+     "prefix": "car1",
+     "renderType": null
+    }
+   ],
+   "assetPath": "phillyStreets/phillyCars",
+   "atlasSettings": null,
+   "name": "phillyCars",
+   "position": [1200, 818],
+   "scale": 1,
+   "scroll": [0.9, 1],
+   "startingAnimation": null,
+   "zIndex": 80
+  },
+  {
+   "animations": [
+    {
+     "animType": null,
+     "assetPath": null,
+     "atlasSettings": null,
+     "name": "tored",
+     "prefix": "greentored",
+     "renderType": null
+    },
+    {
+     "animType": null,
+     "assetPath": null,
+     "atlasSettings": null,
+     "name": "togreen",
+     "prefix": "redtogreen",
+     "renderType": null
+    }
+   ],
+   "assetPath": "phillyStreets/phillyTraffic",
+   "atlasSettings": null,
+   "name": "phillyTraffic",
+   "position": [894, 673],
+   "scale": 1,
+   "scroll": [0.9, 1],
+   "startingAnimation": null,
+   "zIndex": 90
+  },
+  {
+   "assetPath": "phillyStreets/phillyTraffic_lightmap",
+   "atlasSettings": null,
+   "name": "phillyTraffic_lightmap",
+   "position": [1280, 727],
+   "scale": 1,
+   "scroll": [0.9, 1],
+   "startingAnimation": null,
+   "zIndex": 90
+  },
+  {
+   "assetPath": "phillyStreets/r/phillyForeground",
+   "atlasSettings": null,
+   "name": "phillyForeground",
+   "position": [311, 339],
+   "scale": 1,
+   "startingAnimation": null,
+   "zIndex": 100
+  },
+  {
+   "assetPath": "SpraycanPile",
+   "atlasSettings": null,
+   "name": "spraycanPile",
+   "position": [920, 1145],
+   "scale": 1,
+   "startingAnimation": null,
+   "zIndex": 690
+  }
+ ],
+ "characters": {
+  "bf": {
+   "cameraOffsets": [-300, -100],
+   "position": [2151, 1245],
+   "zIndex": 400
+  },
+
+  "dad": {
+   "cameraOffsets": [500, -100],
+   "position": [920, 1420],
+   "zIndex": 350
+  },
+  "gf": {
+   "cameraOffsets": [0, 0],
+   "position": [1600, 1140],
+   "zIndex": 300
+  }
+ },
+ "cameraZoom": 0.77, 
+ "directory": "weekend1"
+}
