@@ -12,22 +12,22 @@
     },
     {
       "name": "singLEFT",
-      "prefix": "BF NOTE LEFT0",
+      "prefix": "BF NOTE LEFT 1",
       "offsets": [12, -6]
     },
     {
       "name": "singDOWN",
-      "prefix": "BF NOTE DOWN0",
+      "prefix": "BF NOTE DOWN 1",
       "offsets": [-10, -50]
     },
     {
       "name": "singUP",
-      "prefix": "BF NOTE UP0",
+      "prefix": "BF NOTE UP 1",
       "offsets": [-29, 27]
     },
     {
       "name": "singRIGHT",
-      "prefix": "BF NOTE RIGHT0",
+      "prefix": "BF NOTE RIGHT 1",
       "offsets": [-38, -7]
     },
     {
@@ -49,6 +49,18 @@
       "name": "singRIGHTmiss",
       "prefix": "BF NOTE RIGHT MISS",
       "offsets": [-30, 21]
+    },
+        {
+      "name": "dodge",
+      "prefix": "boyfriend dodge",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "dodge-hold",
+      "prefix": "boyfriend dodge",
+      "frameIndices": [10, 11, 12],
+      "looped": true,
+      "offsets": [0, 0]
     },
     {
       "name": "hey",

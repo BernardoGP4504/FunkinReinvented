@@ -1,56 +1,276 @@
 {
 	"version": "1.0.0",
-	"name": "Reinvented Girlfriend (QT Rewired).",
-	"assetPath": "shared:characters/GF-REINVENTED/QT",
-	"renderType": "animateatlas",
+	"renderType": "sparrow",
+	"offsets": [
+		0,
+		0
+	],
+	"danceEvery": 1,
+	"applyStageMatrix": false,
+	"scale": 1,
+	"name": "Girlfriend Reinvented (QT).",
+	"cameraOffsets": [
+		0,
+		-12
+	],
+	"flipX": false,
+	"singTime": 4,
 	"startingAnimation": "danceRight",
+	"isPixel": false,
+	"assetPath": "characters/GF-REINVENTED/REINVENTED_GF_QT_AsssTS",
+	"healthIcon": {
+		"isPixel": false,
+		"shouldBop": true,
+		"offsets": [
+			0,
+			0
+		],
+		"scale": 1,
+		"id": "gf-qt-r",
+		"flipX": false
+	},
+	"atlasSettings": {
+		"swfMode": true,
+		"applyStageMatrix": false,
+		"useRenderTexture": false,
+		"filterQuality": 1,
+		"cacheOnLoad": false
+	},
 	"animations": [
 		{
+			"offsets": [
+				0,
+				208
+			],
+			"prefix": "gf idle",
+			"frameIndices": [
+				30,
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			],
 			"name": "danceLeft",
-			"prefix": "dance left"
+			"looped": false,
+			"flipX": false,
+			"animType": "framelabel",
+			"flipY": false,
+			"frameRate": 24
 		},
 		{
+			"offsets": [
+				0,
+				208
+			],
+			"prefix": "gf idle",
+			"frameIndices": [
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29
+			],
 			"name": "danceRight",
-			"prefix": "dance right"
+			"looped": false,
+			"flipX": false,
+			"animType": "framelabel",
+			"flipY": false,
+			"frameRate": 24
 		},
 		{
-			"name": "danceRight-alt",
-			"frameIndices": [14, 15, 16, 17, 18, 19, 0, 1, 2, 3],
-			"prefix": "caramelldansen"
-		},
-		{
-			"name": "dodge",
-			"prefix": "dodge"
-		},
-		{
-			"name": "intro",
-			"prefix": "shocked",
-			"looped": true
-		},
-		{
+			"offsets": [
+				-10,
+				198
+			],
+			"prefix": "gf caramelldansen",
+			"frameIndices": [
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				0,
+				1,
+				2,
+				3
+			],
 			"name": "danceLeft-alt",
-			"prefix": "caramelldansen",
-			"frameIndices": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+			"looped": false,
+			"flipX": false,
+			"animType": "framelabel",
+			"flipY": false,
+			"frameRate": 24
 		},
 		{
+			"offsets": [
+				-30,
+				223
+			],
+			"prefix": "gf dodge",
+			"frameIndices": [],
+			"name": "dodge",
+			"looped": false,
+			"flipX": false,
+			"animType": "framelabel",
+			"flipY": false,
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				-25,
+				198
+			],
+			"prefix": "gf shocked",
+			"frameIndices": [],
+			"looped": true,
+			"name": "intro",
+			"flipX": false,
+			"animType": "framelabel",
+			"flipY": false,
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				-10,
+				198
+			],
+			"prefix": "gf caramelldansen",
+			"frameIndices": [
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13
+			],
+			"name": "danceRight-alt",
+			"looped": false,
+			"flipX": false,
+			"animType": "framelabel",
+			"flipY": false,
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				-20,
+				198
+			],
+			"prefix": "gf pre dance0",
+			"looped": false,
 			"name": "preDance",
-			"prefix": "pre dance"
+			"flipX": false,
+			"animType": "framelabel",
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": "characters/GF/gf_dance"
 		},
 		{
+			"offsets": [
+				-20,
+				188
+			],
+			"prefix": "gf sad",
+			"frameIndices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12
+			],
 			"name": "sad",
-			"prefix": "sad"
+			"looped": false,
+			"flipX": false,
+			"animType": "framelabel",
+			"flipY": false,
+			"frameRate": 24
 		},
 		{
+			"offsets": [
+				-40,
+				218
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "gf cheer",
 			"name": "cheer",
-			"prefix": "cheer"
+			"looped": false,
+			"flipX": false,
+			"animType": "framelabel"
 		},
 		{
+			"offsets": [
+				-40,
+				218
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "gf cheer",
 			"name": "combo50",
-			"prefix": "cheer"
+			"looped": false,
+			"flipX": false,
+			"animType": "framelabel"
 		},
 		{
+			"offsets": [
+				-15,
+				188
+			],
+			"prefix": "gf sad",
+			"frameIndices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12
+			],
 			"name": "drop70",
-			"prefix": "sad"
+			"looped": false,
+			"flipX": false,
+			"animType": "framelabel",
+			"flipY": false,
+			"frameRate": 24
 		}
 	]
 }

@@ -1,0 +1,63 @@
+import funkin.play.PlayState;
+import flixel.FlxG;
+import funkin.play.character.MultiSparrowCharacter;
+import flixel.util.FlxTimer;
+import funkin.play.GameOverSubState;
+import funkin.input.Controls;
+import funkin.play.character.CharacterType;
+import funkin.modding.base.ScriptedFlxAtlasSprite;
+import flixel.effects.FlxFlicker;
+import funkin.util.TouchUtil;
+import funkin.Conductor;
+
+class QtBFRAnims extends MultiSparrowCharacter {
+	function new() {
+		super('qt-bfr');
+		this.ignoreExclusionPref = ["danceLeft-alt","danceRight-alt","preDance","preDance-secret", "hey", "intro"];
+	}
+	
+	override function onAnimationFinished(name:String) {
+
+		switch (name) {
+			case "preDance":
+				shouldAlternate = true;
+				idleSuffix = '-alt';
+			case "hey":
+				danceEvery = 1;
+				shouldAlternate = null;
+				idleSuffix = '';
+		}
+		super.onAnimationFinished(name);
+
+	}
+
+	public override function onPause(event:PauseScriptEvent) {
+		super.onPause(event);
+	}
+
+	public override function onResume(event:ScriptEvent) {
+		super.onResume(event);
+	}
+
+	override function onCreate(event)
+	{
+		super.onCreate(event);
+		if (PlayState.instance == null) return;
+	}
+
+	override function getDeathQuote():Null<String> {
+		if (PlayState.instance.currentStage.getDad().characterId == "QT") 
+			return Paths.sound('qtgameover/bf/qtGameover-' + FlxG.random.int(1, 7));
+	}
+
+	public override function onUpdate(event)
+	{
+		super.onUpdate(event);
+		if (GameOverSubState.instance == null) return;
+
+		if (GameOverSubState.instance.controls.BACK) {
+			GameOverSubState.blueballed = true;
+			GameOverSubState.instance.goBack();
+		}
+	}
+}

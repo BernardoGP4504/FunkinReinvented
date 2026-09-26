@@ -1,62 +1,57 @@
 import funkin.play.PlayState;
-import funkin.play.character.AnimateAtlasCharacter;
-import flixel.FlxG;
-import animate.internal.elements.FlxSpriteElement;
-import funkin.graphics.shaders.AdjustColorShader;
+import funkin.play.character.SparrowCharacter;
+import funkin.graphics.FunkinSprite;
 
-class TheReinventedGirlfriendCharacterQtAnims extends AnimateAtlasCharacter {
+class GFRCharacterQtAnims extends SparrowCharacter {
 	function new() {
 		super('gf-qt-r');
 	}
-	public var boomBoxSpeakers:SpeakerSprite;
-	private var speakerShader:AdjustColorShader;
+	public var boomBoxSpeakers:FunkinSprite;
 	function onCreate(event:ScriptEvent) {
 		super.onCreate(event);	
 
-		boomBoxSpeakers = new SpeakerSprite(0, 0);
-
-    	var element:FlxSpriteElement = new FlxSpriteElement(boomBoxSpeakers);
-		for (frame in this.getFramesWithKeyword("placeholder"))
-		frame.add(element);
-		speakerShader = new AdjustColorShader();
+		boomBoxSpeakers = FunkinSprite.createSparrow(this.x, this.y, "characters/GF-REINVENTED/speaker_assets");
+		boomBoxSpeakers.animation.addByPrefix('boom', 'bumpBox', 24, false);
+		boomBoxSpeakers.antialiasing = this.antialiasing;
 		
 	}
-
-	override function onUpdate(event) {
+	var indexChange:Bool = false;
+	function onUpdate(event:UpdateScriptEvent) {
 		super.onUpdate(event);
 
-		if (this.shader == null) return;
-		
-        speakerShader.brightness = this.shader.brightness;
-        speakerShader.hue = this.shader.hue;
-        speakerShader.contrast = this.shader.contrast -20;
-        speakerShader.saturation = this.shader.saturation + 20;
+		boomBoxSpeakers.visible = this.visible;
+		if (!indexChange)
+		{
+            boomBoxSpeakers.x = this.x - 350 + 173;
+			boomBoxSpeakers.y = this.y - 118 + 220;
+			boomBoxSpeakers.zIndex = this.zIndex - 1;
+			boomBoxSpeakers.shader = this.shader;
+			PlayState.instance.currentStage.add(boomBoxSpeakers);
 
-		boomBoxSpeakers.shader = speakerShader;
 
+			PlayState.instance.currentStage.refresh();
+			indexChange = true;
+		}
 	}
-	
-
-	override function dance(forceRestart:Bool) {
+			
+override function dance(forceRestart:Bool) {
 		super.dance(forceRestart);
 
 		if (boomBoxSpeakers != null && boomBoxSpeakers.animation != null)
-			boomBoxSpeakers.animation.play("bump", true);
+			boomBoxSpeakers.animation.play("boom", true);
 		
 	}
 
-	override function resetCharacter(resetCamera:Bool):Void{
+override function resetCharacter(resetCamera:Bool):Void{
 		super.resetCharacter(resetCamera);
 		shouldAlternate = null;
 		idleSuffix = '';
 
 	}
-
 	override function onAnimationFinished(name:String) {
 		if (PlayState.instance != null) 
 			switch (name) {
 				case "preDance":
-          			hasDanced = PlayState.instance.currentStage.getBoyfriend().hasDanced;
 					idleSuffix = '-alt';
 				case "cheer":
 					idleSuffix = '';
