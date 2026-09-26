@@ -17,7 +17,6 @@ class QtBFRAnims extends MultiSparrowCharacter {
 	}
 	
 	override function onAnimationFinished(name:String) {
-
 		switch (name) {
 			case "preDance":
 				shouldAlternate = true;
@@ -28,7 +27,6 @@ class QtBFRAnims extends MultiSparrowCharacter {
 				idleSuffix = '';
 		}
 		super.onAnimationFinished(name);
-
 	}
 
 	public override function onPause(event:PauseScriptEvent) {
@@ -43,6 +41,7 @@ class QtBFRAnims extends MultiSparrowCharacter {
 	{
 		super.onCreate(event);
 		if (PlayState.instance == null) return;
+		GameOverSubState.musicSuffix = '-reinvented';
 	}
 
 	override function getDeathQuote():Null<String> {
