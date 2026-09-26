@@ -127,7 +127,7 @@
    "e": "PlayAnimation",
    "v": {
 	"target": "boyfriend",
-	"anim": "hey",
+	"anim": "cheer",
 	"force": false
 }
   }
