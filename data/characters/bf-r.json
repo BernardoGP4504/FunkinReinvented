@@ -1,100 +1,270 @@
 {
-  "version": "1.0.0",
-  "name": "Boyfriend (Reinvented)",
-  "renderType": "multisparrow",
-  "assetPath": "characters/BF-REINVENTED/BF",
-  "flipX": true,
-  "animations": [
-    {
-      "name": "idle",
-      "prefix": "BF idle dance",
-      "offsets": [-5, 0]
-    },
-    {
-      "name": "singLEFT",
-      "prefix": "BF NOTE LEFT 1",
-      "offsets": [12, -6]
-    },
-    {
-      "name": "singDOWN",
-      "prefix": "BF NOTE DOWN 1",
-      "offsets": [-10, -50]
-    },
-    {
-      "name": "singUP",
-      "prefix": "BF NOTE UP 1",
-      "offsets": [-29, 27]
-    },
-    {
-      "name": "singRIGHT",
-      "prefix": "BF NOTE RIGHT 1",
-      "offsets": [-38, -7]
-    },
-    {
-      "name": "singLEFTmiss",
-      "prefix": "BF NOTE LEFT MISS",
-      "offsets": [12, 24]
-    },
-    {
-      "name": "singDOWNmiss",
-      "prefix": "BF NOTE DOWN MISS",
-      "offsets": [-11, -19]
-    },
-    {
-      "name": "singUPmiss",
-      "prefix": "BF NOTE UP MISS",
-      "offsets": [-29, 27]
-    },
-    {
-      "name": "singRIGHTmiss",
-      "prefix": "BF NOTE RIGHT MISS",
-      "offsets": [-30, 21]
-    },
-        {
-      "name": "dodge",
-      "prefix": "boyfriend dodge",
-      "offsets": [0, 0]
-    },
-    {
-      "name": "dodge-hold",
-      "prefix": "boyfriend dodge",
-      "frameIndices": [10, 11, 12],
-      "looped": true,
-      "offsets": [0, 0]
-    },
-    {
-      "name": "hey",
-      "prefix": "BF HEY!!",
-      "offsets": [7, 4]
-    },
-    {
-      "name": "cheer",
-      "prefix": "Boyfriend YEAH cheer0",
-      "offsets": [0, 0]
-    },
-    {
-      "name": "firstDeath",  
-      "prefix": "BF dies",
-      "assetPath": "characters/BF-REINVENTED/DEAD",         
-      "offsets": [-37, 11]
-    },    
-    {
-      "name": "deathLoop",
-      "prefix": "BF Dead Loop",
-      "assetPath": "characters/BF-REINVENTED/DEAD",
-      "looped": true,
-      "offsets": [-37, 5]
-    },
-    {
-      "name": "deathConfirm",
-      "assetPath": "characters/BF-REINVENTED/DEAD",      
-      "prefix": "BF Dead confirm",
-      "offsets": [-37, 69]
-    },
-    {
-      "name": "scared",
-      "prefix": "BF idle shaking",
-      "offsets": [-4, 0]
-    }
-  ]
+	"version": "1.0.0",
+	"renderType": "multisparrow",
+	"offsets": [
+		0,
+		0
+	],
+	"danceEvery": 1,
+	"applyStageMatrix": false,
+	"scale": 1,
+	"name": "Boyfriend (Reinvented)",
+	"flipX": true,
+	"cameraOffsets": [
+		0,
+		0
+	],
+	"startingAnimation": "idle",
+	"isPixel": false,
+	"singTime": 8,
+	"assetPath": "characters/BF-REINVENTED/BF",
+	"healthIcon": {
+		"offsets": [
+			0,
+			0
+		],
+		"id": "bf-r",
+		"flipX": false,
+		"shouldBop": true,
+		"isPixel": false,
+		"scale": 1
+	},
+	"atlasSettings": {
+		"applyStageMatrix": false,
+		"useRenderTexture": false,
+		"filterQuality": 1,
+		"cacheOnLoad": false,
+		"swfMode": true
+	},
+	"animations": [
+		{
+			"flipY": false,
+			"offsets": [
+				-5,
+				0
+			],
+			"frameRate": 24,
+			"prefix": "BF idle dance",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "idle"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				12,
+				-6
+			],
+			"frameRate": 24,
+			"prefix": "BF NOTE LEFT 1",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "singLEFT"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-10,
+				-50
+			],
+			"frameRate": 24,
+			"prefix": "BF NOTE DOWN 1",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "singDOWN"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-29,
+				27
+			],
+			"frameRate": 24,
+			"prefix": "BF NOTE UP 1",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "singUP"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-38,
+				-7
+			],
+			"frameRate": 24,
+			"prefix": "BF NOTE RIGHT 1",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "singRIGHT"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				12,
+				24
+			],
+			"frameRate": 24,
+			"prefix": "BF NOTE LEFT MISS",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "singLEFTmiss"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-11,
+				-19
+			],
+			"frameRate": 24,
+			"prefix": "BF NOTE DOWN MISS",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "singDOWNmiss"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-29,
+				27
+			],
+			"frameRate": 24,
+			"prefix": "BF NOTE UP MISS",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "singUPmiss"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-30,
+				21
+			],
+			"frameRate": 24,
+			"prefix": "BF NOTE RIGHT MISS",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "singRIGHTmiss"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-5,
+				-15
+			],
+			"frameRate": 24,
+			"prefix": "boyfriend dodge",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "dodge"
+		},
+		{
+			"offsets": [
+				-5,
+				0
+			],
+			"prefix": "boyfriend dodge",
+			"frameIndices": [
+				10,
+				11,
+				12
+			],
+			"animType": "framelabel",
+			"flipX": false,
+			"name": "dodge-hold",
+			"looped": true,
+			"flipY": false,
+			"frameRate": 24
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				7,
+				4
+			],
+			"frameRate": 24,
+			"prefix": "BF HEY!!",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "hey"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"frameRate": 24,
+			"prefix": "Boyfriend YEAH cheer0",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "cheer"
+		},
+		{
+			"offsets": [
+				-37,
+				11
+			],
+			"prefix": "BF dies",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "firstDeath",
+			"flipY": false,
+			"assetPath": "characters/BF-REINVENTED/DEAD",
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				-37,
+				5
+			],
+			"prefix": "BF Dead Loop",
+			"animType": "framelabel",
+			"flipX": false,
+			"name": "deathLoop",
+			"looped": true,
+			"flipY": false,
+			"assetPath": "characters/BF-REINVENTED/DEAD",
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				-37,
+				69
+			],
+			"prefix": "BF Dead confirm",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "deathConfirm",
+			"flipY": false,
+			"assetPath": "characters/BF-REINVENTED/DEAD",
+			"frameRate": 24
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-4,
+				0
+			],
+			"frameRate": 24,
+			"prefix": "BF idle shaking",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "scared"
+		}
+	]
 }
