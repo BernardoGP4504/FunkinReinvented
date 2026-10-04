@@ -15,12 +15,12 @@
     {
       "op": "add",
       "path": "/playData/characters/altInstrumentals/-",
-      "value": "extras"
+      "value": "alt"
     }
   ],
   [
     { "op": "test", "path": "/playData/songVariations", "inverse": true },
     { "op": "add", "path": "/playData/songVariations", "value": [] }
   ],
-  [{ "op": "add", "path": "/playData/songVariations/-", "value": "extras" }]
+  [{ "op": "add", "path": "/playData/songVariations/-", "value": "alt" }]
 ]

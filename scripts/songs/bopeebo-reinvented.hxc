@@ -1,0 +1,23 @@
+import flixel.FlxG;
+import funkin.play.song.Song;
+import funkin.save.Save;
+import funkin.play.PlayState;
+import funkin.graphics.FunkinSprite;
+import flixel.tweens.FlxTween;
+import funkin.data.freeplay.player.PlayerRegistry;
+import funkin.modding.module.ModuleHandler;
+import funkin.play.Countdown;
+import funkin.Conductor;
+
+class BopeeboReinventedSong extends Song {
+    public function new() {
+        super('bopeebo-reinvented', {});
+    }
+
+    public override function onCountdownStart(event:CountdownScriptEvent):Void {
+        super.onCountdownStart(event);
+        event.cancel();
+        PlayState.instance.isInCountdown = true;
+        Conductor.instance.update(0);
+    }
+}
