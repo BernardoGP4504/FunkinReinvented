@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="BF Assets.png">
+	<!-- Created with Adobe Animate version 22.0.3.179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Boyfriend YEAH cheer0000" x="1225" y="1317" width="433" height="459" frameX="-2" frameY="0" frameWidth="435" frameHeight="460"/>
+	<SubTexture name="Boyfriend YEAH cheer0001" x="1225" y="1317" width="433" height="459" frameX="-2" frameY="0" frameWidth="435" frameHeight="460"/>
+	<SubTexture name="Boyfriend YEAH cheer0002" x="1658" y="1317" width="425" height="438" frameX="-4" frameY="-21" frameWidth="435" frameHeight="460"/>
+	<SubTexture name="Boyfriend YEAH cheer0003" x="1658" y="1317" width="425" height="438" frameX="-4" frameY="-21" frameWidth="435" frameHeight="460"/>
+	<SubTexture name="Boyfriend YEAH cheer0004" x="2083" y="1317" width="432" height="446" frameX="0" frameY="-14" frameWidth="435" frameHeight="460"/>
+	<SubTexture name="Boyfriend YEAH cheer0005" x="2083" y="1317" width="432" height="446" frameX="0" frameY="-14" frameWidth="435" frameHeight="460"/>
+	<SubTexture name="Boyfriend YEAH cheer0006" x="2083" y="1317" width="432" height="446" frameX="0" frameY="-14" frameWidth="435" frameHeight="460"/>
+	<SubTexture name="Boyfriend YEAH cheer0007" x="2083" y="1317" width="432" height="446" frameX="0" frameY="-14" frameWidth="435" frameHeight="460"/>
+	<SubTexture name="Boyfriend YEAH cheer0008" x="2083" y="1317" width="432" height="446" frameX="0" frameY="-14" frameWidth="435" frameHeight="460"/>
+</TextureAtlas>

@@ -4,7 +4,7 @@
 	"songName": "Guns (Reinvented)",
 	"playData": {
 		"difficulties": ["hard"],
-		"stage": "battlefieldReinvented",
+		"stage": "tankmanBattlefieldErect",
 		"noteStyle": "reinvented",
 		"ratings": {
 			"hard": 5
@@ -14,6 +14,7 @@
 			"girlfriend": "gf-tankmen",
 			"opponent": "tankman"
 		},
+		"stickerPack": "standard-reinvented",
 		"album": "volume2"
 	},
 	"timeChanges": [

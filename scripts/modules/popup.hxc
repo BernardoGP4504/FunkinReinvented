@@ -1,0 +1,31 @@
+import funkin.modding.module.Module;
+import funkin.play.PlayState;
+
+#if mobile
+import funkin.input.ControlsHandler;
+#end
+
+class GlobalPopupOffsets extends Module
+{
+    public function new()
+    {
+        super("GlobalPopupOffsets", 1000, {state: PlayState});
+    }
+
+    public override function onCountdownStart(event:ScriptEvent):Void
+    {
+        super.onCountdownStart(event);
+
+        if (PlayState.instance == null || PlayState.instance.comboPopUps == null) return;
+
+        // PC
+        #if !mobile
+        if (!Preferences.downscroll) PlayState.instance.comboPopUps.offsets = [550, 350];
+        else PlayState.instance.comboPopUps.offsets = [550, -190];
+        #else
+        // Mobile (adapte conforme sua lógica)
+        if (Preferences.controlsScheme == "Arrows" && !ControlsHandler.usingExternalInputDevice)
+            PlayState.instance.comboPopUps.offsets = [30, 350];
+        #end
+    }
+}

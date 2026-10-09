@@ -1,0 +1,46 @@
+{
+ "version": "2.2.4",
+ "songName": "Bopeebo (Reinvented)",
+ "artist": "Jujuzinha + Write",
+ "charter": "BerGP + magnífic0",
+ "offsets": { },
+ "playData": {
+  "difficulties": [
+   "hard"
+  ],
+  "characters": {
+   "player": "bf-r",
+   "girlfriend": "gf-r",
+   "opponent": "dad-r",
+   "opponentVocals": [
+    "dad-r"
+   ],
+   "playerVocals": [
+    "bf-r"
+   ]
+  },
+  "stage": "mainStageReinvented",
+  "noteStyle": "reinvented",
+  "ratings": {
+   "hard": 6
+  },
+  "stickerPack": "standard-reinvented", 
+  "album": "volume1",
+  "previewEnd": 0.2
+ },
+ "generatedBy": "Friday Night Funkin' - v0.8.6",
+ "timeChanges": [
+  {
+   "t": 0,
+   "b": 0,
+   "bpm": 115,
+   "bt": [4, 4, 4, 4]
+  },
+  {
+   "t": 34743.9957,
+   "b": 66.5927,
+   "bpm": 115,
+   "bt": [4, 4, 4, 4]
+  }
+ ]
+}

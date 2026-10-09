@@ -1,29 +1,29 @@
 {
  "version": "2.2.4",
- "songName": "Delightful",
+ "songName": "Delightful (ALT)",
  "artist": "Pankdoe",
  "charter": "magnífic0",
  "offsets": { },
  "playData": {
   "difficulties": [
-   "extras"
+   "alt"
   ],
   "characters": {
    "player": "qt-bfr",
    "girlfriend": "gf-qt-r",
-   "opponent": "qt",
-   "instrumental": "extras",
+   "opponent": "qt-r",
+   "instrumental": "alt",
    "opponentVocals": [
-    "qt"
+    "qt-r"
    ],
    "playerVocals": [
     "qt-bfr"
    ]
   },
-  "stage": "qtStageCityErect",
+  "stage": "qtStage",
   "noteStyle": "reinvented",
   "ratings": {
-   "extras": 6
+   "alt": 6
   },
   "album": "qt",
   "stickerPack": "qtStickers",

@@ -103,6 +103,20 @@
 		{
 			"flipY": false,
 			"offsets": [
+				-5,
+				-15
+			],
+			"assetPath": "characters/BF-REINVENTED/BF",
+			"frameRate": 24,
+			"prefix": "boyfriend dodge",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "dodge"
+		},
+		{
+			"flipY": false,
+			"offsets": [
 				-10,
 				-50
 			],

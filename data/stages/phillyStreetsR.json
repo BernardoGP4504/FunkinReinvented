@@ -206,7 +206,7 @@
    "zIndex": 100
   },
   {
-   "assetPath": "SpraycanPile",
+   "assetPath": "phillyStreets/r/SpraycanPile",
    "atlasSettings": null,
    "name": "spraycanPile",
    "position": [920, 1145],

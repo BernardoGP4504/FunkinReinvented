@@ -1,0 +1,110 @@
+import flixel.FlxG;
+import flixel.util.FlxTimer;
+import funkin.util.ReflectUtil;
+import funkin.modding.module.Module;
+import funkin.data.song.SongRegistry;
+import funkin.ui.transition.LoadingState;
+
+class testCode extends Module {
+	public function new() {
+		super('testCode');
+	}
+
+	var currentState = "";
+	var inputBuffer = [];
+	var maxBufferLength = 20;
+
+	var secretCodes = [
+		["t", "e", "s", "t", function() {
+			trace("TEST code triggered!");
+        	FlxG.sound.play(Paths.sound("confirmMenu"));
+
+            new FlxTimer().start(0.8, () -> {
+                
+		        loadSong('test-reinvented', 'hard');	
+        	});
+		}]
+	];
+
+	function onStateChangeEnd() {
+		super.onStateChangeEnd();
+		var daThing = ReflectUtil.getClassNameOf(FlxG.state).split(".");
+		
+		currentState = daThing[daThing.length - 1];
+	}
+
+	override function onUpdate() {
+		super.onUpdate();
+
+		if (currentState == "MainMenuState") {
+			
+			if (FlxG.keys.justReleased.A) press("a");
+			if (FlxG.keys.justReleased.B) press("b"); //lol this is the easiest way to do this btw
+			if (FlxG.keys.justReleased.C) press("c");
+			if (FlxG.keys.justReleased.D) press("d");
+			if (FlxG.keys.justReleased.E) press("e");
+			if (FlxG.keys.justReleased.F) press("f");
+			if (FlxG.keys.justReleased.G) press("g");
+			if (FlxG.keys.justReleased.H) press("h");
+			if (FlxG.keys.justReleased.I) press("i");
+			if (FlxG.keys.justReleased.J) press("j");
+			if (FlxG.keys.justReleased.K) press("k");
+			if (FlxG.keys.justReleased.L) press("l");
+			if (FlxG.keys.justReleased.M) press("m");
+			if (FlxG.keys.justReleased.N) press("n");
+			if (FlxG.keys.justReleased.O) press("o");
+			if (FlxG.keys.justReleased.P) press("p");
+			if (FlxG.keys.justReleased.Q) press("q");
+			if (FlxG.keys.justReleased.R) press("r");
+			if (FlxG.keys.justReleased.S) press("s");
+			if (FlxG.keys.justReleased.T) press("t");
+			if (FlxG.keys.justReleased.U) press("u");
+			if (FlxG.keys.justReleased.V) press("v");
+			if (FlxG.keys.justReleased.W) press("w");
+			if (FlxG.keys.justReleased.X) press("x");
+			if (FlxG.keys.justReleased.Y) press("y");
+			if (FlxG.keys.justReleased.Z) press("z");
+		}
+	}
+
+	function press(letter:String) {
+		inputBuffer.push(letter);
+		if (inputBuffer.length > maxBufferLength)
+			inputBuffer.shift();
+		checkCodes();
+	}
+
+	function checkCodes() {
+		for (code in secretCodes) {
+			var codeSeq = [];
+			for (i in 0...code.length - 1)
+				codeSeq.push(code[i]);
+
+			var action = code[code.length - 1];
+			if (matchesBuffer(codeSeq)) {
+				action(); 
+				inputBuffer = []; 
+				break;
+			}
+		}
+	}
+
+	function matchesBuffer(code:Array<String>):Bool {
+		if (code.length > inputBuffer.length) return false;
+
+		for (i in 0...code.length) {
+			if (inputBuffer[inputBuffer.length - code.length + i] != code[i])
+				return false;
+		}
+		return true;
+	}
+
+    function loadSong(theSong:String, theDifficulty:String) {
+        theSong = SongRegistry.instance.fetchEntry(theSong);	
+        LoadingState.loadPlayState({
+        targetSong: theSong,
+        targetDifficulty: theDifficulty,
+        targetVariation: null
+        }, true);
+    }
+}
