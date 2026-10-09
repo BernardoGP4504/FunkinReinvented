@@ -33,13 +33,8 @@ class PhillyStreetsReinventedStage extends Stage
   var lastChange:Int = 0;
   var changeInterval:Int = 8;
 
-  var carWaiting:Bool = false;
-  var carInterruptable:Bool = true;
-  var car2Interruptable:Bool = true;
-
   var scrollingSky:FlxTiledSprite;
 
-  // ---- MIST ----
   var mist0:FlxBackdrop;
   var mist1:FlxBackdrop;
   var mist2:FlxBackdrop;
@@ -48,7 +43,6 @@ class PhillyStreetsReinventedStage extends Stage
   var mist5:FlxBackdrop;
   var _timer:Float = 0;
 
-  // ---- SHADER DOS PERSONAGENS ----
   var colorShader:AdjustColorShader;
 
   function new()
@@ -70,38 +64,6 @@ class PhillyStreetsReinventedStage extends Stage
     {
       getNamedProp('phillyTraffic').animation.play('togreen');
       changeInterval = 30;
-
-      if (carWaiting == true) finishCarLights(getNamedProp('phillyCars'));
-    }
-  }
-
-  function resetCar(left:Bool, right:Bool)
-  {
-    if (left)
-    {
-      carWaiting = false;
-      carInterruptable = true;
-      var cars = getNamedProp('phillyCars');
-      if (cars != null)
-      {
-        FlxTween.cancelTweensOf(cars);
-        cars.x = 1200;
-        cars.y = 818;
-        cars.angle = 0;
-      }
-    }
-
-    if (right)
-    {
-      car2Interruptable = true;
-      var cars2 = getNamedProp('phillyCars2');
-      if (cars2 != null)
-      {
-        FlxTween.cancelTweensOf(cars2);
-        getNamedProp('phillyCars2').x = 1200;
-        getNamedProp('phillyCars2').y = 818;
-        getNamedProp('phillyCars2').angle = 0;
-      }
     }
   }
 
@@ -138,7 +100,6 @@ class PhillyStreetsReinventedStage extends Stage
     rainShaderFilter = new ShaderFilter(rainShader);
     FlxG.camera.filters = [rainShaderFilter];
 
-    resetCar(true, true);
     resetStageValues();
   }
 
@@ -146,7 +107,6 @@ class PhillyStreetsReinventedStage extends Stage
   {
     super.buildStage();
 
-    // ---- SHADER DOS PERSONAGENS ----
     colorShader = new AdjustColorShader();
     colorShader.hue = -5;
     colorShader.saturation = -40;
@@ -161,7 +121,6 @@ class PhillyStreetsReinventedStage extends Stage
 
     add(scrollingSky);
 
-    // ---- CAMADAS DE MIST ----
     mist0 = new FlxBackdrop(Paths.image('phillyStreets/erect/mistMid'), 0x01);
     mist0.setPosition(-650, -100);
     mist0.scrollFactor.set(1.2, 1.2);
@@ -231,150 +190,6 @@ class PhillyStreetsReinventedStage extends Stage
   override function onDestroy(event:ScriptEvent)
   {
     super.onDestroy();
-
-    var cars = getNamedProp('phillyCars');
-    if (cars != null) FlxTween.cancelTweensOf(cars);
-    var cars2 = getNamedProp('phillyCars2');
-    if (cars2 != null) FlxTween.cancelTweensOf(cars2);
-  }
-
-  function finishCarLights(sprite:FlxSprite):Void
-  {
-    carWaiting = false;
-    var duration:Float = FlxG.random.float(1.8, 3);
-    var rotations:Array<Int> = [-5, 18];
-    var offset:Array<Float> = [306.6, 168.3];
-    var startdelay:Float = FlxG.random.float(0.2, 1.2);
-
-    var path:Array<FlxPoint> = [FlxPoint.get(1950 - offset[0] - 80,
-      980 - offset[1] + 15), FlxPoint.get(2400 - offset[0], 980 - offset[1] - 50), FlxPoint.get(3102 - offset[0], 1187 - offset[1] + 40)];
-
-    FlxTween.angle(sprite, rotations[0], rotations[1], duration, {ease: FlxEase.sineIn, startDelay: startdelay});
-    FlxTween.quadPath(sprite, path, duration, true, {
-      ease: FlxEase.sineIn,
-      startDelay: startdelay,
-      onComplete: function(_)
-      {
-        carInterruptable = true;
-      }
-    });
-  }
-
-  function driveCarLights(sprite:FlxSprite):Void
-  {
-    carInterruptable = false;
-    FlxTween.cancelTweensOf(sprite);
-    var variant:Int = FlxG.random.int(1, 4);
-    sprite.animation.play('car' + variant);
-    var extraOffset = [0, 0];
-    var duration:Float = 2;
-
-    switch (variant)
-    {
-      case 1:
-        duration = FlxG.random.float(1, 1.7);
-      case 2:
-        extraOffset = [20, -15];
-        duration = FlxG.random.float(0.9, 1.5);
-      case 3:
-        extraOffset = [30, 50];
-        duration = FlxG.random.float(1.5, 2.5);
-      case 4:
-        extraOffset = [10, 60];
-        duration = FlxG.random.float(1.5, 2.5);
-    }
-    var rotations:Array<Int> = [-7, -5];
-    var offset:Array<Float> = [306.6, 168.3];
-    sprite.offset.set(extraOffset[0], extraOffset[1]);
-
-    var path:Array<FlxPoint> = [FlxPoint.get(1500 - offset[0] - 20,
-      1049 - offset[1] - 20), FlxPoint.get(1770 - offset[0] - 80, 994 - offset[1] + 10), FlxPoint.get(1950 - offset[0] - 80, 980 - offset[1] + 15)];
-
-    FlxTween.angle(sprite, rotations[0], rotations[1], duration, {ease: FlxEase.cubeOut});
-    FlxTween.quadPath(sprite, path, duration, true, {
-      ease: FlxEase.cubeOut,
-      onComplete: function(_)
-      {
-        carWaiting = true;
-        if (lightsStop == false) finishCarLights(getNamedProp('phillyCars'));
-      }
-    });
-  }
-
-  function driveCar(sprite:FlxSprite):Void
-  {
-    carInterruptable = false;
-    FlxTween.cancelTweensOf(sprite);
-    var variant:Int = FlxG.random.int(1, 4);
-    sprite.animation.play('car' + variant);
-    var extraOffset = [0, 0];
-    var duration:Float = 2;
-    switch (variant)
-    {
-      case 1:
-        duration = FlxG.random.float(1, 1.7);
-      case 2:
-        extraOffset = [20, -15];
-        duration = FlxG.random.float(0.6, 1.2);
-      case 3:
-        extraOffset = [30, 50];
-        duration = FlxG.random.float(1.5, 2.5);
-      case 4:
-        extraOffset = [10, 60];
-        duration = FlxG.random.float(1.5, 2.5);
-    }
-    var offset:Array<Float> = [306.6, 168.3];
-    sprite.offset.set(extraOffset[0], extraOffset[1]);
-    var rotations:Array<Int> = [-8, 18];
-    var path:Array<FlxPoint> = [FlxPoint.get(1570 - offset[0],
-      1049 - offset[1] - 30), FlxPoint.get(2400 - offset[0], 980 - offset[1] - 50), FlxPoint.get(3102 - offset[0], 1187 - offset[1] + 40)];
-
-    FlxTween.angle(sprite, rotations[0], rotations[1], duration, null);
-    FlxTween.quadPath(sprite, path, duration, true, {
-      ease: null,
-      onComplete: function(_)
-      {
-        carInterruptable = true;
-      }
-    });
-  }
-
-  function driveCarBack(sprite:FlxSprite):Void
-  {
-    car2Interruptable = false;
-    FlxTween.cancelTweensOf(sprite);
-    var variant:Int = FlxG.random.int(1, 4);
-    sprite.animation.play('car' + variant);
-    var extraOffset = [0, 0];
-    var duration:Float = 2;
-    switch (variant)
-    {
-      case 1:
-        duration = FlxG.random.float(1, 1.7);
-      case 2:
-        extraOffset = [20, -15];
-        duration = FlxG.random.float(0.6, 1.2);
-      case 3:
-        extraOffset = [30, 50];
-        duration = FlxG.random.float(1.5, 2.5);
-      case 4:
-        extraOffset = [10, 60];
-        duration = FlxG.random.float(1.5, 2.5);
-    }
-    var offset:Array<Float> = [306.6, 168.3];
-    sprite.offset.set(extraOffset[0], extraOffset[1]);
-    var rotations:Array<Int> = [18, -8];
-    var path:Array<FlxPoint> = [FlxPoint.get(3102 - offset[0],
-      1127 - offset[1] + 60), FlxPoint.get(2400 - offset[0], 980 - offset[1] - 30), FlxPoint.get(1570 - offset[0], 1049 - offset[1] - 10)];
-
-    FlxTween.angle(sprite, rotations[0], rotations[1], duration, null);
-    FlxTween.quadPath(sprite, path, duration, true, {
-      ease: null,
-      onComplete: function(_)
-      {
-        car2Interruptable = true;
-      }
-    });
   }
 
   function resetStageValues():Void
@@ -428,23 +243,6 @@ class PhillyStreetsReinventedStage extends Stage
   {
     super.onBeatHit(event);
 
-    if (FlxG.random.bool(10) && event.beat != (lastChange + changeInterval) && carInterruptable == true)
-    {
-      if (lightsStop == false)
-      {
-        driveCar(getNamedProp('phillyCars'));
-      }
-      else
-      {
-        driveCarLights(getNamedProp('phillyCars'));
-      }
-    }
-
-    if (FlxG.random.bool(10)
-      && event.beat != (lastChange + changeInterval)
-      && car2Interruptable == true
-      && lightsStop == false) driveCarBack(getNamedProp('phillyCars2'));
-
     if (event.beat == (lastChange + changeInterval)) changeLights(event.beat);
   }
 
@@ -462,31 +260,11 @@ class PhillyStreetsReinventedStage extends Stage
   public override function onPause(event:PauseScriptEvent)
   {
     super.onPause(event);
-    pauseCars();
   }
 
   public override function onResume(event:ScriptEvent)
   {
     super.onResume(event);
-    resumeCars();
-  }
-
-  function pauseCars():Void
-  {
-    var cars = getNamedProp('phillyCars');
-    if (cars != null) FlxTweenUtil.pauseTweensOf(cars);
-
-    var cars2 = getNamedProp('phillyCars2');
-    if (cars2 != null) FlxTweenUtil.pauseTweensOf(cars2);
-  }
-
-  function resumeCars():Void
-  {
-    var cars = getNamedProp('phillyCars');
-    if (cars != null) FlxTweenUtil.resumeTweensOf(cars);
-
-    var cars2 = getNamedProp('phillyCars2');
-    if (cars2 != null) FlxTweenUtil.resumeTweensOf(cars2);
   }
 
   override function onGameOver(event:ScriptEvent):Void
@@ -499,7 +277,6 @@ class PhillyStreetsReinventedStage extends Stage
   {
     super.onSongRetry(event);
 
-    resetCar(true, true);
     resetStageValues();
     FlxG.camera.filters = [rainShaderFilter];
   }

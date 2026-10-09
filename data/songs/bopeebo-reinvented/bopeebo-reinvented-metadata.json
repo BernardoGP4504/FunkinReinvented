@@ -24,14 +24,21 @@
   "ratings": {
    "hard": 6
   },
+  "stickerPack": "standard-reinvented", 
   "album": "volume1",
-  "stickerPack": "week4-reinvented"
+  "previewEnd": 0.2
  },
  "generatedBy": "Friday Night Funkin' - v0.8.6",
  "timeChanges": [
   {
    "t": 0,
    "b": 0,
+   "bpm": 115,
+   "bt": [4, 4, 4, 4]
+  },
+  {
+   "t": 34743.9957,
+   "b": 66.5927,
    "bpm": 115,
    "bt": [4, 4, 4, 4]
   }

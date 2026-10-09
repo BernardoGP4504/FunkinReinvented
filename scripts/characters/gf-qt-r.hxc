@@ -2,7 +2,7 @@ import funkin.play.PlayState;
 import funkin.play.character.SparrowCharacter;
 import funkin.graphics.FunkinSprite;
 
-class GFRCharacterQtAnims extends SparrowCharacter {
+class GFREINVENTEDCharacterQtAnims extends SparrowCharacter {
 	function new() {
 		super('gf-qt-r');
 	}

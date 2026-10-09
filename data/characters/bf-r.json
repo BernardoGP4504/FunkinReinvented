@@ -168,24 +168,6 @@
 			"name": "dodge"
 		},
 		{
-			"offsets": [
-				-5,
-				0
-			],
-			"prefix": "boyfriend dodge",
-			"frameIndices": [
-				10,
-				11,
-				12
-			],
-			"animType": "framelabel",
-			"flipX": false,
-			"name": "dodge-hold",
-			"looped": true,
-			"flipY": false,
-			"frameRate": 24
-		},
-		{
 			"flipY": false,
 			"offsets": [
 				7,
@@ -205,7 +187,8 @@
 				0
 			],
 			"frameRate": 24,
-			"prefix": "Boyfriend YEAH cheer0",
+			"assetPath": "characters/BF-REINVENTED/cheer",			
+			"prefix": "Boyfriend YEAH cheer",
 			"animType": "framelabel",
 			"flipX": false,
 			"looped": false,
