@@ -12,6 +12,10 @@
    "player": "pico-playable-r",
    "girlfriend": "nene-r",
    "opponent": "darnell-reinvented",
+   "altInstrumentals": [
+    "bf",
+    "erect"
+   ],
    "opponentVocals": [
     "darnell-reinvented"
    ],

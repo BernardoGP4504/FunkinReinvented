@@ -1,0 +1,30 @@
+import funkin.modding.module.Module;
+import funkin.api.discord.DiscordClient;
+import funkin.play.PlayState;
+import Std; //have safe sex
+import lime.graphics.Image;
+import lime.app.Application;
+
+class DiscordFunkinReinvented extends Module
+{
+	public function new()
+	{
+		super('namex', 1000);
+    #if !sys active = false; #end
+	}
+
+	override function onCreate(ev)
+	{
+		super.onCreate(ev);
+		FlxG.stage.application.window.title = "Friday Night Funkin' Reinvented";
+		Application.current.window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('icon'))));
+	}
+
+	override function onUpdate(event) 
+	{
+		super.onUpdate(event);
+		if(Std.isOfType(FlxG.state,PlayState)) return "my booty itches";
+
+    DiscordClient.setPresence({state: "In the Menus", details:"Reinvented Edition", largeImageKey: "https://raw.githubusercontent.com/BernardoGP4504/FunkinReinvented/main/_polymod_icon.png"});
+	}
+}

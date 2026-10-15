@@ -1,0 +1,40 @@
+{
+ "version": "2.2.4",
+ "songName": "Probable Outset",
+ "artist": "jakeynet",
+ "charter": "magnífic0",
+ "offsets": { },
+ "playData": {
+  "difficulties": [
+   "hard"
+  ],
+  "characters": {
+   "player": "bf-r",
+   "girlfriend": "gf-r",
+   "opponent": "dad",
+   "opponentVocals": [
+    "Voices"
+   ],
+   "playerVocals": [
+    "Voices"
+   ]
+  },
+  "stage": "theCircus",
+  "noteStyle": "reinvented",
+  "ratings": {
+   "hard": 0
+  },
+  "album": "volume1",
+  "stickerPack": "standard-reinvented",
+  "previewEnd": 0
+ },
+ "generatedBy": "Friday Night Funkin' - v0.8.6",
+ "timeChanges": [
+  {
+   "t": 0,
+   "b": 0,
+   "bpm": 200,
+   "bt": [4, 4, 4, 4]
+  }
+ ]
+}

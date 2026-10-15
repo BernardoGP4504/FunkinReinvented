@@ -1,0 +1,204 @@
+import flixel.FlxG;
+import flixel.math.FlxMath;
+import flixel.addons.display.FlxRuntimeShader;
+import flixel.tweens.FlxTween;
+
+import funkin.Paths;
+import funkin.Conductor;
+import funkin.audio.FunkinSound;
+import funkin.graphics.shaders.RuntimeRainShader;
+import funkin.play.PlayState;
+import funkin.play.Countdown;
+import funkin.play.song.Song;
+import funkin.save.Save;
+
+import openfl.filters.ShaderFilter;
+
+class RainReinventedBase extends Song
+{
+	var rainShader:RuntimeRainShader;
+	var rainShaderFilter:ShaderFilter;
+	var rainSndAmbience:FunkinSound;
+
+	var rainShaderStartIntensity:Float = 0.1;
+	var rainShaderEndIntensity:Float = 0.3;
+
+	override function onCreate()
+	{
+		rainShader = new RuntimeRainShader();
+		rainSndAmbience = FunkinSound.load(Paths.sound("rainAmbience"), true, false, true);
+		rainSndAmbience.volume = 0;
+		rainSndAmbience.play(false, FlxG.random.float(0, rainSndAmbience.length));
+
+		rainShader.scale = FlxG.height / 200;
+		rainShader.intensity = rainShaderStartIntensity;
+		rainShaderFilter = new ShaderFilter(rainShader);
+
+		FlxG.camera.filters ??= [];
+		FlxG.camera.filters.push(rainShaderFilter);
+	}
+
+	override function onUpdate()
+	{
+		if (rainShader == null) return;
+
+		var targetIntensity:Float;
+
+		if (FlxG.sound.music != null)
+		{
+			targetIntensity = FlxMath.remapToRange(
+				Conductor.instance.songPosition,
+				0,
+				FlxG.sound.music.length,
+				rainShaderStartIntensity,
+				rainShaderEndIntensity
+			);
+		}
+		else
+		{
+			targetIntensity = rainShaderStartIntensity;
+		}
+
+		rainShader.intensity = targetIntensity;
+		if (rainSndAmbience != null)
+			rainSndAmbience.volume = Math.min(0.3, targetIntensity * 2);
+
+		rainShader.updateViewInfo(FlxG.width, FlxG.height, FlxG.camera);
+		rainShader.update(FlxG.elapsed);
+	}
+
+	override function onSongRetry()
+	{
+		FlxG.camera.filters ??= [];
+		if (rainShaderFilter != null && !FlxG.camera.filters.contains(rainShaderFilter))
+			FlxG.camera.filters.push(rainShaderFilter);
+	}
+
+	override function onGameOver()
+	{
+		if (rainShaderFilter != null && FlxG.camera.filters != null)
+			FlxG.camera.filters.remove(rainShaderFilter);
+	}
+
+	override function onDestroy()
+	{
+		rainSndAmbience?.stop();
+		rainSndAmbience = null;
+		rainShader = null;
+		rainShaderFilter = null;
+	}
+
+	override function onPause()  { rainSndAmbience?.pause(); }
+	override function onResume() { rainSndAmbience?.resume(); }
+
+	public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+	{
+		return !Save.instance.hasBeatenSong(this.id, null, this.variation);
+	}
+}
+
+class ReinventedSongBase extends Song
+{
+	public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+	{
+		return !Save.instance.hasBeatenSong(this.id, null, this.variation);
+	}
+}
+
+class ReinventedCountdownSong extends Song
+{
+	public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+	{
+		return !Save.instance.hasBeatenSong(this.id, null, this.variation);
+	}
+
+	public override function onCountdownStart(event:CountdownScriptEvent):Void
+	{
+		super.onCountdownStart(event);
+		event.cancel();
+		PlayState.instance.isInCountdown = true;
+		Conductor.instance.update(0);
+	}
+}
+
+class FreshReinvented extends ReinventedSongBase
+{
+	public function new() { super('fresh-reinvented'); }
+}
+
+class HighestReinvented extends ReinventedSongBase
+{
+	public function new() { super('high-reinvented'); }
+}
+
+class Preface extends ReinventedSongBase
+{
+	public function new() { super('tutorial-reinvented'); }
+}
+
+class DarnellReinvented extends ReinventedSongBase
+{
+	public function new() { super('darnell-reinvented'); }
+}
+
+class BlissfulDelightful extends ReinventedSongBase
+{
+	public function new()
+	{
+		super('blissful', { variation: 'alt' });
+	}
+}
+
+class ArmasReinvented extends ReinventedSongBase
+{
+	public function new()
+	{
+		super('guns-reinvented');
+	}
+}
+
+class SpookeezReinvented extends ReinventedCountdownSong
+{
+	public function new() { super('spookeez-reinvented'); }
+}
+
+class BopeeboInReinvented extends ReinventedCountdownSong
+{
+	public function new() { super('bopeebo-reinvented'); }
+}
+
+class PicoReinvented extends ReinventedCountdownSong
+{
+	var gfBeatChanged:Bool = false;
+
+	public function new() { super('pico-reinvented'); }
+
+	public override function onCountdownStart(event:CountdownScriptEvent):Void
+	{
+		super.onCountdownStart(event);
+
+		var currentSpectator = PlayState.instance.currentStage.getGirlfriend();
+		if (currentSpectator != null)
+			currentSpectator.danceEvery = 2;
+	}
+			}
+	
+class PhillyReinventedShader extends RainReinventedBase
+{
+	function new()
+	{
+		super('philly-nice-reinvented');
+		rainShaderStartIntensity = 0.1;
+		rainShaderEndIntensity = 0.3;
+	}
+}
+
+class BlammedReinventedShader extends RainReinventedBase
+{
+	function new()
+	{
+		super('blammed-reinvented');
+		rainShaderStartIntensity = 0.3;
+		rainShaderEndIntensity = 0.1;
+	}
+}

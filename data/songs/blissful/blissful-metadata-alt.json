@@ -13,6 +13,9 @@
    "girlfriend": "gf-qt-r",
    "opponent": "qt-r",
    "instrumental": "alt",
+   "altInstrumentals": [
+    ""
+   ],
    "opponentVocals": [
     "qt-r"
    ],

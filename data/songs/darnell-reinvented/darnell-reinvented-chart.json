@@ -565,6 +565,48 @@
    }
   },
   {
+   "t": 59548.3870967742,
+   "e": "PlayAnimation",
+   "v": {
+    "anim": "pissed",
+    "force": false,
+    "target": "dad"
+   }
+  },
+  {
+   "t": 60290.3225806452,
+   "e": "PlayAnimation",
+   "v": {
+    "anim": "intro1",
+    "force": false,
+    "target": "boyfriend"
+   }
+  },
+  {
+   "t": 60387.0967741935,
+   "e": "FocusCamera",
+   "v": {
+    "char": 1,
+    "duration": 4,
+    "ease": "INSTANT",
+    "easeDir": "In",
+    "x": -280,
+    "y": 40
+   }
+  },
+  {
+   "t": 60967.7419354839,
+   "e": "FocusCamera",
+   "v": {
+    "char": 0,
+    "duration": 4,
+    "ease": "INSTANT",
+    "easeDir": "Out",
+    "x": 0,
+    "y": 40
+   }
+  },
+  {
    "t": 60967.7419354839,
    "e": "ZoomCamera",
    "v": {
@@ -2370,7 +2412,7 @@
     "d": 1
    },
    {
-    "t": 61548.3870967742,
+    "t": 61564.5161290323,
     "d": 3,
     "l": 290.322580645161
    },

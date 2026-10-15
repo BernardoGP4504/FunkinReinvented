@@ -12,6 +12,10 @@
    "player": "bf-r",
    "girlfriend": "gf-r",
    "opponent": "pico-r",
+   "altInstrumentals": [
+    "original",
+    "pico"
+   ],
    "opponentVocals": [
     "pico-r"
    ],

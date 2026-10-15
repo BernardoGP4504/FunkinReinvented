@@ -1,0 +1,35 @@
+import funkin.graphics.shaders.AdjustColorShader;
+import funkin.play.stage.Stage;
+
+class CircusStage extends Stage
+{
+  var colorShader:AdjustColorShader;
+
+  function new()
+  {
+    super('theCircus');
+  }
+
+  override function buildStage()
+  {
+    super.buildStage();
+
+    colorShader = new AdjustColorShader();
+    colorShader.hue = -5;
+    colorShader.saturation = -35;
+    colorShader.contrast = -25;
+    colorShader.brightness = -20;
+  }
+
+  override function addCharacter(character:BaseCharacter, charType:CharacterType):Void
+  {
+    super.addCharacter(character, charType);
+
+    trace('Applied stage shader to ' + character.characterName);
+    character.shader = colorShader;
+
+    // Enable render texture for Animate Atlas characters
+    // This is so it doesn't run the shader on each individual limb!
+    character.useRenderTexture = true;
+  }
+}
