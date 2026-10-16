@@ -1,13 +1,16 @@
 {
   "version": "1.0.0",
-  "name": "TANKMAN FT. JOHNNYUTAH",
-  "titleAsset": "storymenu/titles/week7",
+  "name": "MOMMY'S HOT",
+      "capsule": {
+    "name": "Week 4"
+  },
+  "titleAsset": "storymenu/titles/week4",
   "visible": false,
   "props": [
     {
-      "assetPath": "storymenu/props/tankman",
-      "scale": 1.0,
-      "offsets": [100, 100],
+      "assetPath": "storymenu/props/mom",
+      "scale": 0.9,
+      "offsets": [120, 50],
       "animations": [
         {
           "name": "idle",
@@ -53,6 +56,6 @@
       ]
     }
   ],
-  "background": "#F9CF51",
-  "songs": ["ugh", "guns", "stress"]
+  "background": "#ff2882",
+  "songs": ["high-reinvented"]
 }

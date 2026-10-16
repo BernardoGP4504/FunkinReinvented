@@ -14,7 +14,7 @@
 			"playerVocals": ["bf-reinvented"]
 		},
 		"stage": "mainStageReinvented",
-                "stickerPack": "tutorial-reinvented",
+        "stickerPack": "tutorial-reinvented",
 		"noteStyle": "reinvented",
 		"ratings": {
 			"hard": 3

@@ -5,6 +5,7 @@
     "name": "preface"
   },
   "titleAsset": "storymenu/titles/tutorial",
+  "visible": false,
   "props": [
     {
       "assetPath": "storymenu/props/gf",

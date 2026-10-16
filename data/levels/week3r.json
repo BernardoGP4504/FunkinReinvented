@@ -1,12 +1,16 @@
 {
   "version": "1.0.0",
-  "name": "DADDY SUCKS",
-  "titleAsset": "storymenu/titles/week1",
+  "name": "MURDEROUS INTENT",
+      "capsule": {
+    "name": "Week 3"
+  },
+  "titleAsset": "storymenu/titles/week3",
+  "visible": false,  
   "props": [
     {
-      "assetPath": "storymenu/props/dad",
+      "assetPath": "storymenu/props/pico",
       "scale": 1.0,
-      "offsets": [100, 60],
+      "offsets": [100, 120],
       "animations": [
         {
           "name": "idle",
@@ -52,6 +56,6 @@
       ]
     }
   ],
-  "background": "#CC99FF",
-  "songs": ["bopeebo-reinvented", "fresh-reinvented"]
+  "background": "#33F6FF",
+  "songs": ["pico-reinvented", "philly-nice-reinvented", "blammed-reinvented"]
 }
