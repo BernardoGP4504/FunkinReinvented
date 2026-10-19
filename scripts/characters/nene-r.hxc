@@ -374,7 +374,7 @@ class NeneRCharacter extends AnimateAtlasCharacter
   function setupAbot():Void
   {
     abot.x = this.x - 95 - (-this.globalOffsets[0] * this.scale.x);
-    abot.y = this.y + 384 - (-this.globalOffsets[1] * this.scale.y);
+    abot.y = this.y + 358 - (-this.globalOffsets[1] * this.scale.y);
     abot.zIndex = this.zIndex - 10;
 
     currentStage.add(abot);
