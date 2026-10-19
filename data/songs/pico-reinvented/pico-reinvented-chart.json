@@ -173,7 +173,7 @@
    "t": 79600,
    "e": "PlayAnimation",
    "v": {
-    "anim": "hey",
+    "anim": "cheer",
     "force": false,
     "target": "boyfriend"
    }

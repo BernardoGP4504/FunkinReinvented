@@ -96,12 +96,12 @@
 	},
 	"results": {
 		"music": {
-			"PERFECT_GOLD": "resultsPERFECT",
-			"PERFECT": "resultsPERFECT",
-			"EXCELLENT": "resultsEXCELLENT",
-			"GREAT": "resultsNORMAL",
-			"GOOD": "resultsNORMAL",
-			"SHIT": "resultsSHIT"
+			"PERFECT_GOLD": "resultsPERFECTGOLD-reinvented",
+			"PERFECT": "resultsPERFECT-reinvented",
+			"EXCELLENT": "resultsEXCELLENT-reinvented",
+			"GREAT": "resultsNORMAL-reinvented",
+			"GOOD": "resultsMEH",
+			"SHIT": "resultsSHIT-reinvented"
 		},
 		"perfectGold": [
 			{

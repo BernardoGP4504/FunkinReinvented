@@ -3,6 +3,7 @@ import funkin.play.character.MultiSparrowCharacter;
 import funkin.play.GameOverSubState;
 import funkin.play.PlayState;
 import funkin.Preferences;
+import funkin.play.PauseSubState;
 import funkin.util.Constants;
 import funkin.util.HapticUtil;
 
@@ -30,8 +31,11 @@ class BoyfriendReinventedCharacter extends MultiSparrowCharacter
 
   function onCreate(event:ScriptEvent)
   {
-    GameOverSubState.musicSuffix = '-reinvented';
     super.onCreate(event);
+
+    GameOverSubState.musicSuffix = '-reinvented';
+
+    PauseSubState.musicSuffix = '-reinvented';
   }
 
   override function getDeathQuote():Null<String>

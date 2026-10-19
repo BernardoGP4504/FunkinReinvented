@@ -4,6 +4,7 @@
 	"assetPath": "shared:characters/parents/Dad",
 	"renderType": "animateatlas",
 	"singTime": 8.0,
+	"danceEvery": 2,
 	"offsets": [13, 3],
 	"cameraOffsets": [11, 6],
 	"animations": [
