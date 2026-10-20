@@ -25,6 +25,6 @@ class DiscordFunkinReinvented extends Module
 		super.onUpdate(event);
 		if(Std.isOfType(FlxG.state,PlayState)) return "my booty itches";
 
-    DiscordClient.setPresence({state: "In the Menus", details:"Reinvented Edition", largeImageKey: "https://raw.githubusercontent.com/BernardoGP4504/FunkinReinvented/main/_polymod_icon.png"});
+    DiscordClient.setPresence({state: "In the Menus", details:"Reinvented Edition", largeImageKey: "https://raw.githubusercontent.com/BernardoGP4504/FunkinReinvented/refs/heads/main/_polymod_icon.png"});
 	}
 }

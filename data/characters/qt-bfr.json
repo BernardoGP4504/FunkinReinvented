@@ -38,7 +38,6 @@
 			"name": "idle"
 		},
 		{
-		    "assetPath": "characters/BF-REINVENTED/bf_qt",
 			"name": "danceLeft-alt",
 			"prefix": "bf caramelldansen",
 			"frameIndices": [
@@ -59,7 +58,6 @@
 			]
 		},
 		{
-			"assetPath": "characters/BF-REINVENTED/bf_qt",
 			"name": "danceRight-alt",
 			"prefix": "bf caramelldansen",
 			"frameIndices": [
@@ -80,7 +78,6 @@
 			]
 		},
 		{
-			"assetPath": "characters/BF-REINVENTED/bf_qt",
 			"name": "preDance",
 			"prefix": "bf pre dance",
 			"offsets": [
