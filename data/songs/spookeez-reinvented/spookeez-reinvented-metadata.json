@@ -13,7 +13,7 @@
 		"characters": {
 			"player": "bf-dark-r",
 			"girlfriend": "gf-dark-r",
-			"opponent": "spooky-dark-r",
+			"opponent": "spooky-dark",
 			"opponentVocals": ["spooky-dark"],
 			"playerVocals": ["bf-dark-r"]
 		},

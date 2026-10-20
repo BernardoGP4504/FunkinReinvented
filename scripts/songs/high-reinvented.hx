@@ -1,15 +1,19 @@
 import flixel.addons.display.FlxRuntimeShader;
 import openfl.filters.ShaderFilter;
 import funkin.Paths;
+import funkin.save.Save;
 import funkin.play.PlayState;
 import funkin.play.song.Song;
 
-class HighReinventedSunset extends Song
+class HighReinventedSunset extends ReinventedSongBase
 {
+	public function new()
+	{
+		super('high-reinvented');
+	}
+
 	var shader:FlxRuntimeShader;
 	var shaderFilter:ShaderFilter;
-
-	function new() { super('high-reinvented'); }
 
 	override function onCreate()
 	{
