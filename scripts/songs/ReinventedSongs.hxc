@@ -144,10 +144,6 @@ class ArmasReinvented extends ReinventedSongBase
 	}
 }
 
-class SpookeezReinvented extends ReinventedCountdownSong
-{
-	public function new() { super('spookeez-reinvented'); }
-}
 
 class BopeeboInReinvented extends ReinventedCountdownSong
 {

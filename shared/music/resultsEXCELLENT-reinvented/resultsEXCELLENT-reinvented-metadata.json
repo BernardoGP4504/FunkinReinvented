@@ -1,8 +1,8 @@
 {
   "timeFormat": "ms",
-  "artist": "Funkin' Sound Project",
-  "songName": "Stay Funky (FSP Take)",
-  "timeChanges": [{ "d": 4, "n": 4, "t": 0, "bt": [4, 4, 4, 4], "bpm": 110 }],
+  "artist": "Naofumi Hataya | Arrangement by Jujuzinha",
+  "songName": "Could it be Right",
+  "timeChanges": [{ "d": 4, "n": 4, "t": 0, "bt": [4, 4, 4, 4], "bpm": 135 }],
   "generatedBy": "Manual (by magnífic0)",
   "looped": true,
   "version": "2.0.0"

@@ -26,6 +26,11 @@
 		},
 		{
 			"offsets": [-29, 27],
+			"prefix": "BF hit 1",
+			"name": "hit"
+		},
+		{
+			"offsets": [-29, 27],
 			"prefix": "BF NOTE UP 1",
 			"name": "singUP"
 		},

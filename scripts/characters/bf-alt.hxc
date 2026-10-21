@@ -1,16 +1,19 @@
 import funkin.play.PlayState;
 import flixel.FlxG;
-import funkin.play.character.MultiSparrowCharacter;
 import flixel.util.FlxTimer;
+import funkin.util.Constants;
+import funkin.play.PauseSubState;
 import funkin.play.GameOverSubState;
+import funkin.util.HapticUtil;
 import funkin.input.Controls;
-import funkin.play.character.CharacterType;
+import funkin.Preferences;
+import funkin.play.character.MultiSparrowCharacter;
 import funkin.modding.base.ScriptedFlxAtlasSprite;
 import flixel.effects.FlxFlicker;
 import funkin.util.TouchUtil;
 import funkin.Conductor;
 
-class QtBFALTAnims extends MultiSparrowCharacter {
+class BFALTREINVENTED extends MultiSparrowCharacter {
 	function new() {
 		super('bf-alt');
 		this.ignoreExclusionPref = ["danceLeft-alt","danceRight-alt","preDance","preDance-secret", "hey", "intro"];
@@ -33,15 +36,35 @@ class QtBFALTAnims extends MultiSparrowCharacter {
 		super.onPause(event);
 	}
 
+	  function onAnimationFrame(name:String, frameNumber:Int, frameIndex:Int)
+    {
+    super.onAnimationFrame(name, frameNumber, frameIndex);
+    if (!HapticUtil.hapticsAvailable) return;
+
+    // BF's mic drops.
+    if (name == 'firstDeath' && frameNumber == 27)
+    {
+      HapticUtil.vibrate(0, 0.1, 0.1, 1);
+    }
+
+    // BF's balls pulsating.
+    if (name == 'deathLoop' && (frameNumber == 0 || frameNumber == 18))
+    {
+      HapticUtil.vibrate(0, 0.1, 0.1, 1);
+    }
+  }
+
+    function onCreate(event:ScriptEvent)
+  {
+    super.onCreate(event);
+
+    GameOverSubState.musicSuffix = '-reinvented';
+
+    PauseSubState.musicSuffix = '-reinvented';
+  }
+
 	public override function onResume(event:ScriptEvent) {
 		super.onResume(event);
-	}
-
-	override function onCreate(event)
-	{
-		super.onCreate(event);
-		if (PlayState.instance == null) return;
-		GameOverSubState.musicSuffix = '-reinvented';
 	}
 
 	override function getDeathQuote():Null<String> {
