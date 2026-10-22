@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "name": "qtStickersReinvented",
+  "artist": "JoaDash and Phantom Arcade",
+  "stickers": [
+    "stickers/stickers-qt/bfSticker",
+    "stickers/stickers-qt/gfSticker",
+    "stickers/stickers-qt/kbSticker1",
+    "stickers/stickers-qt/kbSticker1",        
+    "stickers/stickers-qt/qtSticker2",
+    "stickers/stickers-qt/qtSticker3",
+    "stickers/stickers-qt/flowerSticker",
+    "stickers/stickers-qt/starSticker",
+    "stickers/stickers-qt/crayonSticker",
+    "stickers/stickers-qt/lgbt",
+    "stickers/stickers-qt/tvSticker",
+    "stickers/stickers-qt/skullSticker"
+  ]
+}

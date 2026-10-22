@@ -14,7 +14,8 @@
    "opponent": "qt-r",
    "instrumental": "alt",
    "altInstrumentals": [
-    ""
+    "",
+    "pico"
    ],
    "opponentVocals": [
     "qt-r"
@@ -29,7 +30,7 @@
    "alt": 4
   },
   "album": "qt",
-  "stickerPack": "qtStickers",
+  "stickerPack": "qt-reinvented",
   "previewEnd": 0.0485679622342858
  },
  "generatedBy": "Friday Night Funkin' - v0.8.6",
