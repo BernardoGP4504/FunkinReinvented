@@ -1,56 +1,47 @@
 {
- "version": "2.2.4",
- "songName": "Darnell (Reinvented)",
- "artist": "SKS",
- "charter": "magnífic0",
- "offsets": { },
- "playData": {
-  "difficulties": [
-   "hard"
-  ],
-  "characters": {
-   "player": "pico-playable-r",
-   "girlfriend": "nene-r",
-   "opponent": "darnell-reinvented",
-   "altInstrumentals": [
-    "bf",
-    "erect"
-   ],
-   "opponentVocals": [
-    "darnell-reinvented"
-   ],
-   "playerVocals": [
-    "pico-playable-r"
-   ]
-  },
-  "stage": "phillyStreetsR",
-  "noteStyle": "reinvented",
-  "ratings": {
-   "hard": 12
-  },
-  "album": "volume1",
-  "stickerPack": "standard-pico-reinvented",
-  "previewEnd": 0
- },
- "generatedBy": "Friday Night Funkin' - v0.8.6",
- "timeChanges": [
-  {
-   "t": 0,
-   "b": 0,
-   "bpm": 155,
-   "bt": [4, 4, 4, 4]
-  },
-  {
-   "t": 102062.3785,
-   "b": 263.6611,
-   "bpm": 155,
-   "bt": [4, 4, 4, 4]
-  },
-  {
-   "t": 129918.1563,
-   "b": 335.6219,
-   "bpm": 155,
-   "bt": [4, 4, 4, 4]
-  }
- ]
+	"version": "2.2.4",
+	"songName": "Darnell (Reinvented)",
+	"artist": "SKS",
+	"charter": "felipito",
+	"offsets": {},
+	"playData": {
+		"difficulties": ["hard"],
+		"characters": {
+			"player": "pico-playable-r",
+			"girlfriend": "nene-r",
+			"opponent": "darnell-reinvented",
+			"altInstrumentals": ["bf", "erect"],
+			"opponentVocals": ["darnell-reinvented"],
+			"playerVocals": ["pico-playable-r"]
+		},
+		"stage": "phillyStreetsR",
+		"noteStyle": "reinvented",
+		"ratings": {
+			"hard": 12
+		},
+		"album": "volume1",
+		"stickerPack": "standard-pico-reinvented",
+		"previewEnd": 0
+	},
+	"generatedBy": "Friday Night Funkin' - v0.8.6",
+	"timeChanges": [
+		{
+			"t": 0,
+			"b": 0,
+			"bpm": 155,
+			"bt": [4, 4, 4, 4]
+		},
+		{
+			"t": 102062.3785,
+			"b": 263.6611,
+			"bpm": 155,
+			"bt": [4, 4, 4, 4]
+		},
+		{
+			"t": 129918.1563,
+			"b": 335.6219,
+			"bpm": 155,
+			"bt": [4, 4, 4, 4]
+		}
+	]
 }

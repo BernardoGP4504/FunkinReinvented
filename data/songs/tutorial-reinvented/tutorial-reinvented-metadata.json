@@ -2,7 +2,7 @@
 	"version": "2.2.4",
 	"songName": "Preface",
 	"artist": "Jujuzinha",
-	"charter": "magnífic0",
+	"charter": "felipito",
 	"offsets": {},
 	"playData": {
 		"difficulties": ["hard"],
@@ -14,7 +14,7 @@
 			"playerVocals": ["bf-reinvented"]
 		},
 		"stage": "mainStageReinvented",
-        "stickerPack": "tutorial-reinvented",
+		"stickerPack": "tutorial-reinvented",
 		"noteStyle": "reinvented",
 		"ratings": {
 			"hard": 3

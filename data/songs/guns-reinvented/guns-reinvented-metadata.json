@@ -1,42 +1,34 @@
 {
- "version": "2.2.4",
- "songName": "Guns (Reinvented)",
- "artist": "Lotrob",
- "charter": "magnífic0",
- "offsets": { },
- "playData": {
-  "difficulties": [
-   "hard"
-  ],
-  "characters": {
-   "player": "bf-r",
-   "girlfriend": "gf-r",
-   "opponent": "tankman",
-   "altInstrumentals": [
-    "pico"
-   ],
-   "opponentVocals": [
-    "tankman"
-   ],
-   "playerVocals": [
-    "bf-r"
-   ]
-  },
-  "stage": "tankmanBattlefieldErect",
-  "noteStyle": "reinvented",
-  "ratings": {
-   "hard": 6
-  },
-  "album": "volume2",
-  "stickerPack": "standard-reinvented"
- },
- "generatedBy": "Friday Night Funkin' - v0.8.6",
- "timeChanges": [
-  {
-   "t": 0,
-   "b": 0,
-   "bpm": 185,
-   "bt": [4, 4, 4, 4]
-  }
- ]
+	"version": "2.2.4",
+	"songName": "Guns (Reinvented)",
+	"artist": "Lotrob",
+	"charter": "felipito",
+	"offsets": {},
+	"playData": {
+		"difficulties": ["hard"],
+		"characters": {
+			"player": "bf-r",
+			"girlfriend": "gf-r",
+			"opponent": "tankman",
+			"altInstrumentals": ["pico"],
+			"opponentVocals": ["tankman"],
+			"playerVocals": ["bf-r"]
+		},
+		"stage": "tankmanBattlefieldErect",
+		"noteStyle": "reinvented",
+		"ratings": {
+			"hard": 6
+		},
+		"album": "volume2",
+		"stickerPack": "standard-reinvented"
+	},
+	"generatedBy": "Friday Night Funkin' - v0.8.6",
+	"timeChanges": [
+		{
+			"t": 0,
+			"b": 0,
+			"bpm": 185,
+			"bt": [4, 4, 4, 4]
+		}
+	]
 }

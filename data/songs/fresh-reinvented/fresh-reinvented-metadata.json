@@ -1,41 +1,35 @@
 {
- "version": "2.2.4",
- "songName": "Fresh (Reinvented)",
- "artist": "AeFelipe",
- "charter": "magnífic0",
- "offsets": { },
- "playData": {
-  "difficulties": [
-   "hard"
-  ],
-  "characters": {
-   "player": "bf-r",
-   "girlfriend": "gf-r",
-   "opponent": "dad-r",
-   "opponentVocals": [
-    "dad-r"
-   ],
-   "playerVocals": [
-    "bf-r"
-   ]
-  },
-  "stage": "mainStageReinvented",
-  "noteStyle": "reinvented",
-  "ratings": {
-   "hard": 4
-  },
+	"version": "2.2.4",
+	"songName": "Fresh (Reinvented)",
+	"artist": "AeFelipe",
+	"charter": "felipito",
+	"offsets": {},
+	"playData": {
+		"difficulties": ["hard"],
+		"characters": {
+			"player": "bf-r",
+			"girlfriend": "gf-r",
+			"opponent": "dad-r",
+			"opponentVocals": ["dad-r"],
+			"playerVocals": ["bf-r"]
+		},
+		"stage": "mainStageReinvented",
+		"noteStyle": "reinvented",
+		"ratings": {
+			"hard": 4
+		},
 
-  "album": "volume1",
-  "stickerPack": "standard-reinvented",
-  "previewEnd": 89.00089
- },
- "generatedBy": "Friday Night Funkin' - v0.8.6",
- "timeChanges": [
-  {
-   "t": 0,
-   "b": 0,
-   "bpm": 120,
-   "bt": [4, 4, 4, 4]
-  }
- ]
+		"album": "volume1",
+		"stickerPack": "standard-reinvented",
+		"previewEnd": 89.00089
+	},
+	"generatedBy": "Friday Night Funkin' - v0.8.6",
+	"timeChanges": [
+		{
+			"t": 0,
+			"b": 0,
+			"bpm": 120,
+			"bt": [4, 4, 4, 4]
+		}
+	]
 }

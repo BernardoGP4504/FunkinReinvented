@@ -1,45 +1,36 @@
 {
- "version": "2.2.4",
- "songName": "Delightful (ALT)",
- "artist": "Pankdoe",
- "charter": "magnífic0",
- "offsets": { },
- "playData": {
-  "difficulties": [
-   "alt"
-  ],
-  "characters": {
-   "player": "qt-bfr",
-   "girlfriend": "gf-qt-r",
-   "opponent": "qt-r",
-   "instrumental": "alt",
-   "altInstrumentals": [
-    "",
-    "pico"
-   ],
-   "opponentVocals": [
-    "qt-r"
-   ],
-   "playerVocals": [
-    "bf-alt"
-   ]
-  },
-  "stage": "qtStage",
-  "noteStyle": "reinvented",
-  "ratings": {
-   "alt": 4
-  },
-  "album": "qt",
-  "stickerPack": "qt-reinvented",
-  "previewEnd": 0.0485679622342858
- },
- "generatedBy": "Friday Night Funkin' - v0.8.6",
- "timeChanges": [
-  {
-   "t": 0,
-   "b": 0,
-   "bpm": 138,
-   "bt": [4, 4, 4, 4]
-  }
- ]
+	"version": "2.2.4",
+	"songName": "Delightful (ALT)",
+	"artist": "Pankdoe",
+	"charter": "felipito",
+	"offsets": {},
+	"playData": {
+		"difficulties": ["alt"],
+		"characters": {
+			"player": "qt-bfr",
+			"girlfriend": "gf-qt-r",
+			"opponent": "qt-r",
+			"instrumental": "alt",
+			"altInstrumentals": ["", "pico"],
+			"opponentVocals": ["qt-r"],
+			"playerVocals": ["bf-alt"]
+		},
+		"stage": "qtStage",
+		"noteStyle": "reinvented",
+		"ratings": {
+			"alt": 4
+		},
+		"album": "qt",
+		"stickerPack": "qt-reinvented",
+		"previewEnd": 0.0485679622342858
+	},
+	"generatedBy": "Friday Night Funkin' - v0.8.6",
+	"timeChanges": [
+		{
+			"t": 0,
+			"b": 0,
+			"bpm": 138,
+			"bt": [4, 4, 4, 4]
+		}
+	]
 }

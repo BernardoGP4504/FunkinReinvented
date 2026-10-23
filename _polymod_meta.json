@@ -1,80 +1,79 @@
 {
 	"title": "Funkin' Reinvented",
 	"author": "TheReinventedCrew!",
-  "description": "Your new favorite remix mod?? Ok my bad.", 
+	"description": "Your new favorite remix mod?? Ok my bad.",
 	"contribuitors": [
-    {
-      "name": "Felipito (Magnífic0)",
-      "role": "Director & Charter"
-    },
-    {
-      "name": "Jujuzinha",
-      "role": "Composer"
-    },
-	  {
-      "name": "THMPlays",
-      "role": "Composer",
-      "url": "https://www.youtube.com/channel/UCiePw2ROS0Bnavvy-0syBVw"
-    },
-	  {
-      "name": "Write",
-      "role": "Composer"
-    },
-	  {
-      "name": "Pankdoe",
-      "role": "Composer",
-      "url1": "https://x.com/pankdoe",
-	    "url2": "https://www.youtube.com/channel/UCcpC5wJ3nlE9SmwacZM-MAg"
-    },
-	  {
-      "name": "AeFelipe",
-      "role": "Composer"
-    },
-	  {
-      "name": "SKS",
-      "role": "Composer",
-	    "url1": "https://x.com/SKSwork_no1",
-	    "url2": "https://www.youtube.com/channel/UCpJeugYxpHLqpzLLJ9DxZqg"
-    },
-    {
-      "name": "Turtleman42",
-      "role": "Composer",
-      "url1": "https://www.youtube.com/@turtleman42/videos",
-      "url2": "https://soundcloud.com/turtleman42"
-	},
-	{
-      "name": "Lotrob",
-      "role": "Composer"
-    }, 	
-    {
-      "name": "Kerv66",
-      "role": "Charter"
-    },
-    {
-      "name": "BerGP",
-      "role": "Coder"
-    },
-    {
-      "name": "3piz2uko",
-      "role": "Artist"
-    },
-    {
-      "name": "Tooru",
-      "role": "Artist/Animator"
-    },
-    {
-      "name": "HVW",
-      "role": "Artist/Animator",
-      "url": "https://x.com/hvw208"
-    },
-    {
-      "name": "Alej0h",
-      "role": "Artist"
-    }
+		{
+			"name": "Felipito (Magnífic0)",
+			"role": "Director & Charter"
+		},
+		{
+			"name": "Jujuzinha",
+			"role": "Composer"
+		},
+		{
+			"name": "THMPlays",
+			"role": "Composer",
+			"url": "https://www.youtube.com/channel/UCiePw2ROS0Bnavvy-0syBVw"
+		},
+		{
+			"name": "Write",
+			"role": "Composer"
+		},
+		{
+			"name": "Pankdoe",
+			"role": "Composer",
+			"url1": "https://x.com/pankdoe",
+			"url2": "https://www.youtube.com/channel/UCcpC5wJ3nlE9SmwacZM-MAg"
+		},
+		{
+			"name": "AeFelipe",
+			"role": "Composer"
+		},
+		{
+			"name": "SKS",
+			"role": "Composer",
+			"url1": "https://x.com/SKSwork_no1",
+			"url2": "https://www.youtube.com/channel/UCpJeugYxpHLqpzLLJ9DxZqg"
+		},
+		{
+			"name": "Turtleman42",
+			"role": "Composer",
+			"url1": "https://www.youtube.com/@turtleman42/videos",
+			"url2": "https://soundcloud.com/turtleman42"
+		},
+		{
+			"name": "Lotrob",
+			"role": "Composer"
+		},
+		{
+			"name": "Kerv66",
+			"role": "Charter"
+		},
+		{
+			"name": "BerGP",
+			"role": "Coder"
+		},
+		{
+			"name": "3piz2uko",
+			"role": "Artist"
+		},
+		{
+			"name": "Tooru",
+			"role": "Artist/Animator"
+		},
+		{
+			"name": "HVW",
+			"role": "Artist/Animator",
+			"url": "https://x.com/hvw208"
+		},
+		{
+			"name": "Alej0h",
+			"role": "Artist"
+		}
+	],
 
-  ],
-
-  "api_version": "0.8.4",
+	"api_version": "0.8.4",
 	"mod_version": "1.1.1",
 	"optionalDependencies": {
 		"qt-rewired-pc_23e8e": ""
