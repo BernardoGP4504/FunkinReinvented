@@ -136,6 +136,20 @@ class BopeeboInReinvented extends ReinventedCountdownSong
 	public function new() { super('bopeebo-reinvented'); }
 }
 
+class TestReinvented extends ReinventedSongBase
+{
+	public function new() { super('test-reinvented'); }
+
+	override function getDifficulty(?diffId:String, ?variation:String, ?variations:Array<String>)
+	{
+		final ogResult:Null<SongDifficulty> = super.getDifficulty(diffId, variation, variations);
+		if (ogResult == null || isSongNew(diffId, variation)) return ogResult;
+
+		ogResult.songName = 'Test (Reinvented)';
+		return ogResult;
+	}
+}
+
 class PicoReinvented extends ReinventedCountdownSong
 {
 	var gfBeatChanged:Bool = false;
