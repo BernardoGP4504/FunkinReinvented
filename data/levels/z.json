@@ -2,7 +2,7 @@
 	"version": "1.0.0",
 	"name": "MURDEROUS INTENT",
 	"titleAsset": "storymenu/titles/week3",
-    "visible": false,
+	"visible": false,
 	"props": [
 		{
 			"assetPath": "storymenu/props/pico",
@@ -54,6 +54,6 @@
 		}
 	],
 	"background": "#5464e8",
-	"songs": ["test-reinvented"],
-	"capsule": { "name": "    ????" }
+	"songs": ["probable-outset", "test-reinvented"],
+	"capsule": { "name": "Extras" }
 }

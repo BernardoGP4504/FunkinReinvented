@@ -14,7 +14,7 @@ import funkin.save.Save;
 
 import openfl.filters.ShaderFilter;
 
-class RainReinventedBase extends Song
+class RainReinventedBase extends ReinventedSongBase
 {
 	var rainShader:RuntimeRainShader;
 	var rainShaderFilter:ShaderFilter;
@@ -90,11 +90,6 @@ class RainReinventedBase extends Song
 
 	override function onPause()  { rainSndAmbience?.pause(); }
 	override function onResume() { rainSndAmbience?.resume(); }
-
-	public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
-	{
-		return !Save.instance.hasBeatenSong(this.id, null, this.variation);
-	}
 }
 
 class ReinventedSongBase extends Song
@@ -105,13 +100,8 @@ class ReinventedSongBase extends Song
 	}
 }
 
-class ReinventedCountdownSong extends Song
+class ReinventedCountdownSong extends ReinventedSongBase
 {
-	public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
-	{
-		return !Save.instance.hasBeatenSong(this.id, null, this.variation);
-	}
-
 	public override function onCountdownStart(event:CountdownScriptEvent):Void
 	{
 		super.onCountdownStart(event);
@@ -138,12 +128,8 @@ class DarnellReinvented extends ReinventedSongBase
 
 class ArmasReinvented extends ReinventedSongBase
 {
-	public function new()
-	{
-		super('guns-reinvented');
-	}
+	public function new() { super('guns-reinvented'); }
 }
-
 
 class BopeeboInReinvented extends ReinventedCountdownSong
 {
@@ -164,7 +150,7 @@ class PicoReinvented extends ReinventedCountdownSong
 		if (currentSpectator != null)
 			currentSpectator.danceEvery = 2;
 	}
-			}
+}
 	
 class PhillyReinventedShader extends RainReinventedBase
 {
