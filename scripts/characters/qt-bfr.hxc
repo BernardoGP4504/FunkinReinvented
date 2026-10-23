@@ -22,7 +22,7 @@ class QtBFRAnims extends MultiSparrowCharacter {
 				shouldAlternate = true;
 				idleSuffix = '-alt';
 			case "hey":
-				danceEvery = 2;
+				danceEvery = 1;
 				shouldAlternate = null;
 				idleSuffix = '';
 		}

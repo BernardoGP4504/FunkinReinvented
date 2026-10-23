@@ -2,27 +2,29 @@
 	"version": "1.0.0",
 	"renderType": "sparrow",
 	"danceEvery": 1,
+	"scale": 1,
 	"name": "Girlfriend Reinvented (QT).",
 	"cameraOffsets": [
 		0,
-		-100
+		-150
 	],
-	"singTime": 4,
 	"startingAnimation": "danceRight",
+	"singTime": 4,
 	"assetPath": "characters/GF-REINVENTED/REINVENTED_GF_QT_AsssTS",
 	"healthIcon": {
 		"shouldBop": true,
+		"scale": 1,
 		"id": "gf-qt-r"
 	},
 	"atlasSettings": {
-		"swfMode": true,
-		"filterQuality": 1
+		"filterQuality": 1,
+		"swfMode": true
 	},
 	"animations": [
 		{
 			"offsets": [
 				0,
-				223
+				228
 			],
 			"prefix": "gf idle",
 			"frameIndices": [
@@ -43,17 +45,14 @@
 				13,
 				14
 			],
-			"name": "danceLeft",
-			"looped": false,
-			"flipX": false,
 			"animType": "framelabel",
-			"flipY": false,
+			"name": "danceLeft",
 			"frameRate": 24
 		},
 		{
 			"offsets": [
 				0,
-				223
+				228
 			],
 			"prefix": "gf idle",
 			"frameIndices": [
@@ -73,14 +72,14 @@
 				28,
 				29
 			],
-			"name": "danceRight",
 			"animType": "framelabel",
+			"name": "danceRight",
 			"frameRate": 24
 		},
 		{
 			"offsets": [
 				-10,
-				213
+				218
 			],
 			"prefix": "gf caramelldansen",
 			"frameIndices": [
@@ -95,37 +94,37 @@
 				2,
 				3
 			],
-			"name": "danceLeft-alt",
 			"animType": "framelabel",
+			"name": "danceLeft-alt",
 			"frameRate": 24
 		},
 		{
 			"offsets": [
 				-30,
-				238
+				243
 			],
 			"prefix": "gf dodge",
 			"frameIndices": [],
-			"name": "dodge",
 			"animType": "framelabel",
+			"name": "dodge",
 			"frameRate": 24
 		},
 		{
 			"offsets": [
 				-25,
-				213
+				218
 			],
 			"prefix": "gf shocked",
 			"frameIndices": [],
-			"looped": true,
-			"name": "intro",
 			"animType": "framelabel",
+			"name": "intro",
+			"looped": true,
 			"frameRate": 24
 		},
 		{
 			"offsets": [
 				-10,
-				213
+				218
 			],
 			"prefix": "gf caramelldansen",
 			"frameIndices": [
@@ -140,8 +139,8 @@
 				12,
 				13
 			],
-			"name": "danceRight-alt",
 			"animType": "framelabel",
+			"name": "danceRight-alt",
 			"frameRate": 24
 		},
 		{
@@ -158,7 +157,7 @@
 		{
 			"offsets": [
 				-20,
-				203
+				208
 			],
 			"prefix": "gf sad",
 			"frameIndices": [
@@ -176,29 +175,29 @@
 				11,
 				12
 			],
-			"name": "sad",
 			"animType": "framelabel",
+			"name": "sad",
 			"frameRate": 24
 		},
-		{
+        {
 			"offsets": [
 				-40,
-				233
+				238
 			],
 			"frameRate": 24,
 			"prefix": "gf cheer",
-			"name": "cheer",
-			"animType": "framelabel"
+			"animType": "framelabel",
+			"name": "cheer"
 		},
 		{
 			"offsets": [
 				-40,
-				233
+				228
 			],
 			"frameRate": 24,
 			"prefix": "gf cheer",
-			"name": "combo50",
-			"animType": "framelabel"
+			"animType": "framelabel",
+			"name": "combo50"
 		},
 		{
 			"offsets": [
@@ -221,8 +220,8 @@
 				11,
 				12
 			],
-			"name": "drop70",
 			"animType": "framelabel",
+			"name": "drop70",
 			"frameRate": 24
 		}
 	]

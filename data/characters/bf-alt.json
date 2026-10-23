@@ -1,6 +1,7 @@
 {
 	"version": "1.0.0",
 	"renderType": "multisparrow",
+	"cameraOffsets": [-18, 36],
 	"flipX": true,
 	"name": "Boyfriend ALT (Reinvented)",
 	"startingAnimation": "idle",

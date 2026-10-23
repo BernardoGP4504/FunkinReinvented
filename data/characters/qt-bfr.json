@@ -5,7 +5,7 @@
 	"assetPath": "characters/BF-REINVENTED/bf_qt",
 	"name": "BFR (QT Rewired).",
 	"flipX": true,
-	"singTime": 8.0,
+	"cameraOffsets": [-18, 36],
 	"startingAnimation": "idle",
 	"death": {
 		"cameraZoom": 1

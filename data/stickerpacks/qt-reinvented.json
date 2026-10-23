@@ -1,19 +1,19 @@
 {
   "version": "1.0.0",
   "name": "qtStickersReinvented",
-  "artist": "JoaDash and Phantom Arcade",
+  "artist": "JoaDash",
   "stickers": [
-    "stickers/stickers-qt/bfSticker",
-    "stickers/stickers-qt/gfSticker",
-    "stickers/stickers-qt/kbSticker1",
-    "stickers/stickers-qt/kbSticker1",        
-    "stickers/stickers-qt/qtSticker2",
-    "stickers/stickers-qt/qtSticker3",
-    "stickers/stickers-qt/flowerSticker",
-    "stickers/stickers-qt/starSticker",
-    "stickers/stickers-qt/crayonSticker",
-    "stickers/stickers-qt/lgbt",
-    "stickers/stickers-qt/tvSticker",
-    "stickers/stickers-qt/skullSticker"
+    "transitionSwag/stickers-qt/bfSticker",
+    "transitionSwag/stickers-qt/gfSticker",
+    "transitionSwag/stickers-qt/kbSticker",  
+    "transitionSwag/stickers-qt/qtSticker1",
+    "transitionSwag/stickers-qt/qtSticker2",  
+    "transitionSwag/stickers-qt/qtSticker3",      
+    "transitionSwag/stickers-qt/flowerSticker",
+    "transitionSwag/stickers-qt/starSticker",
+    "transitionSwag/stickers-qt/crayonSticker",
+    "transitionSwag/stickers-qt/lgbtSticker",
+    "transitionSwag/stickers-qt/tvSticker",
+    "transitionSwag/stickers-qt/skullSticker"
   ]
 }
