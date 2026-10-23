@@ -7,6 +7,7 @@ import funkin.input.Controls;
 import funkin.play.character.CharacterType;
 import funkin.modding.base.ScriptedFlxAtlasSprite;
 import flixel.effects.FlxFlicker;
+import funkin.play.PauseSubState;
 import funkin.util.TouchUtil;
 import funkin.Conductor;
 
@@ -19,10 +20,11 @@ class QtBFRAnims extends MultiSparrowCharacter {
 	override function onAnimationFinished(name:String) {
 		switch (name) {
 			case "preDance":
+                danceEvery = 1;
 				shouldAlternate = true;
 				idleSuffix = '-alt';
 			case "hey":
-				danceEvery = 1;
+				danceEvery = 2;
 				shouldAlternate = null;
 				idleSuffix = '';
 		}
@@ -37,12 +39,15 @@ class QtBFRAnims extends MultiSparrowCharacter {
 		super.onResume(event);
 	}
 
-	override function onCreate(event)
-	{
-		super.onCreate(event);
-		if (PlayState.instance == null) return;
-		GameOverSubState.musicSuffix = '-reinvented';
-	}
+	  function onCreate(event:ScriptEvent)
+  {
+    super.onCreate(event);
+
+    GameOverSubState.musicSuffix = '-reinvented';
+
+    PauseSubState.musicSuffix = '-reinvented';
+  }
+
 
 	override function getDeathQuote():Null<String> {
 		if (PlayState.instance.currentStage.getDad().characterId == "QT") 

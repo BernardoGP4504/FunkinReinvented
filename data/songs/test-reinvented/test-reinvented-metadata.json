@@ -2,27 +2,28 @@
 	"version": "2.2.4",
 	"songName": "???",
 	"artist": "AeFelipe",
-	"charter": "felipito",
+	"charter": "magnífic0",
 	"offsets": {},
 	"playData": {
+		"songVariations": ["erect"],
 		"difficulties": ["hard"],
 		"characters": {
 			"player": "bf-r",
 			"girlfriend": "gf-r",
 			"opponent": "bf-pixel-r-op",
-			"opponentVocals": ["bf-pixel-r-opp"],
-			"playerVocals": ["bf-r"],
-			"altInstrumentals": ["original"]
+			"altInstrumentals": ["original"],
+			"opponentVocals": ["bf-pixel-r-op"],
+			"playerVocals": ["bf-r"]
 		},
 		"stage": "mainStageReinvented",
 		"noteStyle": "reinvented",
 		"ratings": {
 			"hard": 6
 		},
-		"stickerPack": "bf-reinvented",
-		"previewEnd": 80
+		"previewEnd": 0.000773208487010198,
+		"stickerpack": "bf-reinvented"
 	},
-	"generatedBy": "Friday Night Funkin' - v0.8.4",
+	"generatedBy": "Friday Night Funkin' - v0.8.6",
 	"timeChanges": [
 		{
 			"t": 0,
