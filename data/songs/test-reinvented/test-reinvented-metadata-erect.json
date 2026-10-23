@@ -1,0 +1,43 @@
+{
+ "version": "2.2.4",
+ "songName": "??? Erect",
+ "artist": "AeFelipe",
+ "charter": "felipito",
+ "offsets": { },
+ "playData": {
+  "difficulties": [
+   "erect",
+   "nightmare"
+  ],
+  "characters": {
+   "player": "bf-r",
+   "girlfriend": "gf-r",
+   "opponent": "bf-pixel-r-opp",
+   "instrumental": "erect",
+   "opponentVocals": [
+    "bf-pixel-r-opp"
+   ],
+   "playerVocals": [
+    "bf-r"
+   ]
+  },
+  "stage": "mainStageReinvented",
+  "noteStyle": "reinvented",
+  "ratings": {
+   "erect": 10,
+   "nightmare": 12
+  },
+  "album": "volume1",
+  "stickerPack": "bf-reinvented",
+  "previewEnd": 0
+ },
+ "generatedBy": "Friday Night Funkin' - v0.8.6",
+ "timeChanges": [
+  {
+   "t": 0,
+   "b": 0,
+   "bpm": 165,
+   "bt": [4, 4, 4, 4]
+  }
+ ]
+}

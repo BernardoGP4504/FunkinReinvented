@@ -28,10 +28,6 @@ class QTReinventedCharacterAnims extends MultiAnimateAtlasCharacter
         shouldAlternate = true;
         idleSuffix = '-alt';
 
-      case "preDance-erect":
-        shouldAlternate = true;
-        idleSuffix = '-erect';
-        dance(true);
       case "cheer":
         shouldAlternate = null;
         idleSuffix = '';

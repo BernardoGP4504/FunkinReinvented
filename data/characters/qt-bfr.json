@@ -1,10 +1,11 @@
 {
 	"version": "1.0.0",
 	"renderType": "multisparrow",
-	"danceEvery": 2,
 	"assetPath": "characters/BF-REINVENTED/bf_qt",
 	"name": "BFR (QT Rewired).",
 	"flipX": true,
+	"danceEvery": 2,
+	"id": "bf-r",
 	"cameraOffsets": [-18, 36],
 	"startingAnimation": "idle",
 	"death": {

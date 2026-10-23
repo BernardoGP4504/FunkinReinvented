@@ -3,11 +3,11 @@
 	"renderType": "multisparrow",
 	"cameraOffsets": [-18, 36],
 	"flipX": true,
+	"id": "bf-r",
 	"name": "Boyfriend ALT (Reinvented)",
 	"startingAnimation": "idle",
 	"healthIcon": {
 		"shouldBop": true,
-		"scale": 1,
 		"id": "bf-r"
 	},
 	"assetPath": "characters/BF-REINVENTED/alt/ALT",
