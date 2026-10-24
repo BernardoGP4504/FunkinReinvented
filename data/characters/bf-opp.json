@@ -1,0 +1,36 @@
+{
+  "version": "1.0.0",
+  "name": "Boyfriend Opponent (Reinvented)",
+  "renderType": "multianimateatlas",
+  "assetPath": "shared:characters/BF-REINVENTED/opp",
+  "animations": [
+    {
+      "name": "Idle",
+      "prefix": "BF idle dance"
+    },
+    {
+      "name": "right",
+      "prefix": "BF NOTE LEFT"
+    },
+    {
+      "name": "BF NOTE DOWN",
+      "prefix": "Down"
+    },
+    {
+      "name": "up",
+      "prefix": "BF NOTE UP"
+    },
+    {
+      "name": "left",
+      "prefix": "BF NOTE RIGHT"
+    },
+    {
+      "name": "hey",
+      "prefix": "BF HEY!!"
+    },
+    {
+      "name": "cheer",
+      "prefix": "Boyfriend YEAH cheer"
+    }
+  ]
+}
