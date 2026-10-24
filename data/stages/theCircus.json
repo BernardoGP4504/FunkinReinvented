@@ -1,36 +1,32 @@
 {
-  "props": [
-    {
-      "danceEvery": 0,
-      "zIndex": 10,
-      "position": [-600, -200],
-      "scale": [1, 1],
-      "animType": "sparrow",
-      "name": "circus",
-      "isPixel": false,
-      "assetPath": "circus",
-      "scroll": [0.9, 0.9],
-      "animations": []
-    }
-  ],
-  "cameraZoom": 0.80,
-  "version": "1.0.2",
-  "characters": {
-    "bf": {
-      "zIndex": 300,
-      "position": [985, 885],
-      "cameraOffsets": [-100, -100]
-    },
-    "dad": {
-      "zIndex": 200,
-      "position": [335, 885],
-      "cameraOffsets": [150, -100]
-    },
-    "gf": {
-      "zIndex": 100,
-      "cameraOffsets": [0, 0],
-      "position": [751.5, 787]
-    }
-  },
-  "name": "Circus [Reinvented]"
+	"version": "1.0.2",
+	"name": "Circus [Reinvented]",
+	"props": [
+		{
+			"assetPath": "circus",
+			"name": "circus",
+			"position": [-924, -388],
+			"scale": [1.25, 1.22],
+			"scroll": [0.9, 0.9],
+			"zIndex": 1
+		}
+	],
+	"characters": {
+		"bf": {
+			"cameraOffsets": [-100, -100],
+			"position": [1289, 763],
+			"zIndex": 4
+		},
+		"dad": {
+			"cameraOffsets": [150, -100],
+			"position": [217, 763],
+			"zIndex": 3
+		},
+		"gf": {
+			"cameraOffsets": [0, 0],
+			"position": [722, 555],
+			"zIndex": 2
+		}
+	},
+	"cameraZoom": 0.8
 }
