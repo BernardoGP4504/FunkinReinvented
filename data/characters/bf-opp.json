@@ -1,36 +1,47 @@
 {
-  "version": "1.0.0",
-  "name": "Boyfriend Opponent (Reinvented)",
-  "renderType": "multianimateatlas",
-  "assetPath": "shared:characters/BF-REINVENTED/opp",
-  "animations": [
-    {
-      "name": "Idle",
-      "prefix": "BF idle dance"
-    },
-    {
-      "name": "right",
-      "prefix": "BF NOTE LEFT"
-    },
-    {
-      "name": "BF NOTE DOWN",
-      "prefix": "Down"
-    },
-    {
-      "name": "up",
-      "prefix": "BF NOTE UP"
-    },
-    {
-      "name": "left",
-      "prefix": "BF NOTE RIGHT"
-    },
-    {
-      "name": "hey",
-      "prefix": "BF HEY!!"
-    },
-    {
-      "name": "cheer",
-      "prefix": "Boyfriend YEAH cheer"
-    }
-  ]
+	"version": "1.0.0",
+	"name": "Reinvented Boyfriend (Opponent)",
+	"renderType": "animateatlas",
+	"assetPath": "shared:characters/BF-REINVENTED/opp",
+	"offsets": [17, 14],
+	"cameraOffsets": [-18, 36],
+	"flipX": true,
+	"healthIcon": { "id": "bf-r" },
+	"animations": [
+		{
+			"offsets": [-5, 0],
+			"name": "idle",
+			"prefix": "BF idle dance"
+		},
+		{
+			"offsets": [-17, 4],
+			"name": "singRIGHT",
+			"prefix": "BF NOTE LEFT"
+		},
+		{
+			"offsets": [-10, -25],
+			"name": "singDOWN",
+			"prefix": "BF NOTE DOWN"
+		},
+		{
+			"offsets": [38, 34],
+			"name": "singUP",
+			"prefix": "BF NOTE UP"
+		},
+		{
+			"offsets": [43, 6],
+			"name": "singLEFT",
+			"prefix": "BF NOTE RIGHT"
+		},
+		{
+			"offsets": [-9, 9],
+			"name": "hey",
+			"prefix": "BF HEY!!"
+		},
+		{
+			"offsets": [35, 30],
+			"name": "cheer",
+			"prefix": "Boyfriend YEAH cheer"
+		}
+	]
 }

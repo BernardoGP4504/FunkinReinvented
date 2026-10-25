@@ -159,7 +159,7 @@ class TestERECTReinvented extends ReinventedSongBase
 		final ogResult:Null<SongDifficulty> = super.getDifficulty(diffId, variation, variations);
 		if (ogResult == null || isSongNew(diffId, variation)) return ogResult;
 
-		ogResult.songName = 'Test Erect';
+		ogResult.songName = 'Test (Reinvented) Erect';
 		return ogResult;
 	}
 }
