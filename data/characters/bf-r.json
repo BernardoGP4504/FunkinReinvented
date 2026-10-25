@@ -1,102 +1,82 @@
 {
 	"version": "1.0.0",
-	"renderType": "multisparrow",
-	"offsets": [0, 0],
-	"danceEvery": 1,
+	"renderType": "multianimateatlas",
 	"name": "Boyfriend (Reinvented)",
 	"flipX": true,
-	"cameraOffsets": [0, 0],
-	"assetPath": "characters/BF-REINVENTED/BF",
+	"assetPath": "shared:characters/BF-REINVENTED/basic-anims",
 	"healthIcon": { "id": "bf-r" },
 	"animations": [
 		{
-			"offsets": [-5, 0],
-			"prefix": "BF idle dance",
+			"prefix": "Idle",
 			"name": "idle"
 		},
 		{
-			"offsets": [12, -6],
-			"prefix": "BF NOTE LEFT 1",
+			"prefix": "Left",
 			"name": "singLEFT"
 		},
 		{
-			"offsets": [-10, -50],
-			"prefix": "BF NOTE DOWN 1",
+			"prefix": "Down",
 			"name": "singDOWN"
 		},
 		{
-			"offsets": [-29, 27],
 			"prefix": "BF hit 1",
 			"name": "hit"
 		},
 		{
-			"offsets": [-29, 27],
-			"prefix": "BF NOTE UP 1",
+			"prefix": "Up",
 			"name": "singUP"
 		},
 		{
-			"offsets": [-38, -7],
-			"prefix": "BF NOTE RIGHT 1",
+			"prefix": "Right",
 			"name": "singRIGHT"
 		},
 		{
-			"offsets": [12, 24],
-			"prefix": "BF NOTE LEFT MISS",
+			"prefix": "Left Miss",
 			"name": "singLEFTmiss"
 		},
 		{
-			"offsets": [-11, -19],
-			"prefix": "BF NOTE DOWN MISS",
+			"prefix": "Down Miss",
 			"name": "singDOWNmiss"
 		},
 		{
-			"offsets": [-29, 27],
-			"prefix": "BF NOTE UP MISS",
+			"prefix": "Up Miss",
 			"name": "singUPmiss"
 		},
 		{
-			"offsets": [-30, 21],
-			"prefix": "BF NOTE RIGHT MISS",
+			"prefix": "Right Miss",
 			"name": "singRIGHTmiss"
 		},
 		{
-			"offsets": [-5, -15],
 			"prefix": "boyfriend dodge",
 			"name": "dodge"
 		},
 		{
-			"offsets": [7, 4],
-			"prefix": "BF HEY!!",
+			"prefix": "Hey",
 			"name": "hey"
 		},
 		{
-			"offsets": [-15, 20],
-			"prefix": "Boyfriend YEAH cheer",
-			"name": "cheer",
-			"assetPath": "characters/BF-REINVENTED/cheer"
+			"prefix": "Cheer",
+			"name": "cheer"
 		},
 		{
-			"offsets": [-37, 11],
-			"prefix": "BF dies",
-			"name": "firstDeath",
-			"assetPath": "characters/BF-REINVENTED/DEAD"
-		},
-		{
-			"offsets": [-37, 5],
-			"prefix": "BF Dead Loop",
-			"name": "deathLoop",
-			"assetPath": "characters/BF-REINVENTED/DEAD"
-		},
-		{
-			"offsets": [-37, 69],
-			"prefix": "BF Dead confirm",
-			"name": "deathConfirm",
-			"assetPath": "characters/BF-REINVENTED/DEAD"
-		},
-		{
-			"offsets": [-4, 0],
-			"prefix": "BF idle shaking",
+			"prefix": "Scared",
 			"name": "scared"
+		},
+		{
+			"prefix": "Death Intro",
+			"name": "firstDeath",
+			"assetPath": "shared:characters/bf-death"
+		},
+		{
+			"prefix": "Death Loop",
+			"name": "deathLoop",
+			"looped": true,
+			"assetPath": "shared:characters/bf-death"
+		},
+		{
+			"prefix": "Death Confirm",
+			"name": "deathConfirm",
+			"assetPath": "shared:characters/bf-death"
 		}
 	]
 }

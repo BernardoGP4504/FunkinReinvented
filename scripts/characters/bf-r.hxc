@@ -1,5 +1,5 @@
 import flixel.FlxG;
-import funkin.play.character.MultiSparrowCharacter;
+import funkin.play.character.MultiAnimateAtlasCharacter;
 import funkin.play.GameOverSubState;
 import funkin.play.PlayState;
 import funkin.Preferences;
@@ -7,7 +7,7 @@ import funkin.play.PauseSubState;
 import funkin.util.Constants;
 import funkin.util.HapticUtil;
 
-class BoyfriendReinventedCharacter extends MultiSparrowCharacter
+class BoyfriendReinventedCharacter extends MultiAnimateAtlasCharacter
 {
   function new() { super('bf-r'); }
 
