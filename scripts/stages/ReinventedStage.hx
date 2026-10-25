@@ -45,4 +45,11 @@ class ReinventedMainStage extends Stage
 		);
 		character.shader = dropShader;
 	}
+
+	override function onGameOver(_) {
+		final bf:Null<BaseCharacter> = getBoyfriend();
+		if (bf == null) return;
+
+		bf.shader = null;
+	}
 }
